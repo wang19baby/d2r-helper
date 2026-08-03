@@ -1,0 +1,153 @@
+
+
+#
+====
+# D2R Marketplace Tauri - .gitignore
+# ── Rust 构建产物（14 GB，必须忽略）──────────────────────────────
+/src-tauri/target/
+/src-tauri/Cargo.lock.bak
+# d2emu 调研临时资产（d2emu-hero-editor-tool-layout.md / thumb.png 已转 docs/design/）
+/.tmp_d2emu/
+# Rust 临时文件
+**/*.rs.bk
+**/*.pdb
+# ── Node / Web 构建产物 ──────────────────────────────────────────
+/web/node_modules/
+/web/dist/
+/web/.vite/
+/web/.next/
+/web/.nuxt/
+/web/.cache/
+# ── Python（tools/ 内可能有 .py 脚本）─────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+# ── IDE / 编辑器 ─────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+# ── OS 临时文件 ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+# ── 日志 / 临时 ───────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+!tools/**/.gitkeep
+# ── AI 工具运行时状态（保留配置文件 .md / .json 等）──────────────
+# Claude Code
+.claude/scheduled_tasks.lock
+.claude/**/cache/
+.claude/**/logs/
+.claude/worktrees/
+.claude/settings.local.json
+# oh-my-claudecode (omc)
+/.omc/sessions/
+/.omc/state/
+/.omc/logs/
+/.omc/notepad.md
+/.omc/project-memory.json
+web/.omc/state/
+/src-tauri/.omc
+# 保留这些 omc 配置文件（如有）
+!/.omc/plans/
+!/.omc/research/
+# reasonix（claude code 调用历史截断文件，纯运行状态）
+/.reasonix/truncated-results/
+/.reasonix/cache/
+# serena（lsp 缓存 + 临时记忆）
+/.serena/cache/
+/.serena/memories/
+# 注意：.serena/project.yml 仍被追踪（如存在）
+# pi（coding agent）—— 提交 settings.json 让团队共享 package 列表，
+# node_modules 由 pi 启动时自动安装，不要进版本控制
+/.pi/npm/
+/.pi/agents/
+!/.pi/settings.json
+!/.pi/skills/
+!/.pi/extensions/
+!/.pi/prompts/
+!/.pi/themes/
+# 注：当前只用到 .pi/settings.json + .pi/npm/，其他目录保留为白名单以备扩展
+# pi-subagents(项目根下的子代理运行时目录,纯状态)
+.pi-subagents/
+# pi-vault-mind —— 提交配置 + JSONL（事实的 source-of-truth），
+# 但不提交 LanceDB 索引（.lancedb/）和临时 queue/state
+/.vault-mind/.lancedb/
+/.vault-mind/agent-queue.jsonl
+/.vault-mind/server.json
+/.vault-mind/manual-dispatch.md
+/.vault-mind/agents/*.md.bak
+# crew（agent 运行时 metrics/audit）
+/.crew/
+# ── Tauri 构建产物（如果用 tauri build）────────────────────────
+/src-tauri/gen/schemas/
+# ── D2R 真实存档（个人数据，不应进版本控制）────────────────────
+*.d2s
+*.d2x
+!src-tauri/tests/fixtures/*.d2i
+!src-tauri/tests/fixtures/*.d2s
+!src-tauri/tests/fixtures/*.d2x
+# 备份目录（用户运行时自动创建）
+**/marketplace_backups/
+**/_pre_restore_*/
+# D2RMM / 仙道轮回 mod 数据（外部依赖，不属于此项目）
+/D2RMM/
+/D2RMM.mpq/
+/data/global/excel/itemstatcost.txt
+# ── 数据库本地副本（运行时自动初始化）────────────────────────────
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+!.gitkeep_database
+# ── 测试临时文件 ──────────────────────────────────────────────────
+*.actual
+*.expected
+/test-results/
+/coverage/
+# ── 杂项 ─────────────────────────────────────────────────────────
+*.pid
+*.seed
+*.pid.lock
+# 允许的工具数据被追踪（用户选择）
+# tools/ 全部追踪 — 不写忽略规则
+# ── 文档构建产物 ────────────────────────────────────────────────
+/docs/_build/
+/site/
+# ── macOS ────────────────────────────────────────────────────────
+.AppleDouble
+.LSOverride
+._*
+# ── Windows ───────────────────────────────────────────────────────
+*.lnk
+Icon[ ]?
+ehthumbs.db
+.gstack/
+src-tauri/src/protocol/d2i/.omc/
+# ── 用户个人存档 fixture（开源移除, 本地保留）──────────────
+/src-tauri/tests/fixtures/xieedi.d2s
+/src-tauri/tests/fixtures/happy_manman.d2s
+/src-tauri/tests/fixtures/happy_librarian.d2s
+/src-tauri/tests/fixtures/librarian.d2s
+/src-tauri/tests/fixtures/开心图书馆长.d2s
+/src-tauri/tests/fixtures/ModernSharedStashSoftCoreV2.d2i
+/src-tauri/tests/fixtures/user_stash.d2i
+/src-tauri/tests/fixtures/zmb_only.d2i
+# ── 开源分支: 游戏提取资产与图标脚本（本地保留）──────────
+/web/public/assets/img/
+/web/src/assets/
+/tools/download_d2emu_icons.py
+/tools/extract_d2r_icons.py
+/tools/extract_d2r_icons.mjs
+/tools/update_icon_paths.py
+/src-tauri/testsfixturesmodern_stash.d2i
+/.release-d2r-helper/

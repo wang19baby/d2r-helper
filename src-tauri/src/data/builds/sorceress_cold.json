@@ -1,0 +1,78 @@
+{
+  "id": "sorceress-cold",
+  "class": "Sorceress",
+  "name": "Cold Blizzard Sorceress",
+  "name_zh": "纯冰法师",
+  "core_skills": [
+    "Blizzard",
+    "Cold Mastery",
+    "Frozen Orb"
+  ],
+  "stat_priority": [
+    "strength=156",
+    "energy=base",
+    "dexterity=block",
+    "rest=vitality"
+  ],
+  "equipment": {
+    "core": [
+      {
+        "slot": "weapon_main",
+        "code": "obf",
+        "name": "Death's Fathom",
+        "weight": 1.0
+      },
+      {
+        "slot": "helm",
+        "code": "uhm",
+        "name": "Nightwing's Veil",
+        "weight": 0.9
+      },
+      {
+        "slot": "armor",
+        "code": "uui",
+        "name": "Ormus' Robes (Blizzard)",
+        "weight": 0.8
+      }
+    ],
+    "optional": [
+      {
+        "slot": "shield",
+        "code": "uit",
+        "name": "Spirit Monarch",
+        "weight": 0.6
+      },
+      {
+        "slot": "ring_l",
+        "code": "rin",
+        "name": "Stone of Jordan",
+        "weight": 0.5
+      },
+      {
+        "slot": "belt",
+        "code": "ulc",
+        "name": "Arachnid Mesh",
+        "weight": 0.5
+      },
+      {
+        "slot": "gloves",
+        "code": "tgl",
+        "name": "Magefist",
+        "weight": 0.4
+      }
+    ],
+    "runewords": [
+      {
+        "runes": [
+          "jah",
+          "ith",
+          "ber"
+        ],
+        "name": "Enigma",
+        "slot": "armor",
+        "weight": 0.3
+      }
+    ]
+  },
+  "description": "经典冰法，以暴风雪为主要输出技能，适合墨菲斯托/安达利尔等 Boss 速刷。FCR 达到 105 档位后堆 MF。"
+}

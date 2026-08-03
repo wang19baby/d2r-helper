@@ -1,0 +1,80 @@
+Key=War Bonnet zhCN=幼童软帽
+ÿcU[MAX:防19]
+ÿc520小之一，可收藏ÿc4
+Key=Tarnhelm zhCN=塔恩之盔
+ÿcU[MAX:防11/50MF]
+ÿc5前期50MF很实用ÿc4
+Key=Coif of Glory zhCN=荣光锁帽
+ÿcU[MAX:防28]ÿc4
+Key=Duskdeep zhCN=黄昏薄暮
+ÿcU[MAX:50ED/20DEF]
+ÿc5战系开荒神器，无形佣兵也可用ÿc4
+Key=Wormskull zhCN=蛆虫头骨
+ÿcU[MAX:防36]ÿc4
+Key=Howltusk zhCN=怒号长牙
+Key=Undead Crown zhCN=不死王冠
+ÿcU[MAX:100ARU/60ED]ÿc4
+Key=The Face of Horror zhCN=恐惧面容
+ÿcU[MAX:防52]ÿc4
+Key=Peasent Crown zhCN=农夫兜帽
+ÿcU[MAX:12REP]
+ÿc5A1佣兵常用，物理系也可过渡用ÿc4
+Key=Rockstopper zhCN=磐石头盔
+ÿcU[MAX:防694(EthUP)/220ED/40CR/40LR/50FR]
+ÿc5开荒小物免盔，抗性高，没LLÿc4
+Key=Stealskull zhCN=偷取颅盔
+ÿcU[MAX:防758(EthUP)/240ED/50MF]
+ÿc5功能不少，弓马地穴能用ÿc4
+Key=Darksight Helm zhCN=暗视头盔
+ÿcU[MAX:基本防84/40FR]ÿc4
+Key=Valkiry Wing zhCN=女武神之翼
+ÿcU[MAX:2Skill/200ED/4EK]
+ÿc5平民标马和元素弓用ÿc4
+Key=Blackhorn's Face zhCN=黑牛角面甲
+ÿcU[MAX:防739(EthUP)/220ED]
+ÿc5减速吸电盔，常给A1佣兵用ÿc4
+Key=Crown of Thieves zhCN=盗贼皇冠
+ÿcU[MAX:防741(EthUP)/12LL/200ED/100EG]
+ÿc5过渡佣兵常用，打钱也是标配ÿc4
+Key=Vampiregaze zhCN=吸血鬼的凝视
+ÿcU[MAX:8LM/8LL/20DR/15MDR]
+ÿc5物免盔，无形一般给佣兵ÿc4
+Key=Harlequin Crest zhCN=谐角之冠
+ÿcU[MAX:防141]
+ÿc5军帽，法系日用ÿc4
+Key=Steelshade zhCN=钢罩
+ÿcU[MAX:8LM/130ED/18REP/11FA]ÿc4
+Key=Veil of Steel zhCN=钢铁面纱
+ÿc5冰头弟弟，可收藏ÿc4
+Key=Nightwing's Veil zhCN=夜翼面纱
+ÿcU[MAX:15CD/120ED/20DEX/9CA]
+ÿc5冰头，纯冰提升伤害首选ÿc4
+Key=Andariel's Visage zhCN=安达莉尔的仪容
+ÿcU[MAX:10LL/150ED/30STR]
+ÿc5安头/安脸，佣兵终配头之一，弓马也能用。ÿc4
+Key=Crown of Ages zhCN=年纪之冠
+ÿcU[MAX:150DEF/30RES/15DR/2S]
+ÿc520大之一，四神器之一，PK可用，单机多用于与死神搭配ÿc4
+Key=Giantskull zhCN=巨型颅骨
+ÿcU[MAX:防477/320DEF/35STR/2S]
+ÿc5两孔弓马玩具ÿc4
+Key=Kira's Guardian zhCN=奇拉的守护
+ÿcU[MAX:防170/120DEF/70RES]
+ÿc5硬扛超级墨菲斯托定罪光环的选择之一ÿc4
+Key=Griffon's Eye zhCN=狮鹫之眼
+ÿcU[MAX:防260/-20LR/15LD/200DEF]
+ÿc520大之一，四神器之一，电系练法必备ÿc4
+Key=Arreat's Face zhCN=亚瑞特之貌
+ÿcU[MAX:防756(EthUP)/200ED/6LL]
+ÿc5飞机头，攻守兼备，秒杀一切黄金头ÿc4
+Key=Wolfhowl zhCN=狼嚎
+ÿcU[MAX:3/6/6/6/150/15/15/15]
+ÿc5野蛮狼娱乐玩法核心装备ÿc4
+Key=Demonhorn's Edge zhCN=恶魔角锋
+ÿcU[MAX:3/3/3/6LL/160ED/77反伤]ÿc4
+Key=Halaberd's Reign zhCN=死亡女神的统治
+ÿcU[MAX:2战斗指挥/2战斗号令/170ED/23REP]
+ÿc5战网近战用，收藏ÿc4
+Key=Jalal's Mane zhCN=狼王之鬃
+ÿcU[MAX:200ED]
+ÿc5狗头，属性全面，变形德常用ÿc4

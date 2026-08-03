@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D2R 扩展仓库 - 布局原型</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: radial-gradient(circle at top, rgba(120,30,30,0.15), transparent 40%), #0f0d0b;
+    color: #e7d9b8;
+    font-family: "Crimson Pro", serif;
+    padding: 20px;
+    min-height: 100vh;
+  }
+
+  /* ─── 顶部栏 ─── */
+  .header {
+    background: linear-gradient(to bottom, #1a1612, #221d18);
+    border: 1px solid #3a2f25;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+  }
+  .header h1 { font-family: "Cinzel", serif; color: #c9a34a; font-size: 22px; letter-spacing: 2px; }
+  .header .subtitle { color: #8e8268; font-size: 12px; }
+
+  /* ─── 操作栏 ─── */
+  .toolbar {
+    background: linear-gradient(to bottom, #1a1612, #221d18);
+    border: 1px solid #3a2f25;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 4px;
+    font-family: "Cinzel", serif; font-size: 11px; font-weight: 600;
+    cursor: pointer; border: 1px solid #a56d3a; transition: 0.2s;
+    background: linear-gradient(to bottom, #7b2222, #5e1717);
+    color: #f3e7c9;
+  }
+  .btn:hover { background: linear-gradient(to bottom, #922a2a, #6d1c1c); transform: translateY(-1px); }
+  .btn:disabled { opacity: 0.4; cursor: default; transform: none; }
+  .btn-outline {
+    background: linear-gradient(to bottom, #3a3128, #2b241d);
+    border-color: #5e4720;
+  }
+  .btn-outline:hover { background: linear-gradient(to bottom, #4a3a2b, #2c2218); }
+  .badge {
+    display: inline-block; padding: 2px 8px;
+    background: rgba(201,163,74,0.1); border: 1px solid #5e4720;
+    color: #c9a34a; border-radius: 999px; font-size: 10px;
+  }
+
+  /* ─── 主体：三栏 ─── */
+  .main { display: flex; gap: 0; align-items: stretch; }
+
+  /* ─── 左栏：游戏仓库 ─── */
+  .left-panel {
+    width: 340px;
+    flex-shrink: 0;
+    background: linear-gradient(to bottom, #1a1612, #221d18);
+    border: 1px solid #3a2f25;
+    border-radius: 4px;
+    padding: 12px;
+  }
+  .left-panel .panel-title {
+    font-family: "Cinzel", serif; font-size: 13px; color: #c9a34a;
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+  }
+  .page-tabs { display: flex; gap: 4px; }
+  .page-tab {
+    width: 22px; height: 22px; border-radius: 3px; border: 1px solid #3a2f25;
+    background: #221d18; color: #5e4f38; font-size: 10px; font-weight: bold;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .page-tab.active { background: #c9a34a; color: #0f0d0b; border-color: #c9a34a; box-shadow: 0 0 6px rgba(201,163,74,0.4); }
+
+  /* 仓库网格 */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3px;
+    position: relative;
+  }
+  .slot {
+    aspect-ratio: 1;
+    background: #0a0806;
+    border: 1px solid #2a221a;
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .slot.has-item { border-color: #5e4720; }
+  .slot.has-item:hover { border-color: #c9a34a; box-shadow: 0 0 8px rgba(201,163,74,0.2); }
+  .slot .icon { width: 70%; height: 70%; object-fit: contain; }
+  .slot .qty {
+    position: absolute; bottom: 1px; right: 2px;
+    font-size: 9px; font-weight: bold;
+    color: #c9a34a; background: rgba(0,0,0,0.8);
+    padding: 0 3px; border-radius: 2px;
+    line-height: 13px;
+  }
+  .slot .quality-dot {
+    position: absolute; top: 2px; right: 2px;
+    width: 5px; height: 5px; border-radius: 50%;
+  }
+  .slot.selected {
+    border-width: 2px;
+    box-shadow: inset 0 0 8px rgba(201,163,74,0.2);
+  }
+
+  .left-footer {
+    display: flex; justify-content: space-between;
+    margin-top: 8px; font-size: 10px; color: #5e4f38;
+  }
+
+  /* ─── 中间连接线 ─── */
+  .connector {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; padding: 0 12px; gap: 8px;
+    color: #5e4720; font-size: 18px; user-select: none;
+  }
+  .connector .line { width: 1px; height: 40px; background: linear-gradient(to bottom, transparent, #5e4720, transparent); }
+
+  /* ─── 右栏：扩展仓库 ─── */
+  .right-section {
+    flex: 1;
+    display: flex; gap: 12px;
+    min-width: 0;
+  }
+  .right-panel {
+    flex: 1;
+    background: linear-gradient(to bottom, #1a1612, #221d18);
+    border: 1px solid #3a2f25;
+    border-radius: 4px;
+    padding: 12px;
+    min-width: 0;
+  }
+  .collection-tabs {
+    display: flex; gap: 4px; margin-bottom: 8px; overflow-x: auto;
+  }
+  .collection-tab {
+    padding: 4px 12px; border-radius: 4px; font-size: 11px;
+    background: #1a1612; border: 1px solid #3a2f25;
+    color: #8e8268; cursor: pointer; white-space: nowrap;
+    transition: 0.15s;
+  }
+  .collection-tab.active {
+    background: #c9a34a; color: #0f0d0b; border-color: #c9a34a;
+    box-shadow: 0 0 8px rgba(201,163,74,0.3);
+  }
+  .collection-tab.new {
+    border-style: dashed; color: #5e4f38;
+  }
+  .collection-tab.new:hover { color: #c9a34a; border-color: #5e4720; }
+
+  /* 筛选栏 */
+  .filter-bar {
+    display: flex; gap: 6px; align-items: center; margin-bottom: 8px;
+  }
+  .search-box {
+    position: relative; flex: 1;
+  }
+  .search-box input {
+    width: 100%; background: #0a0806; border: 1px solid #3a2f25;
+    border-radius: 4px; padding: 5px 8px 5px 26px;
+    font-size: 11px; color: #e7d9b8; outline: none;
+  }
+  .search-box input:focus { border-color: #8b6b2f; }
+  .search-box input::placeholder { color: #5e4f38; }
+  .search-box .icon {
+    position: absolute; left: 8px; top: 50%; transform: translateY(-50%);
+    color: #5e4f38; font-size: 12px;
+  }
+  .filter-select {
+    background: #0a0806; border: 1px solid #3a2f25; border-radius: 4px;
+    padding: 5px 8px; font-size: 11px; color: #b8aa88; outline: none;
+  }
+  .filter-select:focus { border-color: #8b6b2f; }
+
+  /* 扩展仓库网格 (更密) */
+  .ware-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+  }
+
+  .right-footer {
+    display: flex; justify-content: space-between;
+    margin-top: 8px; font-size: 10px; color: #5e4f38;
+  }
+
+  /* ─── 右侧详情栏 ─── */
+  .detail-panel {
+    width: 260px;
+    flex-shrink: 0;
+    background: linear-gradient(to bottom, #1a1612, #221d18);
+    border: 1px solid #3a2f25;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .detail-empty {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 20px; text-align: center; color: #5e4f38; font-size: 12px;
+  }
+  .detail-empty .big-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.3; }
+  .detail-header {
+    padding: 12px;
+    border-bottom: 1px solid rgba(58,47,37,0.5);
+  }
+  .detail-header .item-icon {
+    width: 44px; height: 44px; background: #0a0806;
+    border: 1px solid #c9a34a; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    float: left; margin-right: 10px;
+  }
+  .detail-header .item-icon img { width: 30px; height: 30px; object-fit: contain; }
+  .detail-header .item-title { font-family: "Cinzel", serif; font-size: 14px; color: #c9a34a; }
+  .detail-header .item-sub { font-size: 11px; color: #6a5f4a; margin-top: 2px; }
+  .detail-section { padding: 10px 12px; border-top: 1px solid rgba(58,47,37,0.5); }
+  .detail-section label { font-size: 10px; color: #6a5f4a; display: block; margin-bottom: 4px; }
+  .detail-section .meta-row {
+    display: flex; justify-content: space-between; font-size: 11px; padding: 2px 0;
+  }
+  .detail-section .meta-row .key { color: #6a5f4a; }
+  .detail-section .meta-row .val { color: #b8aa88; }
+  .detail-section input, .detail-section textarea {
+    width: 100%; background: #0a0806; border: 1px solid #3a2f25;
+    border-radius: 3px; padding: 4px 6px; font-size: 11px; color: #b8aa88;
+    outline: none;
+  }
+  .detail-section textarea { height: 50px; resize: none; }
+  .detail-actions {
+    padding: 12px; border-top: 1px solid rgba(58,47,37,0.5);
+    margin-top: auto; display: flex; gap: 8px;
+  }
+  .detail-actions .btn { flex: 1; justify-content: center; }
+  .detail-actions .btn-small {
+    padding: 8px 12px; background: #2a1a1a; border: 1px solid #4a2a2a;
+    color: #8e5a5a; border-radius: 4px; cursor: pointer; font-size: 14px;
+  }
+
+  /* ─── Tooltip 模拟 ─── */
+  .tooltip-demo {
+    position: fixed; left: 360px; top: 280px; z-index: 100;
+    width: 260px; padding: 0;
+    background: linear-gradient(to bottom, #1f1914, #120f0c);
+    border: 1px solid #c9a34a;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7), 0 0 20px rgba(201,163,74,0.2);
+    border-radius: 4px; overflow: hidden;
+  }
+  .tooltip-demo .tip-hdr {
+    padding: 8px 12px;
+    background: linear-gradient(to right, rgba(201,163,74,0.15), transparent);
+  }
+  .tooltip-demo .tip-hdr .runeword-tag {
+    font-size: 9px; color: #c9a34a; text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .tooltip-demo .tip-hdr .item-name { font-family: "Cinzel", serif; color: #c9a34a; font-size: 13px; }
+  .tooltip-demo .tip-hdr .req-level { font-size: 10px; color: #8e8268; margin-top: 2px; }
+  .tooltip-demo .tip-body { padding: 8px 12px; border-top: 1px solid rgba(58,47,37,0.5); }
+  .tooltip-demo .tip-body .prop { font-size: 11px; color: #b8aa88; padding: 1px 0; }
+  .tooltip-demo .tip-body .prop.highlight { color: #6a9fd8; }
+  .tooltip-demo .tip-stats {
+    padding: 6px 12px; border-top: 1px solid rgba(58,47,37,0.5);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    font-size: 10px;
+  }
+  .tooltip-demo .tip-flavor {
+    padding: 6px 12px; border-top: 1px solid rgba(58,47,37,0.5);
+    font-style: italic; font-size: 10px; color: #6a5f4a;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ 顶部栏 ═══ -->
+<div class="header">
+  <div>
+    <h1>D2R 市场</h1>
+    <div class="subtitle">单机拍卖行 · 扩展仓库</div>
+  </div>
+  <div style="display:flex;gap:6px;align-items:center">
+    <span class="badge">余额 10,000 代币</span>
+  </div>
+</div>
+
+<!-- ═══ 操作栏 ═══ -->
+<div class="toolbar">
+  <div style="display:flex;gap:8px">
+    <button class="btn">📥 存入选中 (0)</button>
+    <button class="btn btn-outline" disabled>📤 取出选中 (0)</button>
+  </div>
+  <div style="font-size:12px;color:#8e8268">
+    拖拽物品在左右两侧之间转移
+  </div>
+</div>
+
+<!-- ═══ 三栏主体 ═══ -->
+<div class="main">
+
+  <!-- ─── 左栏：游戏仓库 ─── -->
+  <div class="left-panel">
+    <div class="panel-title">
+      <span>🎮 游戏共享仓库</span>
+      <div class="page-tabs">
+        <div class="page-tab active">1</div>
+        <div class="page-tab">2</div>
+        <div class="page-tab">3</div>
+        <div class="page-tab">4</div>
+        <div class="page-tab">5</div>
+      </div>
+    </div>
+
+    <!-- 网格 6列 × 8行 = 48格 -->
+    <div class="grid">
+      <!-- 符文 -->
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:18px">🟤</span>
+        <span class="qty">x12</span>
+      </div>
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:18px">🟤</span>
+        <span class="qty">x5</span>
+      </div>
+      <div class="slot has-item" style="border-color:#3bbf4f">
+        <div class="quality-dot" style="background:#3bbf4f"></div>
+        <span style="font-size:18px">🟢</span>
+      </div>
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:14px;color:#c9a34a;font-weight:bold">👑</span>
+      </div>
+      <div class="slot has-item" style="border-color:#6a9fd8">
+        <div class="quality-dot" style="background:#6a9fd8"></div>
+        <span style="font-size:18px">🔷</span>
+      </div>
+      <div class="slot"></div>
+
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:18px">🟤</span>
+        <span class="qty">x8</span>
+      </div>
+      <div class="slot has-item" style="border-color:#3bbf4f">
+        <div class="quality-dot" style="background:#3bbf4f"></div>
+        <span style="font-size:18px">🟢</span>
+      </div>
+      <div class="slot has-item selected" style="border-color:#c9a34a;border-width:2px">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:18px">🟤</span>
+        <span class="qty">x3</span>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(201,163,74,0.1)">
+          <span style="color:#c9a34a;font-size:12px;font-weight:bold">✓</span>
+        </div>
+      </div>
+      <div class="slot has-item" style="border-color:#ffd700">
+        <div class="quality-dot" style="background:#ffd700"></div>
+        <span style="font-size:14px;color:#ffd700;font-weight:bold">🛡️</span>
+      </div>
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:18px">🟤</span>
+        <span class="qty">x1</span>
+      </div>
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:18px">🟤</span>
+        <span class="qty">x1</span>
+      </div>
+
+      <div class="slot has-item" style="border-color:#5e4720">
+        <span style="font-size:18px">🧪</span>
+        <span class="qty">x9</span>
+      </div>
+      <div class="slot"></div>
+      <div class="slot has-item" style="border-color:#5e4720">
+        <span style="font-size:18px">💎</span>
+        <span class="qty">x3</span>
+      </div>
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:18px">🟤</span>
+        <span class="qty">x4</span>
+      </div>
+      <div class="slot has-item" style="border-color:#c9a34a">
+        <div class="quality-dot" style="background:#c9a34a"></div>
+        <span style="font-size:14px;color:#c9a34a;font-weight:bold">🗝️</span>
+      </div>
+      <div class="slot"></div>
+
+      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
+      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
+      <div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div>
+    </div>
+
+    <div class="left-footer">
+      <span>3 符文 · 2 宝石 · 1 药水</span>
+      <span>14 物品 / 48 格</span>
+    </div>
+  </div>
+
+  <!-- ─── 中间连接 ─── -->
+  <div class="connector">
+    <div class="line"></div>
+    <span>⇄</span>
+    <div class="line"></div>
+  </div>
+
+  <!-- ─── 右区：扩展仓库 + 详情 ─── -->
+  <div class="right-section">
+
+    <!-- 扩展仓库 -->
+    <div class="right-panel">
+      <!-- 收藏页标签 -->
+      <div class="collection-tabs">
+        <div class="collection-tab active">全部</div>
+        <div class="collection-tab">符文之语</div>
+        <div class="collection-tab">暗金收藏</div>
+        <div class="collection-tab">符文库存</div>
+        <div class="collection-tab new">+ 新建</div>
+      </div>
+
+      <!-- 筛选栏 -->
+      <div class="filter-bar">
+        <div class="search-box">
+          <span class="icon">🔍</span>
+          <input placeholder="搜物品名、标签…">
+        </div>
+        <select class="filter-select">
+          <option>全部品质</option>
+          <option>暗金</option>
+          <option>套装</option>
+          <option>稀有</option>
+          <option>魔法</option>
+        </select>
+        <select class="filter-select">
+          <option>全部类型</option>
+          <option>符文</option>
+          <option>宝石</option>
+          <option>护甲</option>
+          <option>武器</option>
+        </select>
+      </div>
+
+      <!-- 扩展仓库网格 (更密)-->
+      <div class="ware-grid">
+        <!-- Enigma (选中) -->
+        <div class="slot has-item selected" style="border-color:#c9a34a;border-width:2px">
+          <div class="quality-dot" style="background:#c9a34a"></div>
+          <div style="position:absolute;top:-3px;left:-3px;width:8px;height:8px;border-radius:50%;background:#c9a34a;box-shadow:0 0 6px rgba(201,163,74,0.6)"></div>
+          <span style="font-size:15px;color:#c9a34a">👑</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(201,163,74,0.1)">
+            <span style="color:#c9a34a;font-size:10px;font-weight:bold">✓</span>
+          </div>
+        </div>
+        <!-- SoJ -->
+        <div class="slot has-item" style="border-color:#c9a34a">
+          <div class="quality-dot" style="background:#c9a34a"></div>
+          <span style="font-size:16px;color:#c9a34a">💍</span>
+        </div>
+        <!-- Windforce -->
+        <div class="slot has-item" style="border-color:#c9a34a">
+          <div class="quality-dot" style="background:#c9a34a"></div>
+          <span style="font-size:16px;color:#c9a34a">🏹</span>
+        </div>
+        <!-- Grief (选中) -->
+        <div class="slot has-item selected" style="border-color:#c9a34a;border-width:2px">
+          <div class="quality-dot" style="background:#c9a34a"></div>
+          <div style="position:absolute;top:-3px;left:-3px;width:8px;height:8px;border-radius:50%;background:#c9a34a;box-shadow:0 0 6px rgba(201,163,74,0.6)"></div>
+          <span style="font-size:15px;color:#c9a34a">🗡️</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(201,163,74,0.1)">
+            <span style="color:#c9a34a;font-size:10px;font-weight:bold">✓</span>
+          </div>
+        </div>
+        <!-- Small Charm -->
+        <div class="slot has-item" style="border-color:#6a9fd8">
+          <div class="quality-dot" style="background:#6a9fd8"></div>
+          <span style="font-size:16px;color:#6a9fd8">📜</span>
+        </div>
+        <!-- Arach -->
+        <div class="slot has-item" style="border-color:#c9a34a">
+          <div class="quality-dot" style="background:#c9a34a"></div>
+          <span style="font-size:16px;color:#c9a34a">🔴</span>
+        </div>
+        <!-- Infinity -->
+        <div class="slot has-item" style="border-color:#c9a34a">
+          <div class="quality-dot" style="background:#c9a34a"></div>
+          <div style="position:absolute;top:-3px;left:-3px;width:8px;height:8px;border-radius:50%;background:#c9a34a;box-shadow:0 0 6px rgba(201,163,74,0.6)"></div>
+          <span style="font-size:16px;color:#c9a34a">⚡</span>
+        </div>
+        <!-- Cham -->
+        <div class="slot has-item" style="border-color:#5e4720">
+          <span style="font-size:16px">🟤</span>
+          <span class="qty">x3</span>
+        </div>
+        <!-- Zod -->
+        <div class="slot has-item" style="border-color:#5e4720">
+          <span style="font-size:16px">🟤</span>
+        </div>
+        <!-- WT -->
+        <div class="slot has-item" style="border-color:#c9a34a">
+          <div class="quality-dot" style="background:#c9a34a"></div>
+          <span style="font-size:16px;color:#c9a34a">👢</span>
+        </div>
+      </div>
+
+      <div class="right-footer">
+        <span>10 件 / 4 个收藏页</span>
+        <span><span style="color:#c9a34a">暗金 7</span> · <span style="color:#3bbf4f">套装 1</span> · <span style="color:#ffd700">稀有 1</span></span>
+      </div>
+    </div>
+
+    <!-- 详情栏 -->
+    <div class="detail-panel">
+      <!-- 选中物品时 -->
+      <div class="detail-header" style="background:linear-gradient(to right, rgba(201,163,74,0.08), transparent)">
+        <div class="item-icon">
+          <span style="font-size:22px">👑</span>
+        </div>
+        <div class="item-title">Enigma</div>
+        <div class="item-sub">暗金 · 护甲 · 神符之语</div>
+      </div>
+
+      <div class="detail-section">
+        <div class="meta-row"><span class="key">来源版本</span><span class="val">D2R 3.2</span></div>
+        <div class="meta-row"><span class="key">模组</span><span class="val">原版</span></div>
+        <div class="meta-row"><span class="key">收藏页</span><span class="val" style="color:#c9a34a">符文之语</span></div>
+        <div class="meta-row"><span class="key">存入时间</span><span class="val">2026-06-28</span></div>
+      </div>
+
+      <div class="detail-section">
+        <label>标签</label>
+        <input value="迷团, TP+, 法师" placeholder="逗号分隔" />
+      </div>
+
+      <div class="detail-section" style="flex:1">
+        <label>备注</label>
+        <textarea>15ED 底材</textarea>
+      </div>
+
+      <div class="detail-actions">
+        <button class="btn" style="font-size:11px;padding:8px">📤 取出到仓库</button>
+        <button class="btn-small">🗑</button>
+      </div>
+
+      <!-- 空状态 (没选中时显示这个)
+      <div class="detail-empty">
+        <div class="big-icon">📦</div>
+        <div>选择右侧仓库中的物品<br/>查看详细信息和属性</div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Tooltip 模拟 (浮在左侧选中的物品上) ═══ -->
+<div class="tooltip-demo">
+  <div class="tip-hdr">
+    <div class="runeword-tag">神符之语</div>
+    <div class="item-name">Enigma</div>
+    <div class="req-level">需求等级: 65</div>
+  </div>
+  <div class="tip-body">
+    <div class="prop highlight">+2 所有技能</div>
+    <div class="prop">+45% 高速跑步/行走</div>
+    <div class="prop">+775-990 防御</div>
+    <div class="prop">+0.75 每级力量</div>
+    <div class="prop">法力恢复速度提高 30%</div>
+    <div class="prop">所受伤害减少 8%</div>
+    <div class="prop highlight">+1 传送 (限法师)</div>
+    <div class="prop">+15% 冰系技能伤害上限</div>
+  </div>
+  <div class="tip-stats">
+    <div><span style="color:#6a5f4a">类型</span> <span style="color:#b8aa88">护甲</span></div>
+    <div><span style="color:#6a5f4a">品质</span> <span style="color:#c9a34a">暗金</span></div>
+    <div><span style="color:#6a5f4a">孔数</span> <span style="color:#b8aa88">3</span></div>
+    <div><span style="color:#6a5f4a">数量</span> <span style="color:#b8aa88">1</span></div>
+  </div>
+  <div class="tip-flavor">
+    "在绝望中寻找希望，生命终将找到出路"
+  </div>
+</div>
+
+<div style="margin-top:16px;padding:12px;background:rgba(201,163,74,0.05);border:1px dashed #5e4720;border-radius:4px;font-size:11px;color:#8e8268;line-height:1.8">
+  <strong style="color:#c9a34a">🎯 布局说明：</strong><br/>
+  <strong>左栏 (340px)</strong> = 游戏共享仓库 · 6×8 网格模拟游戏格子 · 顶部 5 页标签 · 品质色编码边框 · x12 堆叠数 · ✓ 选中态<br/>
+  <strong>中间连接</strong> = 拖拽方向指示 ⇄<br/>
+  <strong>右栏 (flex:1) </strong> = 扩展仓库 · 收藏页标签 · 搜索+筛选器 · 8列更密网格<br/>
+  <strong>最右栏 (260px)</strong> = 物品详情面板 · 选中后显示属性/标签/备注/取出按钮<br/>
+  <strong>Tooltip</strong> = 模拟 D2 游戏内悬浮提示框 · 属性 · 背景故事<br/>
+  所有图片用 emoji 代替展示 · 实际用 D2 物品 .webp 图标
+</div>
+
+</body>
+</html>

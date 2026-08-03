@@ -1,0 +1,72 @@
+{
+  "id": "sorceress-lightning",
+  "class": "Sorceress",
+  "name": "Lightning Sorceress",
+  "name_zh": "纯电法师",
+  "core_skills": [
+    "Lightning",
+    "Chain Lightning",
+    "Lightning Mastery",
+    "Teleport"
+  ],
+  "stat_priority": [
+    "strength=156",
+    "energy=base",
+    "rest=vitality"
+  ],
+  "equipment": {
+    "core": [
+      {
+        "slot": "weapon_main",
+        "code": "obc",
+        "name": "Eschuta's Temper",
+        "weight": 0.9
+      },
+      {
+        "slot": "helm",
+        "code": "ci3",
+        "name": "Griffon's Eye",
+        "weight": 1.0
+      },
+      {
+        "slot": "armor",
+        "code": "xea",
+        "name": "Skin of the Vipermagi",
+        "weight": 0.7
+      }
+    ],
+    "optional": [
+      {
+        "slot": "shield",
+        "code": "uit",
+        "name": "Spirit Monarch",
+        "weight": 0.6
+      },
+      {
+        "slot": "belt",
+        "code": "ulc",
+        "name": "Arachnid Mesh",
+        "weight": 0.5
+      },
+      {
+        "slot": "gloves",
+        "code": "tgl",
+        "name": "Magefist",
+        "weight": 0.4
+      }
+    ],
+    "runewords": [
+      {
+        "runes": [
+          "jah",
+          "ith",
+          "ber"
+        ],
+        "name": "Enigma",
+        "slot": "armor",
+        "weight": 0.3
+      }
+    ]
+  },
+  "description": "纯电法师，闪电/连锁闪电主力输出。需要格里芬之眼撑减电抗，伤害上限最高。"
+}

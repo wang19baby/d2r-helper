@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>扩展仓库 · Wireframe · D2R Marketplace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Roboto:wght@300;400;600;700&family=Roboto+Mono:wght@500;700&display=swap" />
+<style>
+/* ────── Wireframe 设计语言 (沿用 d2emu-hero-editor-tool-layout.md) ────── */
+:root {
+  /* palette — 与设计文档一致 */
+  --bg:       #0a0a0a;
+  --panel:    #1a1d21;
+  --panel-2:  #11151a;
+  --line:     #252525;
+  --line-soft:#1a1a1a;
+  --field:    #1a1a1a;
+  --text:     #e5e2de;
+  --muted:    #8c8a85;
+  --gold:     #c7b377;
+  --gold-bright:#fbb13a;
+  --gold-deep:#a08655;
+  --red:      #800000;
+  --orange:   #b87020;
+
+  /* item quality borders */
+  --q-unique:   #c7b377;
+  --q-set:      #2c8c3a;
+  --q-rare:     #c4a847;
+  --q-magic:    #5d6cff;
+  --q-socketed: #6a4a8a;
+
+  /* wireframe-specific */
+  --wf-stroke: 2px dashed rgba(251,177,58,.55);
+  --wf-fill:   rgba(251,177,58,.04);
+  --wf-note:   rgba(251,177,58,.85);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 14px/1.5 'Roboto', system-ui, sans-serif; }
+
+/* === 顶部文档头 === */
+.doc-head {
+  padding: 20px 32px 14px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg,#111,#0a0a0a);
+}
+.doc-head .kicker { color: var(--muted); font: 700 11px/1 'Roboto'; letter-spacing: .14em; text-transform: uppercase; }
+.doc-head h1 { margin: 6px 0 4px; font: 600 28px/1 'Cinzel', serif; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-bright); }
+.doc-head .lede { color: var(--muted); font: 400 13px/1.6 'Roboto'; max-width: 720px; }
+.doc-head .meta { color: var(--muted); font: 600 11px/1 'Roboto Mono', monospace; margin-top: 8px; }
+.doc-head .meta b { color: var(--gold); font-weight: 700; }
+
+/* === 页面外壳 === */
+.shell {
+  padding: 24px 32px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.tabs-wrap {
+  display: flex; gap: 16px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+.crumbs {
+  color: var(--muted); font: 600 11px/1 'Roboto'; letter-spacing: .12em; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.crumbs b { color: var(--gold); font-weight: 700; }
+.crumbs span { padding: 0 6px; color: var(--line); }
+
+/* === 标题块 === */
+.title-block {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: end;
+  padding: 22px 24px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.45), inset 0 0 28px rgba(154,0,0,.06);
+}
+.title-block .tb-left .kicker { color: var(--gold); font: 700 11px/1 'Roboto Mono', monospace; letter-spacing: .18em; text-transform: uppercase; }
+.title-block h2 {
+  margin: 6px 0 8px;
+  font: 600 32px/1 'Cinzel', serif; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--text);
+}
+.title-block .lede { color: var(--muted); max-width: 580px; }
+.title-block .tb-right { display: flex; gap: 10px; }
+
+/* === 按钮 === */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 16px;
+  font: 600 12px/1 'Roboto'; letter-spacing: .08em; text-transform: uppercase;
+  border: 1px solid var(--line); border-radius: 4px;
+  background: transparent; color: var(--text);
+  cursor: pointer; transition: 120ms;
+}
+.btn:hover { border-color: var(--gold); color: var(--gold); }
+.btn-primary { background: transparent; border-color: #444; color: #ccc; }
+.btn-success { background: var(--red); border-color: var(--red); color: #fff; }
+.btn-success:hover { background: #a00000; }
+.btn-ghost   { background: transparent; border-color: var(--line); color: var(--text); }
+.btn i { font-style: normal; }
+
+/* === KPI / 摘要条 === */
+.summary-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 18px 0 16px;
+}
+.kpi {
+  padding: 14px 18px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.kpi::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--gold);
+}
+.kpi .label { color: var(--muted); font: 600 10px/1 'Roboto'; letter-spacing: .12em; text-transform: uppercase; }
+.kpi .value { color: var(--text); font: 700 24px/1 'Cinzel', serif; letter-spacing: 1px; margin: 8px 0 4px; }
+.kpi .delta { color: var(--muted); font: 600 11px/1 'Roboto Mono', monospace; }
+.kpi .delta.up { color: #6ad26a; }
+.kpi .delta.down { color: #ef5350; }
+.kpi.gold .value { color: var(--gold-bright); }
+
+/* === 工具栏 === */
+.toolbar {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  padding: 12px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.toolbar .grow { flex: 1; }
+.toolbar .filter-group {
+  display: flex; gap: 6px; align-items: center;
+}
+.toolbar .filter-label {
+  color: var(--muted); font: 600 10px/1 'Roboto'; letter-spacing: .12em; text-transform: uppercase;
+}
+.search {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 12px;
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-width: 240px;
+}
+.search input {
+  background: transparent; border: none; outline: none; color: var(--text); font: 400 13px/1 'Roboto';
+  width: 100%;
+}
+.search input::placeholder { color: var(--muted); }
+.tag-pill {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: transparent;
+  font: 600 11px/1 'Roboto';
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tag-pill.is-on { background: var(--gold); border-color: var(--gold); color: #000; }
+
+/* === Stash sub-tabs === */
+.subtab-bar {
+  display: flex; gap: 4px;
+  border-bottom: 1px solid var(--line);
+  padding: 0 4px;
+}
+.subtab {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  color: var(--muted);
+  font: 600 11px/1 'Roboto';
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  position: relative; top: 1px;
+}
+.subtab.is-on {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--text);
+}
+.subtab .count {
+  display: inline-block; margin-left: 6px;
+  color: var(--muted); font: 700 10px/1 'Roboto Mono', monospace;
+}
+.subtab.is-on .count { color: var(--gold); }
+
+/* === 主布局 3 栏 === */
+.layout-3col {
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  gap: 16px;
+  margin-top: 14px;
+}
+@media (max-width: 1280px) {
+  .layout-3col { grid-template-columns: 1fr; }
+}
+
+.section {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+}
+.section h3 {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font: 700 11px/1 'Roboto'; letter-spacing: .14em; text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+.section h3 .badge {
+  display: inline-block; margin-left: 8px;
+  background: rgba(199,179,119,.18); color: var(--gold);
+  padding: 2px 6px;
+  font: 700 10px/1 'Roboto Mono', monospace;
+  border-radius: 3px;
+}
+
+/* === Item Cell (64×64) === */
+.cell {
+  width: 64px; height: 64px;
+  background: rgba(0,0,0,.45);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  position: relative;
+  display: grid; place-items: center;
+  font: 700 13px/1 'Roboto Mono', monospace;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.cell.q-unique   { border: 2px solid var(--q-unique); }
+.cell.q-set      { border: 2px solid var(--q-set); }
+.cell.q-rare     { border: 2px solid var(--q-rare); }
+.cell.q-magic    { border: 2px solid var(--q-magic); }
+.cell.q-socketed { border: 2px solid var(--q-socketed); }
+.cell.q-runeword { border: 2px solid #ff6e00; }
+.cell .qty {
+  position: absolute; right: 1px; bottom: 1px;
+  background: rgba(0,0,0,.85);
+  color: #fff; font: 600 10px/1 'Roboto Mono', monospace;
+  padding: 1px 4px; border-radius: 2px;
+}
+.cell .sockets {
+  position: absolute; left: 1px; top: 1px;
+  color: var(--gold-bright); font: 700 10px/1 'Roboto Mono', monospace;
+}
+.cell.empty { background: rgba(0,0,0,.25); border: 1px dashed #2a2a2a; }
+.cell.selected {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 2px rgba(199,179,119,.25), 0 0 12px rgba(199,179,119,.35);
+}
+
+/* === Equipment 7 slots (D2 character silhouette) === */
+.equipment {
+  display: grid;
+  grid-template-columns: 64px 64px 64px;
+  grid-template-rows: 64px 64px 64px 64px;
+  gap: 6px;
+  width: max-content;
+  margin: 0 auto;
+}
+.equipment .cell.s-helm   { grid-area: 1 / 2; }
+.equipment .cell.s-amulet { grid-area: 2 / 2; }
+.equipment .cell.s-armor  { grid-area: 3 / 2; }
+.equipment .cell.s-weapon { grid-area: 3 / 1; }
+.equipment .cell.s-shield { grid-area: 3 / 3; }
+.equipment .cell.s-gloves { grid-area: 4 / 1; }
+.equipment .cell.s-boots  { grid-area: 4 / 3; }
+.equipment .cell.s-belt   { grid-area: 4 / 2; }
+
+/* === Inventory grid === */
+.inv-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 64px);
+  grid-auto-rows: 64px;
+  gap: 4px;
+}
+.inv-grid.compact { grid-template-columns: repeat(10, 56px); grid-auto-rows: 56px; }
+.inv-grid .cell { width: 100%; height: 100%; }
+.inv-grid .cell.c56 { width: 56px; height: 56px; }
+
+/* === List view (右侧详情) === */
+.detail .row {
+  display: grid; grid-template-columns: 100px 1fr auto; gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.detail .row:last-child { border-bottom: none; }
+.detail .row .k { color: var(--muted); font: 600 10px/1 'Roboto'; letter-spacing: .1em; text-transform: uppercase; }
+.detail .row .v { color: var(--text); font: 500 13px/1.4 'Roboto'; }
+.detail .row .v.gold { color: var(--gold-bright); font-weight: 700; }
+
+.stattrack {
+  background: rgba(0,0,0,.4);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px 12px;
+  font: 600 12px/1.6 'Roboto Mono', monospace;
+  color: var(--text);
+  white-space: pre-line;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* === Wireframe annotation === */
+.wf-anno {
+  position: relative;
+  outline: var(--wf-stroke);
+  outline-offset: 4px;
+  background: var(--wf-fill);
+}
+.wf-anno::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -10px; left: 8px;
+  background: var(--bg);
+  color: var(--wf-note);
+  padding: 1px 8px;
+  font: 700 10px/1.4 'Roboto Mono', monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border: 1px dashed var(--wf-note);
+  border-radius: 3px;
+}
+
+/* === 标注侧边栏 === */
+.notebook {
+  background: linear-gradient(180deg,#11151a,#0a0a0a);
+  border-left: 1px solid var(--gold);
+  padding: 16px 18px;
+  font: 400 12px/1.7 'Roboto';
+  color: var(--text);
+}
+.notebook h4 {
+  margin: 0 0 6px;
+  color: var(--gold-bright);
+  font: 600 12px/1 'Roboto'; letter-spacing: .1em; text-transform: uppercase;
+}
+.notebook ul { margin: 0; padding-left: 16px; }
+.notebook li { margin: 4px 0; }
+.notebook .num {
+  display: inline-block; min-width: 22px;
+  color: var(--gold); font: 700 11px/1 'Roboto Mono', monospace;
+}
+
+/* === 历史/列表行 === */
+.tbl {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  font: 400 12px/1.4 'Roboto';
+}
+.tbl thead th {
+  padding: 10px 12px; background: #13171c;
+  border-bottom: 2px solid var(--gold);
+  color: var(--text); font: 700 10px/1 'Roboto'; letter-spacing: .1em; text-transform: uppercase;
+  text-align: left;
+}
+.tbl tbody td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--text);
+}
+.tbl tbody tr:hover { background: rgba(74,158,255,.06); }
+.tbl .gold { color: var(--gold-bright); font-weight: 700; }
+
+/* === 价格步进器 === */
+.stepper {
+  display: grid;
+  grid-template-columns: 28px 90px 28px;
+  align-items: center;
+  height: 28px;
+}
+.stepper button {
+  background: #1f1f1f; color: #fff; border: 1px solid var(--line); cursor: pointer;
+  font: 700 14px/1 'Roboto Mono', monospace;
+  height: 28px;
+}
+.stepper button:hover { background: #262626; }
+.stepper input {
+  text-align: center; background: #1a1a1a; color: var(--gold-bright);
+  border: 1px solid var(--line); border-left: 0; border-right: 0;
+  height: 28px; font: 600 13px/1 'Roboto Mono', monospace;
+}
+
+/* === 仓储列表 (左侧 sidebar) === */
+.side-list { display: flex; flex-direction: column; gap: 4px; max-height: 540px; overflow-y: auto; }
+.side-list .li {
+  display: grid; grid-template-columns: 40px 1fr auto; gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+  align-items: center;
+  cursor: pointer;
+}
+.side-list .li.is-on { border-color: var(--gold); background: rgba(199,179,119,.05); }
+.side-list .li .name { color: var(--text); font: 600 12px/1.2 'Roboto'; }
+.side-list .li .name .code { color: var(--muted); font: 600 10px/1 'Roboto Mono', monospace; margin-left: 6px; }
+.side-list .li .qty { color: var(--gold-bright); font: 700 12px/1 'Roboto Mono', monospace; }
+.side-list .li .mini {
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  background: rgba(0,0,0,.45);
+  border: 2px solid var(--line); border-radius: 2px;
+  font: 700 10px/1 'Roboto Mono', monospace;
+}
+.side-list .li .mini.q-unique { border-color: var(--q-unique); }
+.side-list .li .mini.q-set    { border-color: var(--q-set); }
+.side-list .li .mini.q-magic  { border-color: var(--q-magic); }
+
+/* === footer hint === */
+.doc-foot {
+  margin: 30px 0 0;
+  padding: 18px 32px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font: 400 12px/1.7 'Roboto';
+  background: linear-gradient(180deg,#0a0a0a,#111);
+}
+.doc-foot code { background: rgba(255,255,255,.04); padding: 1px 6px; border-radius: 3px; color: var(--gold-bright); font-family: 'Roboto Mono', monospace; font-size: 11px; }
+
+.divider-h { height: 1px; background: var(--line); margin: 18px 0; }
+
+/* === legend === */
+.legend {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
+  font: 400 11px/1.4 'Roboto';
+  margin-top: 12px;
+}
+.legend .swatch {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 10px;
+  background: rgba(0,0,0,.4);
+  border-radius: 4px;
+}
+.legend .swatch .box {
+  width: 18px; height: 18px;
+  border-radius: 2px;
+  border: 2px solid currentColor;
+}
+.legend .swatch.q1 { color: var(--q-unique); }
+.legend .swatch.q2 { color: var(--q-set); }
+.legend .swatch.q3 { color: var(--q-rare); }
+.legend .swatch.q4 { color: var(--q-magic); }
+.legend .swatch.q5 { color: var(--q-socketed); }
+.legend .swatch .name { color: var(--text); font-weight: 600; }
+.legend .swatch .desc { color: var(--muted); font-size: 10px; }
+
+</style>
+</head>
+<body>
+
+<header class="doc-head">
+  <div class="kicker">Design Wireframe · v0.1 · 2026-07-05</div>
+  <h1>扩展仓库 · Extended Warehouse</h1>
+  <p class="lede">为 D2R Marketplace 出品的扩展仓库页面 wireframe。沿用 d2emu-hero-editor-tool-layout.md 中的设计语言(d2emu 暗黑奇幻 + d2 gothic 标题 + 64×64 物品 cell + quality border 系统)。</p>
+  <p class="meta">页面路径 <code>web/src/pages/StashManager.tsx</code> · 参考站点 <b>d2emu.com/d2s</b> · 配套文档 <b>docs/design/d2emu-hero-editor-tool-layout.md</b></p>
+</header>
+
+<div class="shell">
+
+  <!-- ───────────── ① 页面顶部:标题块 + 主操作 ───────────── -->
+  <div class="title-block wf-anno" data-label="① 标题块 / Page Title">
+    <div class="tb-left">
+      <div class="kicker">Extended Warehouse</div>
+      <h2>扩展仓库</h2>
+      <p class="lede">存放从角色仓库抽出的 runes / gems / keys / tokens。可上架销售或取出回到 stash。</p>
+      <div class="legend">
+        <div class="swatch q1"><span class="box"></span><div><div class="name">Unique</div><div class="desc">烫金</div></div></div>
+        <div class="swatch q2"><span class="box"></span><div><div class="name">Set</div><div class="desc">暗绿</div></div></div>
+        <div class="swatch q3"><span class="box"></span><div><div class="name">Rare</div><div class="desc">暗黄</div></div></div>
+        <div class="swatch q4"><span class="box"></span><div><div class="name">Magic</div><div class="desc">暗蓝</div></div></div>
+        <div class="swatch q5"><span class="box"></span><div><div class="name">Socketed</div><div class="desc">暗紫</div></div></div>
+      </div>
+    </div>
+    <div class="tb-right">
+      <button class="btn btn-ghost"><i>↻</i> 刷新</button>
+      <button class="btn btn-primary"><i>↧</i> 导入 .d2i</button>
+      <button class="btn btn-success"><i>+</i> 存入扩展仓</button>
+    </div>
+  </div>
+
+  <!-- ───────────── ② KPI 摘要 ───────────── -->
+  <div class="summary-row wf-anno" data-label="② KPI / 摘要">
+    <div class="kpi gold">
+      <div class="label">总库存 (Stackable Units)</div>
+      <div class="value">3,427</div>
+      <div class="delta up">▲ 124 本周</div>
+    </div>
+    <div class="kpi">
+      <div class="label">在售物品</div>
+      <div class="value">18</div>
+      <div class="delta">市值 <b style="color:var(--gold-bright)">2.4 M foil</b></div>
+    </div>
+    <div class="kpi">
+      <div class="label">待取回</div>
+      <div class="value">5</div>
+      <div class="delta down">▼ 2 待你确认</div>
+    </div>
+    <div class="kpi">
+      <div class="label">本月成交</div>
+      <div class="value">42</div>
+      <div class="delta up">▲ 18% vs 上月</div>
+    </div>
+  </div>
+
+  <!-- ───────────── ③ 工具栏:搜索 + 过滤 ───────────── -->
+  <div class="toolbar wf-anno" data-label="③ 工具栏 / Toolbar">
+    <div class="search"><i style="color:var(--muted)">⌕</i><input placeholder="按 code / 名称搜索 (例: r30, Jah, Ist)" /></div>
+    <div class="filter-group">
+      <span class="filter-label">类型</span>
+      <button class="tag-pill is-on">Runes</button>
+      <button class="tag-pill">Gems</button>
+      <button class="tag-pill">Keys</button>
+      <button class="tag-pill">Tokens</button>
+      <button class="tag-pill">全部</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">品质</span>
+      <button class="tag-pill">Unique</button>
+      <button class="tag-pill">Set</button>
+      <button class="tag-pill">Rare</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">排序</span>
+      <button class="tag-pill is-on">数量↓</button>
+      <button class="tag-pill">品质</button>
+      <button class="tag-pill">code↑</button>
+    </div>
+    <div class="grow"></div>
+    <div class="filter-group">
+      <label style="color:var(--muted);font:600 10px/1 'Roboto';letter-spacing:.12em;text-transform:uppercase"><input type="checkbox" checked /> 中文名</label>
+    </div>
+  </div>
+
+  <!-- ───────────── ④ 主布局:3 栏 ───────────── -->
+  <div class="layout-3col">
+
+    <!-- ── 4-A 左侧:角色装备 + 仓储分类列表 ── -->
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="section wf-anno" data-label="4-A 角色装备" style="text-align:center;">
+        <h3>角色身上装备 <span class="badge">ECHOINGSTRIKE · Lv 99 · Warlock</span></h3>
+        <div class="equipment">
+          <div class="cell empty s-helm">?</div>
+          <div class="cell q-unique s-amulet"><span style="color:var(--q-unique);font-size:11px">amu</span><span class="qty">x1</span></div>
+          <div class="cell q-unique s-armor"><span style="color:var(--q-unique);font-size:11px">gth</span><span class="qty">x1</span></div>
+          <div class="cell q-magic s-weapon"><span style="color:var(--q-magic);font-size:11px">2hs</span><span class="qty">x1</span></div>
+          <div class="cell q-set s-shield"><span style="color:var(--q-set);font-size:11px">xmg</span><span class="qty">x1</span></div>
+          <div class="cell q-rare s-gloves"><span style="color:var(--q-rare);font-size:11px">xhg</span><span class="qty">x1</span></div>
+          <div class="cell empty s-boots">?</div>
+          <div class="cell empty s-belt">?</div>
+        </div>
+        <div style="margin-top:14px;font:600 10px/1.4 'Roboto';color:var(--muted);letter-spacing:.1em;text-transform:uppercase">
+          7 slots · equip-only · non-tradable
+        </div>
+      </div>
+
+      <div class="section wf-anno" data-label="4-B 分类导航">
+        <h3>分类导航 <span class="badge">12 类</span></h3>
+        <div class="side-list">
+          <div class="li is-on">
+            <div class="mini q-unique" style="color:var(--q-unique)">r30</div>
+            <div><div class="name">High Runes <span class="code">r29+</span></div><div style="color:var(--muted);font-size:11px;margin-top:2px">Jah · Cham · Zod</div></div>
+            <div class="qty">12</div>
+          </div>
+          <div class="li">
+            <div class="mini q-set" style="color:var(--q-set)">r20</div>
+            <div><div class="name">Mid Runes <span class="code">r15-r28</span></div><div style="color:var(--muted);font-size:11px;margin-top:2px">Lem · Pul · Um</div></div>
+            <div class="qty">86</div>
+          </div>
+          <div class="li">
+            <div class="mini q-magic" style="color:var(--q-magic)">r10</div>
+            <div><div class="name">Low Runes <span class="code">r01-r14</span></div><div style="color:var(--muted);font-size:11px;margin-top:2px">El · Eld · Tir</div></div>
+            <div class="qty">231</div>
+          </div>
+          <div class="li">
+            <div class="mini" style="color:var(--text)">gfb</div>
+            <div><div class="name">Perfect Gems <span class="code">g?</span></div><div style="color:var(--muted);font-size:11px;margin-top:2px">完美宝石</div></div>
+            <div class="qty">44</div>
+          </div>
+          <div class="li">
+            <div class="mini" style="color:var(--text)">key</div>
+            <div><div class="name">Keys of Terror/Hate/Destroy</div></div>
+            <div class="qty">128</div>
+          </div>
+          <div class="li">
+            <div class="mini" style="color:var(--text)">tok</div>
+            <div><div class="name">Tokens</div></div>
+            <div class="qty">17</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 4-C 中间:扩展仓网格 + sub-tabs ── -->
+    <div>
+      <div class="section wf-anno" data-label="4-C 扩展仓 (8 列自适应)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <h3 style="margin:0;border:none;padding:0;">扩展仓库 <span class="badge">67 items</span></h3>
+          <div style="display:flex;gap:6px;">
+            <span style="color:var(--muted);font:600 11px/1 'Roboto Mono',monospace;">每页</span>
+            <button class="tag-pill">48</button>
+            <button class="tag-pill is-on">96</button>
+            <button class="tag-pill">全部</button>
+          </div>
+        </div>
+
+        <div class="subtab-bar">
+          <button class="subtab is-on">Runes <span class="count">329</span></button>
+          <button class="subtab">Gems <span class="count">44</span></button>
+          <button class="subtab">Keys <span class="count">128</span></button>
+          <button class="subtab">Tokens <span class="count">17</span></button>
+          <button class="subtab">Crafted <span class="count">3</span></button>
+          <button class="subtab">Misc <span class="count">2</span></button>
+        </div>
+
+        <!-- 8 列自适应 grid -->
+        <div class="inv-grid" style="margin-top:12px;">
+          <!-- Row 1: High Runes -->
+          <div class="cell q-unique">r32<div class="qty">x1</div></div>
+          <div class="cell q-unique">r31<div class="qty">x2</div></div>
+          <div class="cell q-unique">r30<div class="qty">x1</div></div>
+          <div class="cell q-unique">r29<div class="qty">x1</div></div>
+          <div class="cell q-unique">r28<div class="qty">x3</div></div>
+          <div class="cell q-unique">r27<div class="qty">x1</div></div>
+          <div class="cell q-unique">r26<div class="qty">x2</div></div>
+          <div class="cell q-unique">r25<div class="qty">x1</div></div>
+          <!-- Row 2 -->
+          <div class="cell q-unique">r24<div class="qty">x4</div></div>
+          <div class="cell q-unique">r23<div class="qty">x2</div></div>
+          <div class="cell q-unique">r22<div class="qty">x3</div></div>
+          <div class="cell q-unique">r21<div class="qty">x5</div></div>
+          <div class="cell q-unique">r20<div class="qty">x6</div></div>
+          <div class="cell q-unique">r19<div class="qty">x4</div></div>
+          <div class="cell q-unique">r18<div class="qty">x8</div></div>
+          <div class="cell q-unique">r17<div class="qty">x11</div></div>
+          <!-- Row 3 (low runes + gems) -->
+          <div class="cell">r16<div class="qty">x14</div></div>
+          <div class="cell">r15<div class="qty">x18</div></div>
+          <div class="cell">r14<div class="qty">x22</div></div>
+          <div class="cell">r13<div class="qty">x25</div></div>
+          <div class="cell">r12<div class="qty">x31</div></div>
+          <div class="cell">r11<div class="qty">x28</div></div>
+          <div class="cell">r10<div class="qty">x34</div></div>
+          <div class="cell">r09<div class="qty">x42</div></div>
+          <!-- Row 4 -->
+          <div class="cell">r08<div class="qty">x51</div></div>
+          <div class="cell">r07<div class="qty">x58</div></div>
+          <div class="cell">r06<div class="qty">x68</div></div>
+          <div class="cell">r05<div class="qty">x72</div></div>
+          <div class="cell">r04<div class="qty">x81</div></div>
+          <div class="cell">r03<div class="qty">x95</div></div>
+          <div class="cell">r02<div class="qty">x110</div></div>
+          <div class="cell">r01<div class="qty">x140</div></div>
+          <!-- Row 5: gems -->
+          <div class="cell q-magic" style="color:var(--q-magic)">gpg<div class="qty">x9</div></div>
+          <div class="cell q-magic" style="color:var(--q-magic)">gpr<div class="qty">x9</div></div>
+          <div class="cell q-magic" style="color:var(--q-magic)">gpb<div class="qty">x9</div></div>
+          <div class="cell q-magic" style="color:var(--q-magic)">gpy<div class="qty">x9</div></div>
+          <div class="cell q-magic" style="color:var(--q-magic)">gpw<div class="qty">x8</div></div>
+          <div class="cell q-magic" style="color:var(--q-magic)">gfb<div class="qty">x12</div></div>
+          <div class="cell q-magic" style="color:var(--q-magic)">gfv<div class="qty">x11</div></div>
+          <div class="cell q-magic" style="color:var(--q-magic)">gfw<div class="qty">x10</div></div>
+          <!-- Row 6: lower gems -->
+          <div class="cell">gfg<div class="qty">x22</div></div>
+          <div class="cell">gfr<div class="qty">x22</div></div>
+          <div class="cell">gfb<div class="qty">x22</div></div>
+          <div class="cell">gfy<div class="qty">x22</div></div>
+          <div class="cell">gfw<div class="qty">x22</div></div>
+          <div class="cell">gcg<div class="qty">x44</div></div>
+          <div class="cell">gcr<div class="qty">x44</div></div>
+          <div class="cell">gcb<div class="qty">x44</div></div>
+          <!-- Row 7: keys -->
+          <div class="cell">key<div class="qty">x12</div></div>
+          <div class="cell">key<div class="qty">x12</div></div>
+          <div class="cell">key<div class="qty">x12</div></div>
+          <div class="cell q-socketed" style="color:var(--q-socketed)">btk<div class="qty">x14</div></div>
+          <div class="cell q-socketed" style="color:var(--q-socketed)">hkp<div class="qty">x14</div></div>
+          <div class="cell q-socketed" style="color:var(--q-socketed)">dhn<div class="qty">x14</div></div>
+          <div class="cell empty"></div>
+          <div class="cell empty"></div>
+        </div>
+
+        <!-- 页脚 -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);">
+          <div style="color:var(--muted);font:600 11px/1 'Roboto Mono',monospace;">PAGE 1 / 1 · 67 / 96 cells</div>
+          <div style="display:flex;gap:8px;">
+            <button class="btn btn-ghost">‹ 上一页</button>
+            <button class="btn btn-ghost">下一页 ›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 4-D 右侧:选中物品详情 + 交易面板 ── -->
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="section wf-anno" data-label="4-D 物品详情" style="text-align:center;">
+        <h3 style="text-align:left;">选中物品 <span class="badge">r32 Jah</span></h3>
+        <div class="cell q-unique" style="margin:12px auto;width:96px;height:96px;font-size:18px;color:var(--q-unique);">r32<div class="qty" style="font-size:12px;">x1</div></div>
+        <div style="font:600 16px/1 'Cinzel',serif;letter-spacing:2px;color:var(--q-unique);text-transform:uppercase;margin-bottom:4px;">Jah Rune</div>
+        <div style="color:var(--muted);font:600 11px/1 'Roboto Mono',monospace;">Code: r32 · Type: Rune · Tier: High</div>
+        <div style="margin-top:10px;color:var(--gold-bright);font:700 13px/1 'Roboto Mono',monospace;">在售参考价: 380K foil</div>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:14px;">
+          <button class="btn btn-ghost"><i>↧</i> 取出</button>
+          <button class="btn btn-success"><i>$</i> 上架</button>
+        </div>
+      </div>
+
+      <div class="section wf-anno" data-label="4-E 价格 + 操作">
+        <h3>上架操作</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+          <div>
+            <div class="k" style="color:var(--muted);font:600 10px/1 'Roboto';letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;">数量</div>
+            <div class="stepper">
+              <button>−</button>
+              <input value="1" />
+              <button>+</button>
+            </div>
+          </div>
+          <div>
+            <div class="k" style="color:var(--muted);font:600 10px/1 'Roboto';letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;">单价 (foil)</div>
+            <div class="stepper">
+              <button>−</button>
+              <input value="380000" />
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <div style="background:rgba(199,179,119,.06);border:1px solid var(--gold-deep);border-radius:4px;padding:10px;margin-top:8px;font:600 12px/1.4 'Roboto Mono',monospace;color:var(--gold-bright);">
+          合计: <b style="font-size:14px;">380,000</b> foil
+        </div>
+        <button class="btn btn-success" style="width:100%;margin-top:10px;justify-content:center;"><i>+</i> 立即上架</button>
+        <button class="btn btn-ghost" style="width:100%;margin-top:6px;justify-content:center;"><i>↻</i> 重新报价</button>
+      </div>
+
+      <div class="section wf-anno" data-label="4-F 该物品历史成交">
+        <h3>Jah Rune 成交历史 <span class="badge">30 天</span></h3>
+        <table class="tbl">
+          <thead><tr><th>日期</th><th>价(foil)</th><th>对手</th></tr></thead>
+          <tbody>
+            <tr><td>07-04</td><td class="gold">380K</td><td>Sorc_Lv99</td></tr>
+            <tr><td>07-02</td><td class="gold">395K</td><td>Hammerdin_88</td></tr>
+            <tr><td>06-28</td><td class="gold">410K</td><td>Trapsin</td></tr>
+            <tr><td>06-21</td><td class="gold">360K</td><td>Winddruid</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ───────────── ⑤ 交互状态示意 ───────────── -->
+  <div class="divider-h"></div>
+  <div class="notebook wf-anno" data-label="⑤ 交互状态示意">
+    <h4>主要交互</h4>
+    <ul>
+      <li><span class="num">A1</span> 点击 cell → 右侧详情 (4-D) 实时更新 + 上架 (4-E) 预填</li>
+      <li><span class="num">A2</span> 拖拽 cell 到"上架"按钮 → 自动填入数量</li>
+      <li><span class="num">A3</span> 双击 cell → 快速预览弹窗 (含 stat_list 详细展开)</li>
+      <li><span class="num">B1</span> sub-tab (4-C) 切换不刷新页面,grid 重渲染</li>
+      <li><span class="num">B2</span> 工具栏 tag-pill 多选过滤,实时刷新 grid</li>
+      <li><span class="num">C1</span> "上架"成功后,cell 加金色✓角标,数量减一</li>
+      <li><span class="num">C2</span> 售出后 4-D 显示"已售出"+ 时间戳,3s 后清除</li>
+      <li><span class="num">D1</span> 价格步进器 +/− 步长:数量=1,单价=10000</li>
+      <li><span class="num">D2</span> "重新报价" → 拉取最近 7 笔成交均价</li>
+      <li><span class="num">E1</span> 空状态 (扩展仓无物) → 显示 d2emu-drop 风"放入物品"虚线区</li>
+    </ul>
+  </div>
+
+  <!-- ───────────── ⑥ 桌面端 / 平板 响应式说明 ───────────── -->
+  <div class="divider-h"></div>
+  <div class="notebook wf-anno" data-label="⑥ 响应式断点">
+    <h4>断点 & 折叠</h4>
+    <ul>
+      <li><span class="num">≥1280</span> 三栏布局 (280 / 1fr / 320),完整信息</li>
+      <li><span class="num">1024-1279</span> 中右两栏合并,详情下移到 grid 下方</li>
+      <li><span class="num">768-1023</span> 单栏堆叠,grid 10 列紧凑模式 (compact)</li>
+      <li><span class="num">&lt;768</span> 列表视图 (隐藏 grid,改 side-list 卡片)</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer class="doc-foot">
+  <b style="color:var(--gold);">实现路径</b>: 复用 <code>d2emu-hero-design-system.md</code> 设计 token + <code>d2emu-hero-editor-tool-layout.md</code> 布局契约;
+  修改 <code>web/src/pages/StashManager.tsx</code> 当前结构;
+  新建 <code>web/src/components/{ItemCell,InventoryGrid,Stepper,TabBar,QualityLegend}.tsx</code> 共享组件;
+  在 <code>web/src/index.css</code> 追加 <code>.cell / .cell.q-* / .q-unique / .q-set / .q-rare / .q-magic / .q-socketed</code> 等样式。<br><br>
+  <b style="color:var(--gold);">数据契约</b>: 物品 <code>{ code, name_zh, name_en, quality, quantity, sockets, page_index }</code>;
+  交易面板 <code>{ listing_id, code, qty, unit_price_foil, total, seller_id, created_at }</code>。
+</footer>
+
+</body>
+</html>

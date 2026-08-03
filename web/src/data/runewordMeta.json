@@ -1,0 +1,4733 @@
+{
+  "Runeword1": {
+    "en": "Ancients' Pledge",
+    "runes": [
+      "r07",
+      "r08",
+      "r09"
+    ],
+    "bases": [
+      "shld"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "shield"
+    ],
+    "rec_best": [
+      "鸢盾"
+    ],
+    "rec_interim": [],
+    "req_lvl": 21,
+    "ladder_only": false,
+    "rune_order": [
+      "08",
+      "09",
+      "07"
+    ],
+    "max_roll": null,
+    "notes": [
+      "开荒常用抗性盾，A5任务给符文"
+    ],
+    "affixes": [
+      "Cold Resist +30%",
+      "All Resistances +13",
+      "+50% Enhanced Defense",
+      "10% Damage Taken Goes To Mana"
+    ],
+    "affixes_zh": [
+      "冰抗 +30%",
+      "所有抗性 +13",
+      "防御强化 +50%",
+      "dmg-to-mana 10"
+    ],
+    "zh": "先祖之誓"
+  },
+  "Runeword4": {
+    "en": "Beast",
+    "runes": [
+      "r03",
+      "r17",
+      "r22",
+      "r23",
+      "r30"
+    ],
+    "bases": [
+      "axe",
+      "scep",
+      "hamm"
+    ],
+    "sockets": 5,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "狂战斧",
+      "双刃斧"
+    ],
+    "rec_interim": [],
+    "req_lvl": 63,
+    "ladder_only": false,
+    "rune_order": [
+      "30",
+      "03",
+      "22",
+      "23",
+      "17"
+    ],
+    "max_roll": "270ED/40STR",
+    "notes": [
+      "狂热光环，土豪纯招及武学刺客常用"
+    ],
+    "affixes": [
+      "+40% Increased Attack Speed",
+      "Level 9 Fanaticism Aura When Equipped",
+      "+240-270% Enhanced Damage",
+      "+25-40 to Strength",
+      "Level 5-13 Summon Grizzly (5/13 Charges)",
+      "+3 to Wearbear",
+      "+3 to Shape Shifting"
+    ],
+    "affixes_zh": [
+      "攻击速度 +40%",
+      "等级9 狂热光环",
+      "伤害强化 +240-270%",
+      "str 25-40",
+      "等级5 Summon Grizzly(5/13次)",
+      "+3 Wearbear",
+      "+3 Shape Shifting"
+    ],
+    "zh": "野兽"
+  },
+  "Runeword6": {
+    "en": "Black",
+    "runes": [
+      "r04",
+      "r10",
+      "r16"
+    ],
+    "bases": [
+      "club",
+      "hamm",
+      "mace"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "链子锤",
+      "连枷"
+    ],
+    "rec_interim": [
+      "连枷"
+    ],
+    "req_lvl": 35,
+    "ladder_only": false,
+    "rune_order": [
+      "10",
+      "16",
+      "04"
+    ],
+    "max_roll": null,
+    "notes": [
+      "平民K6利器"
+    ],
+    "affixes": [
+      "40% Chance of Crushing Blow",
+      "+120% Enhanced Damage",
+      "+15% Increased Attack Speed",
+      "Magic Damage Reduced by 2",
+      "+200 to Attack Rating",
+      "Level 12-4 74 (12/4 Charges)"
+    ],
+    "affixes_zh": [
+      "crush 40",
+      "伤害强化 +120%",
+      "攻击速度 +15%",
+      "魔法伤害减少 +2",
+      "准确率 +200",
+      "等级12 74(12/4次)"
+    ],
+    "zh": "黑色"
+  },
+  "Runeword8": {
+    "en": "Bone",
+    "runes": [
+      "r12",
+      "r22",
+      "r22"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠",
+      "灰幕寿衣",
+      "龙皮甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 47,
+    "ladder_only": false,
+    "rune_order": [
+      "12",
+      "22",
+      "22"
+    ],
+    "max_roll": "150Mana",
+    "notes": [
+      "属性不好，造价还贵"
+    ],
+    "affixes": [
+      "Bone Spear% Chance to Cast Level 15-10 on Striking",
+      "Bone Armor% Chance to Cast Level 15-10 When Struck",
+      "+2 to Necromancer Skill Levels",
+      "+100-150 to Mana"
+    ],
+    "affixes_zh": [
+      "击中时 15% 施展等级10 骨矛",
+      "被击中时 15% 施展等级10 骨甲",
+      "nec 2",
+      "法力 +100-150"
+    ],
+    "zh": "白骨"
+  },
+  "Runeword9": {
+    "en": "Bramble",
+    "runes": [
+      "r05",
+      "r08",
+      "r27",
+      "r29"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 4,
+    "stars": 2,
+    "phase": null,
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "统治者板甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 61,
+    "ladder_only": false,
+    "rune_order": [
+      "08",
+      "27",
+      "29",
+      "05"
+    ],
+    "max_roll": "21 Thorns/50PD",
+    "notes": [
+      "毒系可用，不如谜团"
+    ],
+    "affixes": [
+      "+50% Faster Hit Recovery",
+      "+300 Defense",
+      "Level 15-21 Thorns Aura When Equipped",
+      "+13 Life after each Kill",
+      "+25-50% to Poison Skill Damage",
+      "Poison Resist +100%",
+      "Level 33-13 Spirit of Barbs (33/13 Charges)"
+    ],
+    "affixes_zh": [
+      "打击恢复 +50%",
+      "防御 +300",
+      "等级15-21 荆棘光环",
+      "杀敌回血 +13",
+      "extra-pois 25-50",
+      "毒抗 +100%",
+      "等级33 Spirit of Barbs(33/13次)"
+    ],
+    "zh": "荆棘"
+  },
+  "Runeword10": {
+    "en": "Brand",
+    "runes": [
+      "r23",
+      "r25",
+      "r28",
+      "r31"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 4,
+    "stars": 2,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "女族长弓",
+      "重弓",
+      "猎弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "31",
+      "28",
+      "23",
+      "25"
+    ],
+    "max_roll": "340ED/330DTD",
+    "notes": [
+      "受弓，物理系副手挨打破免，弓马娱乐用"
+    ],
+    "affixes": [
+      "+260-340% Enhanced Damage",
+      "+280-330% Damage to Demons",
+      "Bone Spear% Chance to Cast Level 100-18 on Striking",
+      "Amplify Damage% Chance to Cast Level 35-14 When Struck",
+      "Knockback",
+      "Prevent Monster Heal",
+      "Fires Explosive Arrows or Bolts"
+    ],
+    "affixes_zh": [
+      "伤害强化 +260-340%",
+      "对恶魔伤害 +280-330%",
+      "击中时 100% 施展等级18 骨矛",
+      "被击中时 35% 施展等级14 伤害加深",
+      "击退",
+      "防止治疗",
+      "explosivearrow 15"
+    ],
+    "zh": "烙印"
+  },
+  "Runeword11": {
+    "en": "Breath of the Dying",
+    "runes": [
+      "r01",
+      "r02",
+      "r05",
+      "r15",
+      "r26",
+      "r33"
+    ],
+    "bases": [
+      "weap"
+    ],
+    "sockets": 6,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "巨神刃",
+      "狂战斧",
+      "统治者之杖",
+      "战争长枪"
+    ],
+    "rec_interim": [],
+    "req_lvl": 69,
+    "ladder_only": false,
+    "rune_order": [
+      "26",
+      "15",
+      "01",
+      "02",
+      "33",
+      "05"
+    ],
+    "max_roll": "400ED/15LL",
+    "notes": [
+      "冷兵器之王，打钱蛮子米山用"
+    ],
+    "affixes": [
+      "+60% Increased Attack Speed",
+      "+125% Damage to Undead",
+      "12-15% Life stolen per hit",
+      "Prevent Monster Heal",
+      "Poison Nova% Chance to Cast Level 50-20 on Kill",
+      "+350-400% Enhanced Damage",
+      "+30 to all Attributes"
+    ],
+    "affixes_zh": [
+      "攻击速度 +60%",
+      "对不死伤害 +125%",
+      "生命偷取 +12-15%",
+      "防止治疗",
+      "杀死时 50% 施展等级20 剧毒新星",
+      "伤害强化 +350-400%",
+      "所有属性 +30"
+    ],
+    "zh": "濒死之息"
+  },
+  "Runeword179": {
+    "en": "Bulwark",
+    "runes": [
+      "r12",
+      "r13",
+      "r16"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "死者面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 35,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "16",
+      "12"
+    ],
+    "max_roll": "100ED/6LL/15DR",
+    "notes": [],
+    "affixes": [
+      "Increase Maximum Life 5%",
+      "+75-100% Enhanced Defense",
+      "Damage Reduced by 10-15%",
+      "Replenish Life +30",
+      "4-6% Life stolen per hit"
+    ],
+    "affixes_zh": [
+      "hp% 5",
+      "防御强化 +75-100%",
+      "red-dmg% 10-15",
+      "生命回复 +30",
+      "生命偷取 +4-6%"
+    ],
+    "zh": "壁垒"
+  },
+  "Runeword13": {
+    "en": "Call to Arms",
+    "runes": [
+      "r08",
+      "r11",
+      "r23",
+      "r24",
+      "r27"
+    ],
+    "bases": [
+      "weap"
+    ],
+    "sockets": 5,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "水晶剑",
+      "连枷"
+    ],
+    "rec_interim": [],
+    "req_lvl": 57,
+    "ladder_only": false,
+    "rune_order": [
+      "11",
+      "08",
+      "23",
+      "24",
+      "27"
+    ],
+    "max_roll": "290ED/6/6/4",
+    "notes": [
+      "CTA，6BO最重要，变量浮动大"
+    ],
+    "affixes": [
+      "+40% Increased Attack Speed",
+      "+200-240% Enhanced Damage",
+      "+1 to All Skills",
+      "+2-6 to Battle Command",
+      "+1-6 to Battle Orders",
+      "+1-4 to Battle Cry",
+      "Replenish Life +12"
+    ],
+    "affixes_zh": [
+      "攻击速度 +40%",
+      "伤害强化 +200-240%",
+      "所有技能 +1",
+      "+2-6 战斗指挥",
+      "+1-6 战斗号令",
+      "+1-4 战嗥",
+      "生命回复 +12"
+    ],
+    "zh": "战争召唤"
+  },
+  "Runeword14": {
+    "en": "Chains of Honor",
+    "runes": [
+      "r14",
+      "r22",
+      "r24",
+      "r30"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 4,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "统治者板甲",
+      "龙皮甲",
+      "灰幕寿衣"
+    ],
+    "rec_interim": [],
+    "req_lvl": 63,
+    "ladder_only": false,
+    "rune_order": [
+      "14",
+      "22",
+      "30",
+      "24"
+    ],
+    "max_roll": null,
+    "notes": [
+      "属性华丽，不需要TP的用"
+    ],
+    "affixes": [
+      "All Resistances +50",
+      "+70% Enhanced Defense",
+      "+200% Damage to Demons",
+      "+100% Damage to Undead",
+      "8% Life stolen per hit",
+      "+2 to All Skills",
+      "+20 to Strength"
+    ],
+    "affixes_zh": [
+      "所有抗性 +50",
+      "防御强化 +70%",
+      "对恶魔伤害 +200%",
+      "对不死伤害 +100%",
+      "生命偷取 +8%",
+      "所有技能 +2",
+      "str 20"
+    ],
+    "zh": "荣耀之链"
+  },
+  "Runeword16": {
+    "en": "Chaos",
+    "runes": [
+      "r19",
+      "r22",
+      "r27"
+    ],
+    "bases": [
+      "h2h"
+    ],
+    "sockets": 3,
+    "stars": 2,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "手推剑",
+      "剪咬手推剑"
+    ],
+    "rec_interim": [],
+    "req_lvl": 57,
+    "ladder_only": false,
+    "rune_order": [
+      "19",
+      "27",
+      "22"
+    ],
+    "max_roll": "340ED",
+    "notes": [
+      "武艺超群",
+      "WWASN必备PK装"
+    ],
+    "affixes": [
+      "+15 Life after each Demon Kill",
+      "+240-290% Enhanced Damage",
+      "Adds 216-471-216-471 Magic Damage",
+      "+1 to Whirlwind",
+      "+35% Increased Attack Speed",
+      "Frozen Orb% Chance to Cast Level 9-11 on Striking",
+      "Charged Bolt% Chance to Cast Level 11-9 on Striking"
+    ],
+    "affixes_zh": [
+      "恶魔恢复",
+      "伤害强化 +240-290%",
+      "增加 216-471 魔法伤害",
+      "+1 旋风斩",
+      "攻击速度 +35%",
+      "击中时 9% 施展等级11 冰封球",
+      "击中时 11% 施展等级9 电荷弹"
+    ],
+    "zh": "混沌"
+  },
+  "Runeword17": {
+    "en": "Crescent Moon",
+    "runes": [
+      "r03",
+      "r13",
+      "r22"
+    ],
+    "bases": [
+      "axe",
+      "swor",
+      "pole"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "水晶剑",
+      "相位之刃"
+    ],
+    "rec_interim": [],
+    "req_lvl": 47,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "22",
+      "03"
+    ],
+    "max_roll": "220ED/11MA",
+    "notes": [
+      "平民电法武器，对高电抗怪物效果明显"
+    ],
+    "affixes": [
+      "-35% to Enemy Lightning Resistance",
+      "Ignore Target's Defense",
+      "+180-220% Enhanced Damage",
+      "Magic Absorb 9-11%",
+      "Level 30-18 Summon Spirit Wolf (30/18 Charges)",
+      "Static Field% Chance to Cast Level 7-13 on Striking",
+      "Chain Lightning% Chance to Cast Level 10-17 on Striking"
+    ],
+    "affixes_zh": [
+      "pierce-ltng 35",
+      "ignore-ac 1",
+      "伤害强化 +180-220%",
+      "魔法吸收 +9-11%",
+      "等级30 Summon Spirit Wolf(30/18次)",
+      "击中时 7% 施展等级13 静电场",
+      "击中时 10% 施展等级17 连锁闪电"
+    ],
+    "zh": "新月"
+  },
+  "Runeword178": {
+    "en": "Cure",
+    "runes": [
+      "r07",
+      "r13",
+      "r16"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "宝冠",
+      "白骨面甲",
+      "恶魔面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 35,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "16",
+      "07"
+    ],
+    "max_roll": "100ED/60PR",
+    "notes": [],
+    "affixes": [
+      "Increase Maximum Life 5%",
+      "+75-100% Enhanced Defense",
+      "Poison Resist +10-30%",
+      "Poison Length Reduced by 50%",
+      "Level 1 Cleansing Aura When Equipped"
+    ],
+    "affixes_zh": [
+      "hp% 5",
+      "防御强化 +75-100%",
+      "毒抗 +10-30%",
+      "res-pois-len 50",
+      "等级1 净化光环"
+    ],
+    "zh": "解药"
+  },
+  "Runeword20": {
+    "en": "Death",
+    "runes": [
+      "r01",
+      "r09",
+      "r15",
+      "r25",
+      "r26"
+    ],
+    "bases": [
+      "swor",
+      "axe"
+    ],
+    "sockets": 5,
+    "stars": 2,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "狂战斧",
+      "巨神剑"
+    ],
+    "rec_interim": [],
+    "req_lvl": 55,
+    "ladder_only": false,
+    "rune_order": [
+      "15",
+      "01",
+      "26",
+      "09",
+      "25"
+    ],
+    "max_roll": "385ED",
+    "notes": [
+      "伤害高但无攻速，双热或野蛮人副手用"
+    ],
+    "affixes": [
+      "+300-385% Enhanced Damage",
+      "Level 15-22 BloodGolem (15/22 Charges)",
+      "25-18% Chance to cast level 25-18 [Skill] on attack",
+      "100-44% Chance to cast level 100-44 [Skill] when you Die",
+      "50% Chance of Crushing Blow",
+      "Indestructible"
+    ],
+    "affixes_zh": [
+      "伤害强化 +300-385%",
+      "等级15 BloodGolem(15/22次)",
+      "att-skill 25-18",
+      "death-skill 100-44",
+      "crush 50",
+      "indestruct 1"
+    ],
+    "zh": "死亡"
+  },
+  "Runeword22": {
+    "en": "Delirium",
+    "runes": [
+      "r16",
+      "r20",
+      "r24"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "白骨面甲",
+      "恶魔面甲",
+      "屠戮盔"
+    ],
+    "rec_interim": [
+      "死者面甲",
+      "宝冠盔"
+    ],
+    "req_lvl": 51,
+    "ladder_only": false,
+    "rune_order": [
+      "20",
+      "24",
+      "16"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "Confuse% Chance to Cast Level 11-18 on Striking",
+      "Level 60-17 Attract (60/17 Charges)",
+      "Terror% Chance to Cast Level 14-13 When Struck",
+      "+261 Defense",
+      "Mind Blast% Chance to Cast Level 6-14 When Struck",
+      "Delerium Change% Chance to Cast Level 1-50 When Struck",
+      "+2 to All Skills"
+    ],
+    "affixes_zh": [
+      "击中时 11% 施展等级18 混乱",
+      "等级60 吸引(60/17次)",
+      "被击中时 14% 施展等级13 恐惧",
+      "防御 +261",
+      "被击中时 6% 施展等级14 Mind Blast",
+      "被击中时 1% 施展等级50 Delerium Change",
+      "所有技能 +2"
+    ],
+    "zh": "迷狂"
+  },
+  "Runeword25": {
+    "en": "Destruction",
+    "runes": [
+      "r18",
+      "r26",
+      "r28",
+      "r30",
+      "r31"
+    ],
+    "bases": [
+      "pole",
+      "swor"
+    ],
+    "sockets": 5,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "26",
+      "28",
+      "30",
+      "31",
+      "18"
+    ],
+    "max_roll": null,
+    "notes": [
+      "属性华丽但不如悔恨，因包含最贵三符文而备受冷落"
+    ],
+    "affixes": [
+      "+350% Enhanced Damage",
+      "Adds 100-180-100-180 Magic Damage",
+      "Molten Boulder% Chance to Cast Level 5-23 on Striking",
+      "100-45% Chance to cast level 100-45 [Skill] when you Die",
+      "15-22% Chance to cast level 15-22 [Skill] on attack",
+      "Volcano% Chance to Cast Level 23-12 on Striking",
+      "Prevent Monster Heal"
+    ],
+    "affixes_zh": [
+      "伤害强化 +350%",
+      "增加 100-180 魔法伤害",
+      "击中时 5% 施展等级23 Molten Boulder",
+      "death-skill 100-45",
+      "att-skill 15-22",
+      "击中时 23% 施展等级12 Volcano",
+      "防止治疗"
+    ],
+    "zh": "毁灭"
+  },
+  "Runeword26": {
+    "en": "Doom",
+    "runes": [
+      "r15",
+      "r22",
+      "r27",
+      "r28",
+      "r32"
+    ],
+    "bases": [
+      "axe",
+      "pole",
+      "hamm"
+    ],
+    "sockets": 5,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "狂战斧",
+      "双刃斧"
+    ],
+    "rec_interim": [],
+    "req_lvl": 67,
+    "ladder_only": false,
+    "rune_order": [
+      "15",
+      "27",
+      "22",
+      "28",
+      "32"
+    ],
+    "max_roll": "370ED/-60CR",
+    "notes": [
+      "风德常用"
+    ],
+    "affixes": [
+      "+280-320% Enhanced Damage",
+      "Level 12 Holy Freeze Aura When Equipped",
+      "+45% Increased Attack Speed",
+      "Prevent Monster Heal",
+      "-40-60% to Enemy Cold Resistance",
+      "+2 to All Skills",
+      "Volcano% Chance to Cast Level 5-18 on Striking"
+    ],
+    "affixes_zh": [
+      "伤害强化 +280-320%",
+      "等级12 神圣之冰光环",
+      "攻击速度 +45%",
+      "防止治疗",
+      "pierce-cold 40-60",
+      "所有技能 +2",
+      "击中时 5% 施展等级18 Volcano"
+    ],
+    "zh": "厄运"
+  },
+  "Runeword27": {
+    "en": "Dragon",
+    "runes": [
+      "r12",
+      "r28",
+      "r29"
+    ],
+    "bases": [
+      "tors",
+      "shld"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "hot1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "统治者板甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 61,
+    "ladder_only": false,
+    "rune_order": [
+      "29",
+      "28",
+      "12"
+    ],
+    "max_roll": "5ATTR",
+    "notes": [
+      "多搭配正义之手使用"
+    ],
+    "affixes": [
+      "+360 Defense",
+      "+230 Defense vs. Missile",
+      "Hydra% Chance to Cast Level 12-15 on Striking",
+      "Venom% Chance to Cast Level 20-18 When Struck",
+      "Level 14 Holy Fire Aura When Equipped",
+      "+3-5 to all Attributes"
+    ],
+    "affixes_zh": [
+      "防御 +360",
+      "远程防御 +230",
+      "击中时 12% 施展等级15 多头蛇",
+      "被击中时 20% 施展等级18 Venom",
+      "等级14 神圣之火光环",
+      "所有属性 +3-5"
+    ],
+    "zh": "巨龙"
+  },
+  "Runeword29": {
+    "en": "Dream",
+    "runes": [
+      "r16",
+      "r21",
+      "r31"
+    ],
+    "bases": [
+      "helm",
+      "shld"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [
+      "shield"
+    ],
+    "rec_best": [
+      "巨魔巢",
+      "神圣小盾"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "16",
+      "31",
+      "21"
+    ],
+    "max_roll": "30FHR/220DEF/20RES/25MF",
+    "notes": [
+      "双梦法师核心装备"
+    ],
+    "affixes": [
+      "+150-220 Defense",
+      "Confuse% Chance to Cast Level 10-15 When Struck",
+      "All Resistances +5-20",
+      "+20-30% Faster Hit Recovery",
+      "Level 15 Holy Shock Aura When Equipped",
+      "12-25% Better Chance of Getting Magic Items"
+    ],
+    "affixes_zh": [
+      "防御 +150-220",
+      "被击中时 10% 施展等级15 混乱",
+      "所有抗性 +5-20",
+      "打击恢复 +20-30%",
+      "等级15 神圣之雷光环",
+      "寻宝率 +12-25%"
+    ],
+    "zh": "梦境"
+  },
+  "Runeword30": {
+    "en": "Duress",
+    "runes": [
+      "r10",
+      "r13",
+      "r22"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "统治者板甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 47,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "22",
+      "10"
+    ],
+    "max_roll": "20EDmg/200EDef",
+    "notes": [
+      "符文之语唯一CB甲，杀BOSS用"
+    ],
+    "affixes": [
+      "Adds 37-133-37-133 Cold Damage",
+      "+10-20% Enhanced Damage",
+      "+150-200% Enhanced Defense",
+      "+20% Faster Hit Recovery",
+      "33% Chance of Open Wounds",
+      "15% Chance of Crushing Blow",
+      "-20% Slower Stamina Drain"
+    ],
+    "affixes_zh": [
+      "增加 37-133 冰伤害",
+      "伤害强化 +10-20%",
+      "防御强化 +150-200%",
+      "打击恢复 +20%",
+      "openwounds 33",
+      "crush 15",
+      "stamdrain -20"
+    ],
+    "zh": "强压"
+  },
+  "Runeword31": {
+    "en": "Edge",
+    "runes": [
+      "r03",
+      "r07",
+      "r11"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "猎弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 25,
+    "ladder_only": false,
+    "rune_order": [
+      "03",
+      "07",
+      "11"
+    ],
+    "max_roll": "380DTD/10ATTR",
+    "notes": [
+      "俗称赌博弓，除UGC外唯一减商人价格的装备"
+    ],
+    "affixes": [
+      "+320-380% Damage to Demons",
+      "+280% Damage to Undead",
+      "+35% Increased Attack Speed",
+      "Prevent Monster Heal",
+      "Level 15 Thorns Aura When Equipped",
+      "+5-10 to all Attributes",
+      "Reduces all Vendor Prices 15%"
+    ],
+    "affixes_zh": [
+      "对恶魔伤害 +320-380%",
+      "对不死伤害 +280%",
+      "攻击速度 +35%",
+      "防止治疗",
+      "等级15 荆棘光环",
+      "所有属性 +5-10",
+      "cheap 15"
+    ],
+    "zh": "锐锋"
+  },
+  "Runeword33": {
+    "en": "Enigma",
+    "runes": [
+      "r06",
+      "r30",
+      "r31"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠",
+      "统治者板甲",
+      "灰幕寿衣"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "31",
+      "06",
+      "30"
+    ],
+    "max_roll": "775DEF",
+    "notes": [
+      "脱贫甲，与无限一起成为土豪标志"
+    ],
+    "affixes": [
+      "+750-775 Defense",
+      "+14 Life after each Kill",
+      "+45% Faster Run/Walk",
+      "+2 to All Skills",
+      "+1 to Teleport"
+    ],
+    "affixes_zh": [
+      "防御 +750-775",
+      "杀敌回血 +14",
+      "跑步速度 +45%",
+      "所有技能 +2",
+      "+1 传送术"
+    ],
+    "zh": "谜团"
+  },
+  "Runeword34": {
+    "en": "Enlightenment",
+    "runes": [
+      "r08",
+      "r12",
+      "r21"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠"
+    ],
+    "rec_interim": [],
+    "req_lvl": 45,
+    "ladder_only": false,
+    "rune_order": [
+      "21",
+      "08",
+      "12"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "Fire Ball% Chance to Cast Level 5-15 on Striking",
+      "Blaze% Chance to Cast Level 5-15 When Struck",
+      "+2 to Sorceress Skill Levels",
+      "+1 to Warmth"
+    ],
+    "affixes_zh": [
+      "击中时 5% 施展等级15 火球术",
+      "被击中时 5% 施展等级15 足跟火",
+      "sor 2",
+      "+1 暖身术"
+    ],
+    "zh": "启迪"
+  },
+  "Runeword36": {
+    "en": "Eternity",
+    "runes": [
+      "r11",
+      "r12",
+      "r24",
+      "r29",
+      "r30"
+    ],
+    "bases": [
+      "mele"
+    ],
+    "sockets": 5,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 63,
+    "ladder_only": false,
+    "rune_order": [
+      "11",
+      "30",
+      "24",
+      "12",
+      "29"
+    ],
+    "max_roll": "310ED",
+    "notes": [],
+    "affixes": [
+      "+260-310% Enhanced Damage",
+      "Indestructible",
+      "Slows Target by 33%",
+      "Level 88-8 Revive (88/8 Charges)",
+      "Replenish Life +16",
+      "Regenerate Mana 16%",
+      "Cannot Be Frozen"
+    ],
+    "affixes_zh": [
+      "伤害强化 +260-310%",
+      "indestruct 1",
+      "减速 +33%",
+      "等级88 重生(88/8次)",
+      "生命回复 +16",
+      "法力回复 +16%",
+      "nofreeze 1"
+    ],
+    "zh": "永恒"
+  },
+  "Runeword37": {
+    "en": "Exile",
+    "runes": [
+      "r14",
+      "r24",
+      "r26",
+      "r27"
+    ],
+    "bases": [
+      "pala"
+    ],
+    "sockets": 4,
+    "stars": 3,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "漩涡盾",
+      "神圣小盾"
+    ],
+    "rec_interim": [],
+    "req_lvl": 57,
+    "ladder_only": false,
+    "rune_order": [
+      "26",
+      "27",
+      "24",
+      "14"
+    ],
+    "max_roll": "16 Defiance/260ED",
+    "notes": [
+      "PK或者K6盾击最常用，PVC不如饰金盾"
+    ],
+    "affixes": [
+      "+30% Faster Block Rate",
+      "Freezes Target +1",
+      "+220-260% Enhanced Defense",
+      "Level 13-16 Defiance Aura When Equipped",
+      "+2 to 10 Skills",
+      "Life Tap% Chance to Cast Level 15-5 on Striking"
+    ],
+    "affixes_zh": [
+      "格挡速度 +30%",
+      "冻结目标 +1",
+      "防御强化 +220-260%",
+      "等级13-16 反抗光环",
+      "+2 10技能",
+      "击中时 15% 施展等级5 偷取生命"
+    ],
+    "zh": "流放"
+  },
+  "Runeword38": {
+    "en": "Faith",
+    "runes": [
+      "r02",
+      "r20",
+      "r27",
+      "r31"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 4,
+    "stars": 3,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "仕女长之弓",
+      "女族长弓",
+      "暗影弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "27",
+      "31",
+      "20",
+      "02"
+    ],
+    "max_roll": "15 Fanaticism/2Skill",
+    "notes": [
+      "弓马进阶必备，弓兵可用"
+    ],
+    "affixes": [
+      "+280% Enhanced Damage",
+      "300% Bonus to Attack Rating",
+      "Adds 120-120 Fire Damage",
+      "All Resistances +15",
+      "Level 12-15 Fanaticism Aura When Equipped",
+      "Reanimate As: [Returned]",
+      "+1-2 to All Skills"
+    ],
+    "affixes_zh": [
+      "伤害强化 +280%",
+      "准确率% +300%",
+      "增加 120 火伤害",
+      "所有抗性 +15",
+      "等级12-15 狂热光环",
+      "reanimate 10",
+      "所有技能 +1-2"
+    ],
+    "zh": "信念"
+  },
+  "Runeword39": {
+    "en": "Famine",
+    "runes": [
+      "r09",
+      "r19",
+      "r27",
+      "r31"
+    ],
+    "bases": [
+      "axe",
+      "hamm"
+    ],
+    "sockets": 4,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "19",
+      "27",
+      "09",
+      "31"
+    ],
+    "max_roll": "370ED",
+    "notes": [],
+    "affixes": [
+      "+270-320% Enhanced Damage",
+      "12% Life stolen per hit",
+      "+30% Increased Attack Speed",
+      "Prevent Monster Heal",
+      "Adds 180-200-180-200 Magic Damage",
+      "Adds 50-200-50-200 Fire/Lightning/Cold Damage",
+      "Ethereal"
+    ],
+    "affixes_zh": [
+      "伤害强化 +270-320%",
+      "生命偷取 +12%",
+      "攻击速度 +30%",
+      "防止治疗",
+      "增加 180-200 魔法伤害",
+      "dmg-elem 50-200",
+      "ethereal 1"
+    ],
+    "zh": "饥荒"
+  },
+  "Runeword40": {
+    "en": "Flickering Flame",
+    "runes": [
+      "r04",
+      "r21",
+      "r26"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "白骨面甲",
+      "恶魔面甲",
+      "死者面甲",
+      "宝冠盔"
+    ],
+    "rec_interim": [
+      "死者面甲",
+      "宝冠盔"
+    ],
+    "req_lvl": 55,
+    "ladder_only": false,
+    "rune_order": [
+      "04",
+      "21",
+      "26"
+    ],
+    "max_roll": "8 Resist Fire/-15FR/75Mana",
+    "notes": [],
+    "affixes": [
+      "+3 to Fire Skills",
+      "Level 4-8 Resist Fire Aura When Equipped",
+      "-10-15% to Enemy Fire Resistance",
+      "+50-75 to Mana",
+      "Half Freeze Duration",
+      "Poison Length Reduced by 50%"
+    ],
+    "affixes_zh": [
+      "fireskill 3",
+      "等级4-8 抗火光环",
+      "pierce-fire 10-15",
+      "法力 +50-75",
+      "半冻",
+      "res-pois-len 50"
+    ],
+    "zh": "闪烁火焰"
+  },
+  "Runeword41": {
+    "en": "Fortitude",
+    "runes": [
+      "r01",
+      "r12",
+      "r14",
+      "r28"
+    ],
+    "bases": [
+      "weap",
+      "tors"
+    ],
+    "sockets": 4,
+    "stars": 1,
+    "phase": null,
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "使者杖",
+      "狂战斧"
+    ],
+    "rec_interim": [],
+    "req_lvl": 59,
+    "ladder_only": false,
+    "rune_order": [
+      "01",
+      "12",
+      "14",
+      "28"
+    ],
+    "max_roll": "1.5LF(LV)/30RES",
+    "notes": [
+      "物理系第一甲"
+    ],
+    "affixes": [
+      "+200% Enhanced Defense",
+      "+300% Enhanced Damage",
+      "+25% Faster Cast Rate",
+      "Chilling Armor% Chance to Cast Level 20-15 When Struck",
+      "12% Damage Taken Goes To Mana",
+      "+8-12 to Life (Based on Character Level)",
+      "All Resistances +25-30"
+    ],
+    "affixes_zh": [
+      "防御强化 +200%",
+      "伤害强化 +300%",
+      "施法速度 +25%",
+      "被击中时 20% 施展等级15 冰棱甲",
+      "dmg-to-mana 12",
+      "hp/lvl 8-12",
+      "所有抗性 +25-30"
+    ],
+    "zh": "刚毅"
+  },
+  "Runeword44": {
+    "en": "Fury",
+    "runes": [
+      "r05",
+      "r25",
+      "r31"
+    ],
+    "bases": [
+      "mele"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "手推剑",
+      "剪咬手推剑"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "31",
+      "25",
+      "05"
+    ],
+    "max_roll": null,
+    "notes": [
+      "WWASN选择之一，兼顾伤害和OW"
+    ],
+    "affixes": [
+      "+209% Enhanced Damage",
+      "+40% Increased Attack Speed",
+      "Prevent Monster Heal",
+      "66% Chance of Open Wounds",
+      "6% Life stolen per hit",
+      "33% Deadly Strike",
+      "+5 to 147"
+    ],
+    "affixes_zh": [
+      "伤害强化 +209%",
+      "攻击速度 +40%",
+      "防止治疗",
+      "openwounds 66",
+      "生命偷取 +6%",
+      "deadly 33",
+      "+5 147"
+    ],
+    "zh": "愤怒"
+  },
+  "Runeword45": {
+    "en": "Gloom",
+    "runes": [
+      "r19",
+      "r21",
+      "r22"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "灰幕寿衣"
+    ],
+    "rec_interim": [],
+    "req_lvl": 47,
+    "ladder_only": false,
+    "rune_order": [
+      "19",
+      "22",
+      "21"
+    ],
+    "max_roll": "260ED",
+    "notes": [],
+    "affixes": [
+      "+170-230% Enhanced Defense",
+      "All Resistances +30",
+      "Dim Vision% Chance to Cast Level 15-3 When Struck",
+      "+10% Faster Hit Recovery",
+      "5% Damage Taken Goes To Mana",
+      "+-3 to Light Radius",
+      "Half Freeze Duration"
+    ],
+    "affixes_zh": [
+      "防御强化 +170-230%",
+      "所有抗性 +30",
+      "被击中时 15% 施展等级3 微暗灵视",
+      "打击恢复 +10%",
+      "dmg-to-mana 5",
+      "光照范围 +-3",
+      "半冻"
+    ],
+    "zh": "阴霾"
+  },
+  "Runeword47": {
+    "en": "Grief",
+    "runes": [
+      "r03",
+      "r05",
+      "r08",
+      "r23",
+      "r28"
+    ],
+    "bases": [
+      "swor",
+      "axe"
+    ],
+    "sockets": 5,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "相位之刃",
+      "狂战斧",
+      "双手重剑"
+    ],
+    "rec_interim": [],
+    "req_lvl": 59,
+    "ladder_only": false,
+    "rune_order": [
+      "05",
+      "03",
+      "28",
+      "23",
+      "08"
+    ],
+    "max_roll": "40IAS/400DAM/-25PR/15LifeEK",
+    "notes": [
+      "单手武器之王，攻速很重要"
+    ],
+    "affixes": [
+      "Damage +340-400",
+      "+30-40% Increased Attack Speed",
+      "Venom% Chance to Cast Level 35-15 on Striking",
+      "-20-25% to Enemy Poison Resistance",
+      "Ignore Target's Defense",
+      "+10-15 Life after each Kill"
+    ],
+    "affixes_zh": [
+      "dmg 340-400",
+      "攻击速度 +30-40%",
+      "击中时 35% 施展等级15 Venom",
+      "pierce-pois 20-25",
+      "ignore-ac 1",
+      "杀敌回血 +10-15"
+    ],
+    "zh": "悔恨"
+  },
+  "Runeword175": {
+    "en": "Ground",
+    "runes": [
+      "r09",
+      "r13",
+      "r16"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "死者面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 35,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "16",
+      "09"
+    ],
+    "max_roll": "100ED/60LR/15LA",
+    "notes": [],
+    "affixes": [
+      "Increase Maximum Life 5%",
+      "+75-100% Enhanced Defense",
+      "Lightning Resist +10-30%",
+      "+10-15 Lightning Absorb"
+    ],
+    "affixes_zh": [
+      "hp% 5",
+      "防御强化 +75-100%",
+      "电抗 +10-30%",
+      "abs-ltng% 10-15"
+    ],
+    "zh": "接地"
+  },
+  "Runeword48": {
+    "en": "Hand of Justice",
+    "runes": [
+      "r11",
+      "r28",
+      "r29",
+      "r32"
+    ],
+    "bases": [
+      "weap"
+    ],
+    "sockets": 4,
+    "stars": 3,
+    "phase": "hot1",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "相位之刃",
+      "女族长弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 67,
+    "ladder_only": false,
+    "rune_order": [
+      "29",
+      "32",
+      "11",
+      "28"
+    ],
+    "max_roll": "330ED",
+    "notes": [
+      "元素弓和审判丁的玩具"
+    ],
+    "affixes": [
+      "+33% Increased Attack Speed",
+      "+280-330% Enhanced Damage",
+      "Level 16 Holy Fire Aura When Equipped",
+      "100-36% Chance to cast level 100-36 [Skill] when you Level-Up",
+      "100-48% Chance to cast level 100-48 [Skill] when you Die",
+      "Ignore Target's Defense",
+      "-20% to Enemy Fire Resistance"
+    ],
+    "affixes_zh": [
+      "攻击速度 +33%",
+      "伤害强化 +280-330%",
+      "等级16 神圣之火光环",
+      "levelup-skill 100-36",
+      "death-skill 100-48",
+      "ignore-ac 1",
+      "pierce-fire 20"
+    ],
+    "zh": "正义之手"
+  },
+  "Runeword49": {
+    "en": "Harmony",
+    "runes": [
+      "r03",
+      "r06",
+      "r12",
+      "r18"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 4,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "女族长弓",
+      "双臂弓",
+      "刀锋弓",
+      "猎弓"
+    ],
+    "rec_interim": [
+      "猎弓"
+    ],
+    "req_lvl": 39,
+    "ladder_only": false,
+    "rune_order": [
+      "03",
+      "06",
+      "12",
+      "18"
+    ],
+    "max_roll": "275ED/6 Valkyrie",
+    "notes": [
+      "跑步弓，二线弓，副手城镇跑步用"
+    ],
+    "affixes": [
+      "+200-275% Enhanced Damage",
+      "Adds 55-160-55-160 Fire/Lightning/Cold Damage",
+      "Level 25-20 Revive (25/20 Charges)",
+      "Level 10 Vigor Aura When Equipped",
+      "+2-6 to Valkyrie",
+      "Regenerate Mana 20%",
+      "+2 to Light Radius"
+    ],
+    "affixes_zh": [
+      "伤害强化 +200-275%",
+      "dmg-elem 55-160",
+      "等级25 重生(25/20次)",
+      "等级10 精力光环",
+      "+2-6 女武神",
+      "法力回复 +20%",
+      "光照范围 +2"
+    ],
+    "zh": "和谐"
+  },
+  "Runeword51": {
+    "en": "Heart of the Oak",
+    "runes": [
+      "r10",
+      "r18",
+      "r21",
+      "r26"
+    ],
+    "bases": [
+      "staf",
+      "mace"
+    ],
+    "sockets": 4,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "连枷"
+    ],
+    "rec_interim": [],
+    "req_lvl": 55,
+    "ladder_only": false,
+    "rune_order": [
+      "18",
+      "26",
+      "21",
+      "10"
+    ],
+    "max_roll": "40RES",
+    "notes": [
+      "OAK，法系万金油"
+    ],
+    "affixes": [
+      "+40% Faster Cast Rate",
+      "Level 25-4 Oak Sage (25/4 Charges)",
+      "Increase Maximum Mana 15%",
+      "+3 to All Skills",
+      "Replenish Life +20",
+      "All Resistances +30-40",
+      "Level 60-14 Raven (60/14 Charges)"
+    ],
+    "affixes_zh": [
+      "施法速度 +40%",
+      "等级25 Oak Sage(25/4次)",
+      "mana% 15",
+      "所有技能 +3",
+      "生命回复 +20",
+      "所有抗性 +30-40",
+      "等级60 Raven(60/14次)"
+    ],
+    "zh": "橡树之心"
+  },
+  "Runeword177": {
+    "en": "Hearth",
+    "runes": [
+      "r10",
+      "r13",
+      "r16"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "死者面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 35,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "16",
+      "10"
+    ],
+    "max_roll": "100ED/60CR/15CA",
+    "notes": [],
+    "affixes": [
+      "Increase Maximum Life 5%",
+      "+75-100% Enhanced Defense",
+      "Cold Resist +10-30%",
+      "+10-15 Cold Absorb",
+      "Cannot Be Frozen"
+    ],
+    "affixes_zh": [
+      "hp% 5",
+      "防御强化 +75-100%",
+      "冰抗 +10-30%",
+      "abs-cold% 10-15",
+      "nofreeze 1"
+    ],
+    "zh": "壁炉"
+  },
+  "Runeword54": {
+    "en": "Holy Thunder",
+    "runes": [
+      "r05",
+      "r07",
+      "r08",
+      "r09"
+    ],
+    "bases": [
+      "scep"
+    ],
+    "sockets": 4,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "战争权杖"
+    ],
+    "rec_interim": [],
+    "req_lvl": 24,
+    "ladder_only": false,
+    "rune_order": [
+      "05",
+      "08",
+      "09",
+      "07"
+    ],
+    "max_roll": null,
+    "notes": [
+      "冲击丁开荒武器"
+    ],
+    "affixes": [
+      "+60% Enhanced Damage",
+      "Adds 20-60-20-60 Lightning Damage",
+      "+10 to Maximum Damage",
+      "Lightning Resist +60%",
+      "+5% to Maximum Lightning Resist",
+      "+3 to 118",
+      "Level 60-7 53 (60/7 Charges)"
+    ],
+    "affixes_zh": [
+      "伤害强化 +60%",
+      "增加 20-60 电伤害",
+      "dmg-max 10",
+      "电抗 +60%",
+      "电抗上限 +5%",
+      "+3 118",
+      "等级60 53(60/7次)"
+    ],
+    "zh": "圣雷"
+  },
+  "Runeword55": {
+    "en": "Honor",
+    "runes": [
+      "r01",
+      "r03",
+      "r06",
+      "r11",
+      "r12"
+    ],
+    "bases": [
+      "mele"
+    ],
+    "sockets": 5,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "双手重剑",
+      "链子锤",
+      "神圣权杖",
+      "战争权杖"
+    ],
+    "rec_interim": [
+      "战争权杖"
+    ],
+    "req_lvl": 27,
+    "ladder_only": false,
+    "rune_order": [
+      "11",
+      "01",
+      "06",
+      "03",
+      "12"
+    ],
+    "max_roll": null,
+    "notes": [
+      "输出不如眼光，但有LL"
+    ],
+    "affixes": [
+      "+160% Enhanced Damage",
+      "Replenish Life +10",
+      "+1 to All Skills",
+      "+200 to Attack Rating",
+      "25% Deadly Strike",
+      "+10 to Strength"
+    ],
+    "affixes_zh": [
+      "伤害强化 +160%",
+      "生命回复 +10",
+      "所有技能 +1",
+      "准确率 +200",
+      "deadly 25",
+      "str 10"
+    ],
+    "zh": "荣耀"
+  },
+  "Runeword171": {
+    "en": "Hustle (armor)",
+    "runes": [
+      "r02",
+      "r13",
+      "r18"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "farm1",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "女族长弓",
+      "猎弓",
+      "相位之刃",
+      "狂野利斧"
+    ],
+    "rec_interim": [],
+    "req_lvl": 39,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "18",
+      "02"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "+65% Faster Run/Walk",
+      "35% Slower Stamina Drain",
+      "+40% Increased Attack Speed",
+      "All Resistances +10",
+      "+6 to Evade"
+    ],
+    "affixes_zh": [
+      "跑步速度 +65%",
+      "stamdrain 35",
+      "攻击速度 +40%",
+      "所有抗性 +10",
+      "+6 回避"
+    ],
+    "zh": "狂乱"
+  },
+  "Runeword172": {
+    "en": "Hustle (weapon)",
+    "runes": [
+      "r02",
+      "r13",
+      "r18"
+    ],
+    "bases": [
+      "weap"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "farm1",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "女族长弓",
+      "猎弓",
+      "相位之刃",
+      "狂野利斧"
+    ],
+    "rec_interim": [],
+    "req_lvl": 39,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "18",
+      "02"
+    ],
+    "max_roll": "200ED",
+    "notes": [],
+    "affixes": [
+      "Quickness% Chance to Cast Level 5-1 on Striking",
+      "+10% Increased Attack Speed",
+      "+180-200% Enhanced Damage",
+      "Level 1 Fanaticism Aura When Equipped"
+    ],
+    "affixes_zh": [
+      "击中时 5% 施展等级1 Quickness",
+      "攻击速度 +10%",
+      "伤害强化 +180-200%",
+      "等级1 狂热光环"
+    ],
+    "zh": "癫狂"
+  },
+  "Runeword59": {
+    "en": "Ice",
+    "runes": [
+      "r11",
+      "r13",
+      "r28",
+      "r31"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 4,
+    "stars": 3,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "女族长弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "11",
+      "13",
+      "31",
+      "28"
+    ],
+    "max_roll": "210ED/30CD",
+    "notes": [
+      "元素弓土豪玩具"
+    ],
+    "affixes": [
+      "+140-210% Enhanced Damage",
+      "Level 18 Holy Freeze Aura When Equipped",
+      "+25-30% to Cold Skill Damage",
+      "Frost Nova% Chance to Cast Level 25-22 on Striking",
+      "100-40% Chance to cast level 100-40 [Skill] when you Level-Up",
+      "-20% to Enemy Cold Resistance"
+    ],
+    "affixes_zh": [
+      "伤害强化 +140-210%",
+      "等级18 神圣之冰光环",
+      "extra-cold 25-30",
+      "击中时 25% 施展等级22 冰霜新星",
+      "levelup-skill 100-40",
+      "pierce-cold 20"
+    ],
+    "zh": "寒冰"
+  },
+  "Runeword60": {
+    "en": "Infinity",
+    "runes": [
+      "r23",
+      "r24",
+      "r30",
+      "r30"
+    ],
+    "bases": [
+      "pole",
+      "spea"
+    ],
+    "sockets": 4,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "砍斧",
+      "巨型砍斧",
+      "捕人叉",
+      "女族长矛"
+    ],
+    "rec_interim": [],
+    "req_lvl": 63,
+    "ladder_only": false,
+    "rune_order": [
+      "30",
+      "23",
+      "30",
+      "24"
+    ],
+    "max_roll": "325ED/-55LR",
+    "notes": [
+      "降怪抗性、破除免疫必备"
+    ],
+    "affixes": [
+      "+255-325% Enhanced Damage",
+      "+35% Faster Run/Walk",
+      "Level 12 Conviction Aura When Equipped",
+      "Chain Lightning% Chance to Cast Level 50-20 on Kill",
+      "-45-55% to Enemy Lightning Resistance",
+      "Level 30-21 Cyclone Armor (30/21 Charges)"
+    ],
+    "affixes_zh": [
+      "伤害强化 +255-325%",
+      "move3 35",
+      "等级12 定罪光环",
+      "杀死时 50% 施展等级20 连锁闪电",
+      "pierce-ltng 45-55",
+      "等级30 Cyclone Armor(30/21次)"
+    ],
+    "zh": "无限"
+  },
+  "Runeword62": {
+    "en": "Insight",
+    "runes": [
+      "r03",
+      "r07",
+      "r08",
+      "r12"
+    ],
+    "bases": [
+      "pole",
+      "staf",
+      "miss"
+    ],
+    "sockets": 4,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "刀锋弓",
+      "双臂弓",
+      "统治者之杖",
+      "接骨木杖"
+    ],
+    "rec_interim": [
+      "复合弓"
+    ],
+    "req_lvl": 27,
+    "ladder_only": false,
+    "rune_order": [
+      "08",
+      "03",
+      "07",
+      "12"
+    ],
+    "max_roll": "17 Meditation/260ED/250AR/6CS",
+    "notes": [
+      "续航神器，好的底材加6CS输出很高"
+    ],
+    "affixes": [
+      "+200-260% Enhanced Damage",
+      "180-250% Bonus to Attack Rating",
+      "23% Better Chance of Getting Magic Items",
+      "+1-6 to Critical Strike",
+      "+35% Faster Cast Rate",
+      "Level 12-17 Meditation Aura When Equipped",
+      "+5 to all Attributes"
+    ],
+    "affixes_zh": [
+      "伤害强化 +200-260%",
+      "准确率% +180-250%",
+      "寻宝率 +23%",
+      "+1-6 致命攻击",
+      "施法速度 +35%",
+      "等级12-17 冥思光环",
+      "所有属性 +5"
+    ],
+    "zh": "眼光"
+  },
+  "Runeword65": {
+    "en": "King's Grace",
+    "runes": [
+      "r08",
+      "r10",
+      "r11"
+    ],
+    "bases": [
+      "swor",
+      "scep"
+    ],
+    "sockets": 3,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 25,
+    "ladder_only": false,
+    "rune_order": [
+      "11",
+      "08",
+      "10"
+    ],
+    "max_roll": null,
+    "notes": [
+      "开荒用，不如地狱瘟疫"
+    ],
+    "affixes": [
+      "+100% Enhanced Damage",
+      "+150 to Attack Rating",
+      "+100% Damage to Demons",
+      "+50% Damage to Undead",
+      "+100 to Attack Rating against Demons",
+      "+100 to Attack Rating against Undead"
+    ],
+    "affixes_zh": [
+      "伤害强化 +100%",
+      "准确率 +150",
+      "对恶魔伤害 +100%",
+      "对不死伤害 +50%",
+      "对恶魔准确率 +100",
+      "对不死准确率 +100"
+    ],
+    "zh": "王恩"
+  },
+  "Runeword66": {
+    "en": "Kingslayer",
+    "runes": [
+      "r19",
+      "r22",
+      "r23",
+      "r25"
+    ],
+    "bases": [
+      "swor",
+      "axe"
+    ],
+    "sockets": 4,
+    "stars": 2,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "相位之刃",
+      "狂战斧",
+      "冠军斧"
+    ],
+    "rec_interim": [],
+    "req_lvl": 53,
+    "ladder_only": false,
+    "rune_order": [
+      "23",
+      "22",
+      "25",
+      "19"
+    ],
+    "max_roll": "270ED",
+    "notes": [
+      "名副其实的高级杀BOSS利器"
+    ],
+    "affixes": [
+      "+30% Increased Attack Speed",
+      "+230-270% Enhanced Damage",
+      "-25% Target Defense",
+      "33% Chance of Crushing Blow",
+      "25% Chance of Open Wounds",
+      "+1 to Vengeance",
+      "40% Extra Gold from Monsters"
+    ],
+    "affixes_zh": [
+      "攻击速度 +30%",
+      "伤害强化 +230-270%",
+      "目标防御 -25%",
+      "crush 33",
+      "openwounds 25",
+      "+1 复仇",
+      "金币掉落 +40%"
+    ],
+    "zh": "弑君者"
+  },
+  "Runeword69": {
+    "en": "Last Wish",
+    "runes": [
+      "r23",
+      "r29",
+      "r30",
+      "r31",
+      "r31",
+      "r31"
+    ],
+    "bases": [
+      "swor",
+      "hamm",
+      "axe"
+    ],
+    "sockets": 6,
+    "stars": 4,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "相位之刃"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "31",
+      "23",
+      "31",
+      "29",
+      "31",
+      "30"
+    ],
+    "max_roll": "375ED/70CB",
+    "notes": [
+      "造价最高的符文之语，被称为最后嘲笑"
+    ],
+    "affixes": [
+      "+330-375% Enhanced Damage",
+      "20% Chance to cast level 20 [Skill] on attack",
+      "Life Tap% Chance to Cast Level 10-18 on Striking",
+      "Fade% Chance to Cast Level 6-11 When Struck",
+      "40-50% Chance of Crushing Blow",
+      "Level 17 Might Aura When Equipped"
+    ],
+    "affixes_zh": [
+      "伤害强化 +330-375%",
+      "att-skill 20",
+      "击中时 10% 施展等级18 偷取生命",
+      "被击中时 6% 施展等级11 Fade",
+      "crush 40-50",
+      "等级17 力量光环"
+    ],
+    "zh": "临终之愿"
+  },
+  "Runeword71": {
+    "en": "Lawbringer",
+    "runes": [
+      "r11",
+      "r18",
+      "r20"
+    ],
+    "bases": [
+      "swor",
+      "hamm",
+      "scep"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "相位之刃"
+    ],
+    "rec_interim": [],
+    "req_lvl": 43,
+    "ladder_only": false,
+    "rune_order": [
+      "11",
+      "20",
+      "18"
+    ],
+    "max_roll": "18 Sanctuary/250DvsMis",
+    "notes": [
+      "城管剑，破物免，A5佣兵最佳副手武器"
+    ],
+    "affixes": [
+      "Adds 130-180-130-180 Cold Damage",
+      "Adds 150-210-150-210 Fire Damage",
+      "Level 16-18 Sanctuary Aura When Equipped",
+      "Decrepify% Chance to Cast Level 20-15 on Striking",
+      "+200-250 Defense vs. Missile",
+      "Slain Monsters Rest in Peace",
+      "-50% Target Defense"
+    ],
+    "affixes_zh": [
+      "增加 130-180 冰伤害",
+      "增加 150-210 火伤害",
+      "等级16-18 庇护之光光环",
+      "击中时 20% 施展等级15 衰老",
+      "远程防御 +200-250",
+      "杀死怪物安息",
+      "目标防御 -50%"
+    ],
+    "zh": "执法者"
+  },
+  "Runeword72": {
+    "en": "Leaf",
+    "runes": [
+      "r03",
+      "r08"
+    ],
+    "bases": [
+      "staf"
+    ],
+    "sockets": 2,
+    "stars": 4,
+    "phase": "farm2",
+    "slots": [],
+    "rec_best": [
+      "短杖",
+      "长杖"
+    ],
+    "rec_interim": [],
+    "req_lvl": 19,
+    "ladder_only": false,
+    "rune_order": [
+      "03",
+      "08"
+    ],
+    "max_roll": null,
+    "notes": [
+      "法师开荒神器"
+    ],
+    "affixes": [
+      "+3 to Fire Skills",
+      "+16 Defense (Based on Character Level)",
+      "Cold Resist +33%",
+      "+3 to 41",
+      "+3 to 36",
+      "+3 to 37"
+    ],
+    "affixes_zh": [
+      "fireskill 3",
+      "ac/lvl 16",
+      "冰抗 +33%",
+      "+3 41",
+      "+3 36",
+      "+3 37"
+    ],
+    "zh": "叶子"
+  },
+  "Runeword74": {
+    "en": "Lionheart",
+    "runes": [
+      "r15",
+      "r17",
+      "r19"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠",
+      "灰幕寿衣",
+      "龙皮甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 41,
+    "ladder_only": false,
+    "rune_order": [
+      "15",
+      "17",
+      "19"
+    ],
+    "max_roll": null,
+    "notes": [
+      "弓马开荒常用"
+    ],
+    "affixes": [
+      "+15 to Strength",
+      "+20 to Vitality",
+      "+15 to Dexterity",
+      "+20% Enhanced Damage",
+      "+50 to Life",
+      "All Resistances +30"
+    ],
+    "affixes_zh": [
+      "str 15",
+      "活力 +20",
+      "敏捷 +15",
+      "伤害强化 +20%",
+      "生命 +50",
+      "所有抗性 +30"
+    ],
+    "zh": "狮心"
+  },
+  "Runeword75": {
+    "en": "Lore",
+    "runes": [
+      "r09",
+      "r12"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 2,
+    "stars": 4,
+    "phase": "farm2",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "恐怖头盔",
+      "死者面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 27,
+    "ladder_only": false,
+    "rune_order": [
+      "09",
+      "12"
+    ],
+    "max_roll": null,
+    "notes": [
+      "法系开荒必备"
+    ],
+    "affixes": [
+      "+10 to Energy",
+      "+1 to All Skills",
+      "+2 to Light Radius",
+      "+2 to Mana after each Kill"
+    ],
+    "affixes_zh": [
+      "能量 +10",
+      "所有技能 +1",
+      "光照范围 +2",
+      "杀敌回蓝 +2"
+    ],
+    "zh": "学识"
+  },
+  "Runeword81": {
+    "en": "Malice",
+    "runes": [
+      "r01",
+      "r05",
+      "r06"
+    ],
+    "bases": [
+      "mele"
+    ],
+    "sockets": 3,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "连枷",
+      "斧枪"
+    ],
+    "rec_interim": [],
+    "req_lvl": 15,
+    "ladder_only": false,
+    "rune_order": [
+      "06",
+      "01",
+      "05"
+    ],
+    "max_roll": null,
+    "notes": [
+      "俗称615，开荒枪兵常用武器"
+    ],
+    "affixes": [
+      "100% Chance of Open Wounds",
+      "--100 to Monster Defense Per Hit",
+      "Prevent Monster Heal",
+      "+33% Enhanced Damage",
+      "+-1 to Light Radius",
+      "Replenish Life +-5"
+    ],
+    "affixes_zh": [
+      "openwounds 100",
+      "dmg-ac -100",
+      "防止治疗",
+      "伤害强化 +33%",
+      "光照范围 +-1",
+      "生命回复 +-5"
+    ],
+    "zh": "怨恨"
+  },
+  "Runeword82": {
+    "en": "Melody",
+    "runes": [
+      "r04",
+      "r13",
+      "r18"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "女族长弓",
+      "白蜡木弓"
+    ],
+    "rec_interim": [
+      "白蜡木弓"
+    ],
+    "req_lvl": 39,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "18",
+      "04"
+    ],
+    "max_roll": null,
+    "notes": [
+      "元素弓堆技能过渡用，不如和谐"
+    ],
+    "affixes": [
+      "+50% Enhanced Damage",
+      "+3 to 0 Skills",
+      "+3 to 9",
+      "+3 to 13",
+      "+3 to 17",
+      "+300% Damage to Undead"
+    ],
+    "affixes_zh": [
+      "伤害强化 +50%",
+      "+3 0技能",
+      "+3 9",
+      "+3 13",
+      "+3 17",
+      "对不死伤害 +300%"
+    ],
+    "zh": "旋律"
+  },
+  "Runeword83": {
+    "en": "Memory",
+    "runes": [
+      "r05",
+      "r12",
+      "r16",
+      "r17"
+    ],
+    "bases": [
+      "staf"
+    ],
+    "sockets": 4,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 37,
+    "ladder_only": false,
+    "rune_order": [
+      "17",
+      "16",
+      "12",
+      "05"
+    ],
+    "max_roll": null,
+    "notes": [
+      "纯冰开荒副手顶球，效果不错"
+    ],
+    "affixes": [
+      "Increase Maximum Mana 20%",
+      "Magic Damage Reduced by 7",
+      "+50% Enhanced Defense",
+      "+33% Faster Cast Rate",
+      "+3 to Sorceress Skill Levels",
+      "+3 to 58",
+      "+2 to 42"
+    ],
+    "affixes_zh": [
+      "mana% 20",
+      "魔法伤害减少 +7",
+      "防御强化 +50%",
+      "施法速度 +33%",
+      "sor 3",
+      "+3 58",
+      "+2 42"
+    ],
+    "zh": "回忆"
+  },
+  "Runeword174": {
+    "en": "Metamorphosis",
+    "runes": [
+      "r16",
+      "r19",
+      "r32"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "hot1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "屠戮盔",
+      "怒火面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 67,
+    "ladder_only": false,
+    "rune_order": [
+      "16",
+      "32",
+      "19"
+    ],
+    "max_roll": "80ED",
+    "notes": [],
+    "affixes": [
+      "Mark of the Bear% Chance to Cast Level 100-1 on Striking",
+      "Mark of the Wolf% Chance to Cast Level 100-1 on Striking",
+      "+5 to 16 Skills",
+      "+50-80% Enhanced Defense",
+      "All Resistances +10",
+      "25% Chance of Crushing Blow"
+    ],
+    "affixes_zh": [
+      "击中时 100% 施展等级1 Mark of the Bear",
+      "击中时 100% 施展等级1 Mark of the Wolf",
+      "+5 16技能",
+      "防御强化 +50-80%",
+      "所有抗性 +10",
+      "crush 25"
+    ],
+    "zh": "变形"
+  },
+  "Runeword84": {
+    "en": "Mist",
+    "runes": [
+      "r06",
+      "r10",
+      "r13",
+      "r25",
+      "r32"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 5,
+    "stars": 2,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "女族长弓",
+      "仕女长之弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 67,
+    "ladder_only": false,
+    "rune_order": [
+      "32",
+      "13",
+      "25",
+      "10",
+      "06"
+    ],
+    "max_roll": "12 Concentration/375ED",
+    "notes": [],
+    "affixes": [
+      "+3 to All Skills",
+      "+325-375% Enhanced Damage",
+      "Level 8-12 Concentration Aura When Equipped",
+      "Piercing Attack",
+      "+24 to Vitality",
+      "All Resistances +40"
+    ],
+    "affixes_zh": [
+      "所有技能 +3",
+      "伤害强化 +325-375%",
+      "等级8-12 专注光环",
+      "穿刺攻击 +100",
+      "活力 +24",
+      "所有抗性 +40"
+    ],
+    "zh": "迷雾"
+  },
+  "Runeword173": {
+    "en": "Mosaic",
+    "runes": [
+      "r11",
+      "r23",
+      "r25"
+    ],
+    "bases": [
+      "h2h"
+    ],
+    "sockets": 3,
+    "stars": 5,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "符文刃爪"
+    ],
+    "rec_interim": [],
+    "req_lvl": 53,
+    "ladder_only": false,
+    "rune_order": [
+      "23",
+      "25",
+      "11"
+    ],
+    "max_roll": "250ED/15CD/15FD/15LD",
+    "notes": [],
+    "affixes": [
+      "+2 to 20 Skills",
+      "+50% chance for finishing moves to not consume charges",
+      "+20% Increased Attack Speed",
+      "+200-250% Enhanced Damage",
+      "+8-15% to Fire Skill Damage",
+      "+8-15% to Cold Skill Damage",
+      "+8-15% to Lightning Skill Damage"
+    ],
+    "affixes_zh": [
+      "+2 20技能",
+      "charge-noconsume 50",
+      "攻击速度 +20%",
+      "伤害强化 +200-250%",
+      "extra-fire 8-15",
+      "extra-cold 8-15",
+      "extra-ltng 8-15"
+    ],
+    "zh": "模糊"
+  },
+  "Runeword87": {
+    "en": "Myth",
+    "runes": [
+      "r04",
+      "r11",
+      "r15"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠",
+      "轻板甲"
+    ],
+    "rec_interim": [
+      "轻板甲"
+    ],
+    "req_lvl": 25,
+    "ladder_only": false,
+    "rune_order": [
+      "15",
+      "11",
+      "04"
+    ],
+    "max_roll": null,
+    "notes": [
+      "肉BO常用甲"
+    ],
+    "affixes": [
+      "Taunt% Chance to Cast Level 10-1 on Striking",
+      "Howl% Chance to Cast Level 3-1 When Struck",
+      "+2 to Barbarian Skill Levels",
+      "Replenish Life +10"
+    ],
+    "affixes_zh": [
+      "击中时 10% 施展等级1 嘲讽",
+      "被击中时 3% 施展等级1 狂嗥",
+      "bar 2",
+      "生命回复 +10"
+    ],
+    "zh": "神话"
+  },
+  "Runeword88": {
+    "en": "Nadir",
+    "runes": [
+      "r03",
+      "r04"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 2,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "骨盔",
+      "头盔",
+      "覆面甲"
+    ],
+    "rec_interim": [
+      "头盔",
+      "覆面甲"
+    ],
+    "req_lvl": 13,
+    "ladder_only": false,
+    "rune_order": [
+      "04",
+      "03"
+    ],
+    "max_roll": null,
+    "notes": [
+      "开荒必做头，到等级后用学识换掉"
+    ],
+    "affixes": [
+      "+50% Enhanced Defense",
+      "+10 Defense",
+      "+-3 to Light Radius",
+      "Level 9-13 264 (9/13 Charges)",
+      "-33% Extra Gold from Monsters",
+      "+5 to Strength"
+    ],
+    "affixes_zh": [
+      "防御强化 +50%",
+      "防御 +10",
+      "光照范围 +-3",
+      "等级9 264(9/13次)",
+      "金币掉落 +-33%",
+      "str 5"
+    ],
+    "zh": "天底"
+  },
+  "Runeword91": {
+    "en": "Oath",
+    "runes": [
+      "r13",
+      "r17",
+      "r21",
+      "r23"
+    ],
+    "bases": [
+      "swor",
+      "axe",
+      "mace"
+    ],
+    "sockets": 4,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "狂战斧",
+      "双头斧",
+      "新月斧",
+      "鞭锤"
+    ],
+    "rec_interim": [],
+    "req_lvl": 49,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "21",
+      "23",
+      "17"
+    ],
+    "max_roll": "340ED/15MA",
+    "notes": [
+      "平民武器之王，好底材比符文更难得"
+    ],
+    "affixes": [
+      "+210-340% Enhanced Damage",
+      "+30% Increased Attack Speed",
+      "Bone Spirit% Chance to Cast Level 30-20 on Striking",
+      "Level 14-17 IronGolem (14/17 Charges)",
+      "Level 20-16 Heart of Wolverine (20/16 Charges)",
+      "Magic Absorb 10-15%",
+      "Indestructible"
+    ],
+    "affixes_zh": [
+      "伤害强化 +210-340%",
+      "攻击速度 +30%",
+      "击中时 30% 施展等级20 骨灵",
+      "等级14 IronGolem(14/17次)",
+      "等级20 Heart of Wolverine(20/16次)",
+      "魔法吸收 +10-15%",
+      "indestruct 1"
+    ],
+    "zh": "誓言"
+  },
+  "Runeword92": {
+    "en": "Obedience",
+    "runes": [
+      "r05",
+      "r10",
+      "r15",
+      "r18",
+      "r19"
+    ],
+    "bases": [
+      "pole",
+      "spea"
+    ],
+    "sockets": 5,
+    "stars": 4,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "砍斧",
+      "巨型砍斧",
+      "重长柄斧",
+      "恐怖镰刀"
+    ],
+    "rec_interim": [
+      "恐怖镰刀"
+    ],
+    "req_lvl": 41,
+    "ladder_only": false,
+    "rune_order": [
+      "15",
+      "18",
+      "10",
+      "05",
+      "19"
+    ],
+    "max_roll": "300DEF/30RES",
+    "notes": [
+      "综合性不错的武器，纯招枪兵或狼德可过渡"
+    ],
+    "affixes": [
+      "+370% Enhanced Damage",
+      "40% Chance of Crushing Blow",
+      "enchant% Chance to Cast Level 30-21 on Kill",
+      "-25% to Enemy Fire Resistance",
+      "+200-300 Defense",
+      "+40% Faster Hit Recovery",
+      "All Resistances +20-30"
+    ],
+    "affixes_zh": [
+      "伤害强化 +370%",
+      "crush 40",
+      "杀死时 30% 施展等级21 enchant",
+      "pierce-fire 25",
+      "防御 +200-300",
+      "打击恢复 +40%",
+      "所有抗性 +20-30"
+    ],
+    "zh": "顺从"
+  },
+  "Runeword94": {
+    "en": "Obsession",
+    "runes": [
+      "r04",
+      "r16",
+      "r17",
+      "r20",
+      "r24",
+      "r33"
+    ],
+    "bases": [
+      "staf"
+    ],
+    "sockets": 6,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "统治者之杖",
+      "符文杖",
+      "战杖"
+    ],
+    "rec_interim": [],
+    "req_lvl": 69,
+    "ladder_only": false,
+    "rune_order": [
+      "33",
+      "24",
+      "20",
+      "17",
+      "16",
+      "04"
+    ],
+    "max_roll": "25MaxLife/30RegMana/70RES",
+    "notes": [],
+    "affixes": [
+      "+4 to All Skills",
+      "Weaken% Chance to Cast Level 24-10 When Struck",
+      "+65% Faster Cast Rate",
+      "+60% Faster Hit Recovery",
+      "All Resistances +60-70",
+      "Increase Maximum Life 15-25%",
+      "Regenerate Mana 15-30%"
+    ],
+    "affixes_zh": [
+      "所有技能 +4",
+      "被击中时 24% 施展等级10 削弱",
+      "施法速度 +65%",
+      "打击恢复 +60%",
+      "所有抗性 +60-70",
+      "hp% 15-25",
+      "法力回复 +15-30%"
+    ],
+    "zh": "执着"
+  },
+  "Runeword95": {
+    "en": "Passion",
+    "runes": [
+      "r02",
+      "r09",
+      "r14",
+      "r20"
+    ],
+    "bases": [
+      "weap"
+    ],
+    "sockets": 4,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "相位之刃"
+    ],
+    "rec_interim": [],
+    "req_lvl": 43,
+    "ladder_only": false,
+    "rune_order": [
+      "14",
+      "09",
+      "02",
+      "20"
+    ],
+    "max_roll": "210ED/80AR",
+    "notes": [
+      "狂战士能拿来破物免，也是双梦法师的武器"
+    ],
+    "affixes": [
+      "+160-210% Enhanced Damage",
+      "+1 to Zeal",
+      "50-80% Bonus to Attack Rating",
+      "+1 to Berserk",
+      "+25% Increased Attack Speed",
+      "Level 12-3 Heart of Wolverine (12/3 Charges)",
+      "Hit Blinds Target +10"
+    ],
+    "affixes_zh": [
+      "伤害强化 +160-210%",
+      "+1 热忱",
+      "准确率% +50-80%",
+      "+1 狂战士",
+      "攻击速度 +25%",
+      "等级12 Heart of Wolverine(12/3次)",
+      "stupidity 10"
+    ],
+    "zh": "热情"
+  },
+  "Runeword97": {
+    "en": "Pattern",
+    "runes": [
+      "r07",
+      "r09",
+      "r10"
+    ],
+    "bases": [
+      "h2h"
+    ],
+    "sockets": 3,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "大型刃爪",
+      "大型手爪刀",
+      "刃爪",
+      "手爪刀"
+    ],
+    "rec_interim": [
+      "刃爪",
+      "手爪刀"
+    ],
+    "req_lvl": 23,
+    "ladder_only": false,
+    "rune_order": [
+      "07",
+      "09",
+      "10"
+    ],
+    "max_roll": "80ED",
+    "notes": [],
+    "affixes": [
+      "10% Bonus to Attack Rating",
+      "+40-80% Enhanced Damage",
+      "Adds 12-32-12-32 Fire Damage",
+      "All Resistances +15",
+      "+6 to Strength",
+      "+6 to Dexterity",
+      "+30% Faster Block Rate"
+    ],
+    "affixes_zh": [
+      "准确率% +10%",
+      "伤害强化 +40-80%",
+      "增加 12-32 火伤害",
+      "所有抗性 +15",
+      "str 6",
+      "敏捷 +6",
+      "格挡速度 +30%"
+    ],
+    "zh": "典范"
+  },
+  "Runeword98": {
+    "en": "Peace",
+    "runes": [
+      "r10",
+      "r11",
+      "r13"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠",
+      "轻板甲"
+    ],
+    "rec_interim": [
+      "轻板甲"
+    ],
+    "req_lvl": 29,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "10",
+      "11"
+    ],
+    "max_roll": null,
+    "notes": [
+      "佣兵过渡甲，标马和元素弓也常用"
+    ],
+    "affixes": [
+      "Valkyrie% Chance to Cast Level 2-15 on Striking",
+      "Slow Missiles% Chance to Cast Level 4-5 When Struck",
+      "+2 to Amazon Skill Levels",
+      "+2 to Critical Strike"
+    ],
+    "affixes_zh": [
+      "击中时 2% 施展等级15 女武神",
+      "被击中时 4% 施展等级5 飞矢减速",
+      "ama 2",
+      "+2 致命攻击"
+    ],
+    "zh": "平和"
+  },
+  "Runeword103": {
+    "en": "Phoenix",
+    "runes": [
+      "r26",
+      "r26",
+      "r28",
+      "r31"
+    ],
+    "bases": [
+      "weap",
+      "shld"
+    ],
+    "sockets": 4,
+    "stars": 2,
+    "phase": "hot1",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "相位之刃",
+      "女族长弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 65,
+    "ladder_only": false,
+    "rune_order": [
+      "26",
+      "26",
+      "28",
+      "31"
+    ],
+    "max_roll": "15 Redemption/400ED/400DvsMis/21FA",
+    "notes": [
+      "续航神器"
+    ],
+    "affixes": [
+      "+350-400% Enhanced Damage",
+      "+350-400 Defense vs. Missile",
+      "Firestorm% Chance to Cast Level 40-22 on Striking",
+      "100-40% Chance to cast level 100-40 [Skill] when you Level-Up",
+      "-28% to Enemy Fire Resistance",
+      "Level 10-15 Redemption Aura When Equipped",
+      "Fire Absorb 15-21%"
+    ],
+    "affixes_zh": [
+      "伤害强化 +350-400%",
+      "远程防御 +350-400",
+      "击中时 40% 施展等级22 Firestorm",
+      "levelup-skill 100-40",
+      "pierce-fire 28",
+      "等级10-15 救赎光环",
+      "abs-fire 15-21"
+    ],
+    "zh": "凤凰"
+  },
+  "Runeword106": {
+    "en": "Plague",
+    "runes": [
+      "r13",
+      "r22",
+      "r32"
+    ],
+    "bases": [
+      "swor",
+      "knif",
+      "h2h"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "hot1",
+    "slots": [],
+    "rec_best": [
+      "相位之刃",
+      "神话剑"
+    ],
+    "rec_interim": [],
+    "req_lvl": 67,
+    "ladder_only": false,
+    "rune_order": [
+      "32",
+      "13",
+      "22"
+    ],
+    "max_roll": "17 Cleansing/2Skill/320ED",
+    "notes": [],
+    "affixes": [
+      "+220-320% Enhanced Damage",
+      "Lower Resist% Chance to Cast Level 20-12 When Struck",
+      "Poison Nova% Chance to Cast Level 25-15 on Striking",
+      "-23% to Enemy Poison Resistance",
+      "Level 13-17 Cleansing Aura When Equipped",
+      "+1-2 to All Skills"
+    ],
+    "affixes_zh": [
+      "伤害强化 +220-320%",
+      "被击中时 20% 施展等级12 降低抗性",
+      "击中时 25% 施展等级15 剧毒新星",
+      "pierce-pois 23",
+      "等级13-17 净化光环",
+      "所有技能 +1-2"
+    ],
+    "zh": "瘟疫"
+  },
+  "Runeword109": {
+    "en": "Pride",
+    "runes": [
+      "r16",
+      "r28",
+      "r29",
+      "r32"
+    ],
+    "bases": [
+      "pole",
+      "spea"
+    ],
+    "sockets": 4,
+    "stars": 3,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "巨型砍斧",
+      "砍斧",
+      "捕人叉"
+    ],
+    "rec_interim": [],
+    "req_lvl": 67,
+    "ladder_only": false,
+    "rune_order": [
+      "32",
+      "29",
+      "16",
+      "28"
+    ],
+    "max_roll": "20 Concentration/300AR",
+    "notes": [
+      "土豪弓马枪兵拿，土豪纯招做铁魔"
+    ],
+    "affixes": [
+      "Adds 50-280-50-280 Lightning Damage",
+      "260-300% Bonus to Attack Rating",
+      "Level 16-20 Concentration Aura When Equipped",
+      "Fire Wall% Chance to Cast Level 25-17 When Struck",
+      "Replenish Life +8"
+    ],
+    "affixes_zh": [
+      "增加 50-280 电伤害",
+      "准确率% +260-300%",
+      "等级16-20 专注光环",
+      "被击中时 25% 施展等级17 火焰墙",
+      "生命回复 +8"
+    ],
+    "zh": "骄傲"
+  },
+  "Runeword110": {
+    "en": "Principle",
+    "runes": [
+      "r02",
+      "r08",
+      "r25"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠"
+    ],
+    "rec_interim": [],
+    "req_lvl": 53,
+    "ladder_only": false,
+    "rune_order": [
+      "08",
+      "25",
+      "02"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "Holy Bolt% Chance to Cast Level 100-5 on Striking",
+      "+2 to Paladin Skill Levels",
+      "+100-150 to Life",
+      "+50% Damage to Undead"
+    ],
+    "affixes_zh": [
+      "击中时 100% 施展等级5 圣光弹",
+      "pal 2",
+      "生命 +100-150",
+      "对不死伤害 +50%"
+    ],
+    "zh": "信条"
+  },
+  "Runeword112": {
+    "en": "Prudence",
+    "runes": [
+      "r03",
+      "r23"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 2,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "灰幕寿衣"
+    ],
+    "rec_interim": [],
+    "req_lvl": 49,
+    "ladder_only": false,
+    "rune_order": [
+      "23",
+      "03"
+    ],
+    "max_roll": "170ED/35RES",
+    "notes": [
+      "最高防御甲，纯冰冻牛用"
+    ],
+    "affixes": [
+      "+140-170% Enhanced Defense",
+      "Magic Damage Reduced by 10",
+      "Damage Reduced by 3",
+      "All Resistances +25-35",
+      "+25% Faster Hit Recovery",
+      "+1 to Light Radius"
+    ],
+    "affixes_zh": [
+      "防御强化 +140-170%",
+      "魔法伤害减少 +10",
+      "red-dmg 3",
+      "所有抗性 +25-35",
+      "打击恢复 +25%",
+      "光照范围 +1"
+    ],
+    "zh": "谨慎"
+  },
+  "Runeword116": {
+    "en": "Radiance",
+    "runes": [
+      "r04",
+      "r06",
+      "r12"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "死者面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 27,
+    "ladder_only": false,
+    "rune_order": [
+      "04",
+      "12",
+      "06"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "+5 to Light Radius",
+      "+10 to Energy",
+      "+10 to Vitality",
+      "Magic Damage Reduced by 3",
+      "+33 to Mana",
+      "+75% Enhanced Defense"
+    ],
+    "affixes_zh": [
+      "光照范围 +5",
+      "能量 +10",
+      "活力 +10",
+      "魔法伤害减少 +3",
+      "法力 +33",
+      "防御强化 +75%"
+    ],
+    "zh": "光辉"
+  },
+  "Runeword117": {
+    "en": "Rain",
+    "runes": [
+      "r06",
+      "r09",
+      "r23"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠"
+    ],
+    "rec_interim": [],
+    "req_lvl": 49,
+    "ladder_only": false,
+    "rune_order": [
+      "09",
+      "23",
+      "06"
+    ],
+    "max_roll": "150Mana",
+    "notes": [],
+    "affixes": [
+      "Twister% Chance to Cast Level 5-15 on Striking",
+      "Cyclone Armor% Chance to Cast Level 5-15 When Struck",
+      "+2 to Druid Skill Levels",
+      "+100-150 to Mana"
+    ],
+    "affixes_zh": [
+      "击中时 5% 施展等级15 Twister",
+      "被击中时 5% 施展等级15 Cyclone Armor",
+      "dru 2",
+      "法力 +100-150"
+    ],
+    "zh": "暴雨"
+  },
+  "Runeword120": {
+    "en": "Rhyme",
+    "runes": [
+      "r05",
+      "r13"
+    ],
+    "bases": [
+      "shld"
+    ],
+    "sockets": 2,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "shield"
+    ],
+    "rec_best": [
+      "恐怖大盾",
+      "阿卡兰轻圆盾",
+      "恶魔头骨",
+      "骨盾"
+    ],
+    "rec_interim": [
+      "骨盾"
+    ],
+    "req_lvl": 29,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "05"
+    ],
+    "max_roll": null,
+    "notes": [
+      "开荒必做盾，战系防冻，法系MF"
+    ],
+    "affixes": [
+      "+20% Faster Block Rate",
+      "20% Increased Chance of Blocking",
+      "All Resistances +25",
+      "Cannot Be Frozen",
+      "50% Extra Gold from Monsters",
+      "25% Better Chance of Getting Magic Items"
+    ],
+    "affixes_zh": [
+      "格挡速度 +20%",
+      "block 20",
+      "所有抗性 +25",
+      "nofreeze 1",
+      "金币掉落 +50%",
+      "寻宝率 +25%"
+    ],
+    "zh": "韵律"
+  },
+  "Runeword121": {
+    "en": "Rift",
+    "runes": [
+      "r15",
+      "r18",
+      "r20",
+      "r25"
+    ],
+    "bases": [
+      "pole",
+      "scep"
+    ],
+    "sockets": 4,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 53,
+    "ladder_only": false,
+    "rune_order": [
+      "15",
+      "18",
+      "20",
+      "25"
+    ],
+    "max_roll": "10ATTR",
+    "notes": [
+      "烟花棒"
+    ],
+    "affixes": [
+      "Adds 160-250-160-250 Magic Damage",
+      "Adds 60-180-60-180 Fire Damage",
+      "38% Damage Taken Goes To Mana",
+      "Tornado% Chance to Cast Level 20-16 on Striking",
+      "16-21% Chance to cast level 16-21 [Skill] on attack",
+      "Level 40-15 Iron Maiden (40/15 Charges)",
+      "+5-10 to all Attributes"
+    ],
+    "affixes_zh": [
+      "增加 160-250 魔法伤害",
+      "增加 60-180 火伤害",
+      "dmg-to-mana 38",
+      "击中时 20% 施展等级16 Tornado",
+      "att-skill 16-21",
+      "等级40 铁处女(40/15次)",
+      "所有属性 +5-10"
+    ],
+    "zh": "裂隙"
+  },
+  "Runeword122": {
+    "en": "Sanctuary",
+    "runes": [
+      "r18",
+      "r18",
+      "r23"
+    ],
+    "bases": [
+      "shld"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "shield"
+    ],
+    "rec_best": [
+      "巨魔巢",
+      "神圣小盾",
+      "龙盾",
+      "皇家盾"
+    ],
+    "rec_interim": [
+      "龙盾",
+      "皇家盾"
+    ],
+    "req_lvl": 49,
+    "ladder_only": false,
+    "rune_order": [
+      "18",
+      "18",
+      "23"
+    ],
+    "max_roll": "160ED/70RES",
+    "notes": [
+      "综合属性不错，但面临饰金盾和暴风盾的竞争"
+    ],
+    "affixes": [
+      "20% Increased Chance of Blocking",
+      "+20% Faster Block Rate",
+      "+130-160% Enhanced Defense",
+      "+250 Defense vs. Missile",
+      "All Resistances +50-70",
+      "+20% Faster Hit Recovery",
+      "Level 60-12 Slow Missiles (60/12 Charges)"
+    ],
+    "affixes_zh": [
+      "block 20",
+      "格挡速度 +20%",
+      "防御强化 +130-160%",
+      "远程防御 +250",
+      "所有抗性 +50-70",
+      "打击恢复 +20%",
+      "等级60 飞矢减速(60/12次)"
+    ],
+    "zh": "庇护"
+  },
+  "Runeword126": {
+    "en": "Silence",
+    "runes": [
+      "r02",
+      "r03",
+      "r14",
+      "r15",
+      "r24",
+      "r26"
+    ],
+    "bases": [
+      "weap"
+    ],
+    "sockets": 6,
+    "stars": 1,
+    "phase": null,
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [
+      "相位之刃"
+    ],
+    "rec_interim": [],
+    "req_lvl": 55,
+    "ladder_only": false,
+    "rune_order": [
+      "14",
+      "02",
+      "15",
+      "24",
+      "03",
+      "26"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "4% Mana stolen per hit",
+      "Hit Blinds Target +33",
+      "+200% Enhanced Damage",
+      "+20% Increased Attack Speed",
+      "All Resistances +75",
+      "+2 to All Skills",
+      "+20% Faster Hit Recovery"
+    ],
+    "affixes_zh": [
+      "法力偷取 +4%",
+      "stupidity 33",
+      "伤害强化 +200%",
+      "攻击速度 +20%",
+      "所有抗性 +75",
+      "所有技能 +2",
+      "打击恢复 +20%"
+    ],
+    "zh": "沉默"
+  },
+  "Runeword128": {
+    "en": "Smoke",
+    "runes": [
+      "r04",
+      "r17"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 2,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠"
+    ],
+    "rec_interim": [],
+    "req_lvl": 37,
+    "ladder_only": false,
+    "rune_order": [
+      "04",
+      "17"
+    ],
+    "max_roll": null,
+    "notes": [
+      "开荒补抗性用"
+    ],
+    "affixes": [
+      "+250 Defense vs. Missile",
+      "+75% Enhanced Defense",
+      "All Resistances +50",
+      "+20% Faster Hit Recovery",
+      "+-1 to Light Radius",
+      "Level 18-6 72 (18/6 Charges)"
+    ],
+    "affixes_zh": [
+      "远程防御 +250",
+      "防御强化 +75%",
+      "所有抗性 +50",
+      "打击恢复 +20%",
+      "光照范围 +-1",
+      "等级18 72(18/6次)"
+    ],
+    "zh": "烟雾"
+  },
+  "Runeword130": {
+    "en": "Spirit",
+    "runes": [
+      "r07",
+      "r09",
+      "r10",
+      "r11"
+    ],
+    "bases": [
+      "swor",
+      "shld"
+    ],
+    "sockets": 4,
+    "stars": 5,
+    "phase": "farm2",
+    "slots": [],
+    "rec_best": [
+      "水晶剑"
+    ],
+    "rec_interim": [],
+    "req_lvl": 25,
+    "ladder_only": false,
+    "rune_order": [
+      "07",
+      "10",
+      "09",
+      "11"
+    ],
+    "max_roll": "35FCR/112Mana/8MA",
+    "notes": [
+      "很多法系终配，35FCR最关键"
+    ],
+    "affixes": [
+      "+55% Faster Hit Recovery",
+      "+89-112 to Mana",
+      "+250 Defense vs. Missile",
+      "+22 to Vitality",
+      "+25-35% Faster Cast Rate",
+      "Magic Absorb 3-8%",
+      "+2 to All Skills"
+    ],
+    "affixes_zh": [
+      "打击恢复 +55%",
+      "法力 +89-112",
+      "远程防御 +250",
+      "活力 +22",
+      "施法速度 +25-35%",
+      "魔法吸收 +3-8%",
+      "所有技能 +2"
+    ],
+    "zh": "精神"
+  },
+  "Runeword131": {
+    "en": "Splendor",
+    "runes": [
+      "r05",
+      "r17"
+    ],
+    "bases": [
+      "shld"
+    ],
+    "sockets": 2,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [
+      "shield"
+    ],
+    "rec_best": [
+      "恐怖大盾",
+      "领唱者法器",
+      "骨盾"
+    ],
+    "rec_interim": [
+      "骨盾"
+    ],
+    "req_lvl": 37,
+    "ladder_only": false,
+    "rune_order": [
+      "05",
+      "17"
+    ],
+    "max_roll": "100ED",
+    "notes": [
+      "初期MF很实用。常用带高级诅咒的底材做，节约死灵技能点"
+    ],
+    "affixes": [
+      "+3 to Light Radius",
+      "50% Extra Gold from Monsters",
+      "20% Better Chance of Getting Magic Items",
+      "+60-100% Enhanced Defense",
+      "+20% Faster Block Rate",
+      "+10% Faster Cast Rate",
+      "+1 to All Skills"
+    ],
+    "affixes_zh": [
+      "光照范围 +3",
+      "金币掉落 +50%",
+      "寻宝率 +20%",
+      "防御强化 +60-100%",
+      "格挡速度 +20%",
+      "施法速度 +10%",
+      "所有技能 +1"
+    ],
+    "zh": "壮美"
+  },
+  "Runeword133": {
+    "en": "Stealth",
+    "runes": [
+      "r05",
+      "r07"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 2,
+    "stars": 5,
+    "phase": "farm2",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "轻板甲",
+      "法师铠",
+      "胸片甲"
+    ],
+    "rec_interim": [
+      "胸片甲"
+    ],
+    "req_lvl": 17,
+    "ladder_only": false,
+    "rune_order": [
+      "07",
+      "05"
+    ],
+    "max_roll": null,
+    "notes": [
+      "各职业开荒必备"
+    ],
+    "affixes": [
+      "Magic Damage Reduced by 3",
+      "+6 to Dexterity",
+      "+15 Maximum Stamina",
+      "+25% Faster Run/Walk",
+      "+25% Faster Cast Rate",
+      "+25% Faster Hit Recovery"
+    ],
+    "affixes_zh": [
+      "魔法伤害减少 +3",
+      "敏捷 +6",
+      "体力 +15",
+      "跑步速度 +25%",
+      "施法速度 +25%",
+      "打击恢复 +25%"
+    ],
+    "zh": "隐秘"
+  },
+  "Runeword134": {
+    "en": "Steel",
+    "runes": [
+      "r01",
+      "r03"
+    ],
+    "bases": [
+      "swor",
+      "axe",
+      "mace"
+    ],
+    "sockets": 2,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "弯刀",
+      "连枷",
+      "战斧"
+    ],
+    "rec_interim": [],
+    "req_lvl": 13,
+    "ladder_only": false,
+    "rune_order": [
+      "03",
+      "01"
+    ],
+    "max_roll": null,
+    "notes": [
+      "近战开荒必做"
+    ],
+    "affixes": [
+      "+25% Increased Attack Speed",
+      "+3 to Minimum Damage",
+      "+3 to Maximum Damage",
+      "50% Chance of Open Wounds",
+      "+20% Enhanced Damage"
+    ],
+    "affixes_zh": [
+      "攻击速度 +25%",
+      "dmg-min 3",
+      "dmg-max 3",
+      "openwounds 50",
+      "伤害强化 +20%"
+    ],
+    "zh": "钢铁"
+  },
+  "Runeword137": {
+    "en": "Stone",
+    "runes": [
+      "r13",
+      "r17",
+      "r21",
+      "r22"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 4,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "灰幕寿衣"
+    ],
+    "rec_interim": [],
+    "req_lvl": 47,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "22",
+      "21",
+      "17"
+    ],
+    "max_roll": "290ED",
+    "notes": [
+      "防御高，佣兵可过渡用"
+    ],
+    "affixes": [
+      "+220-260% Enhanced Defense",
+      "Level 16 Clay Golem (16/16 Charges)",
+      "+300 Defense vs. Missile",
+      "Level 80-16 Molten Boulder (80/16 Charges)",
+      "+16 to Strength",
+      "+16 to Vitality",
+      "+40% Faster Hit Recovery"
+    ],
+    "affixes_zh": [
+      "防御强化 +220-260%",
+      "等级16 黏土傀儡(16/16次)",
+      "远程防御 +300",
+      "等级80 Molten Boulder(80/16次)",
+      "str 16",
+      "活力 +16",
+      "打击恢复 +40%"
+    ],
+    "zh": "磐石"
+  },
+  "Runeword139": {
+    "en": "Strength",
+    "runes": [
+      "r03",
+      "r11"
+    ],
+    "bases": [
+      "mele"
+    ],
+    "sockets": 2,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "短弯刀",
+      "战叉",
+      "弯刀",
+      "羽剑杖"
+    ],
+    "rec_interim": [
+      "弯刀",
+      "羽剑杖"
+    ],
+    "req_lvl": 25,
+    "ladder_only": false,
+    "rune_order": [
+      "11",
+      "03"
+    ],
+    "max_roll": null,
+    "notes": [
+      "开荒杀BOSS用"
+    ],
+    "affixes": [
+      "+20 to Strength",
+      "+35% Enhanced Damage",
+      "+10 to Vitality",
+      "25% Chance of Crushing Blow"
+    ],
+    "affixes_zh": [
+      "str 20",
+      "伤害强化 +35%",
+      "活力 +10",
+      "crush 25"
+    ],
+    "zh": "力量"
+  },
+  "Runeword176": {
+    "en": "Temper",
+    "runes": [
+      "r08",
+      "r13",
+      "r16"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 1,
+    "phase": "farm1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "死者面甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 35,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "16",
+      "08"
+    ],
+    "max_roll": "100ED/60FR/15FA",
+    "notes": [],
+    "affixes": [
+      "Increase Maximum Life 5%",
+      "+75-100% Enhanced Defense",
+      "Fire Resist +10-30%",
+      "+10-15 Fire Absorb"
+    ],
+    "affixes_zh": [
+      "hp% 5",
+      "防御强化 +75-100%",
+      "火抗 +10-30%",
+      "abs-fire% 10-15"
+    ],
+    "zh": "淬火"
+  },
+  "Runeword148": {
+    "en": "Treachery",
+    "runes": [
+      "r10",
+      "r13",
+      "r20"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠",
+      "统治者板甲",
+      "神圣铠甲",
+      "漆甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 43,
+    "ladder_only": false,
+    "rune_order": [
+      "13",
+      "10",
+      "20"
+    ],
+    "max_roll": null,
+    "notes": [
+      "穷人米山第一甲"
+    ],
+    "affixes": [
+      "Venom% Chance to Cast Level 25-15 on Striking",
+      "Fade% Chance to Cast Level 5-15 When Struck",
+      "+2 to Assassin Skill Levels",
+      "+45% Increased Attack Speed"
+    ],
+    "affixes_zh": [
+      "击中时 25% 施展等级15 Venom",
+      "被击中时 5% 施展等级15 Fade",
+      "ass 2",
+      "攻击速度 +45%"
+    ],
+    "zh": "背叛"
+  },
+  "Runeword151": {
+    "en": "Unbending Will",
+    "runes": [
+      "r01",
+      "r02",
+      "r06",
+      "r15",
+      "r16",
+      "r19"
+    ],
+    "bases": [
+      "swor"
+    ],
+    "sockets": 6,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "相位之刃",
+      "巨神刃"
+    ],
+    "rec_interim": [],
+    "req_lvl": 41,
+    "ladder_only": false,
+    "rune_order": [
+      "19",
+      "16",
+      "06",
+      "02",
+      "01",
+      "15"
+    ],
+    "max_roll": "30IAS/350ED/10LL",
+    "notes": [],
+    "affixes": [
+      "+3 to 12 Skills",
+      "Taunt% Chance to Cast Level 18 on Striking",
+      "+20-30% Increased Attack Speed",
+      "+300-350% Enhanced Damage",
+      "Damage Reduced by 8",
+      "Prevent Monster Heal",
+      "8-10% Life stolen per hit"
+    ],
+    "affixes_zh": [
+      "+3 12技能",
+      "击中时 18% 施展等级18 嘲讽",
+      "攻击速度 +20-30%",
+      "伤害强化 +300-350%",
+      "red-dmg 8",
+      "防止治疗",
+      "生命偷取 +8-10%"
+    ],
+    "zh": "不屈之志"
+  },
+  "Runeword154": {
+    "en": "Venom",
+    "runes": [
+      "r07",
+      "r14",
+      "r23"
+    ],
+    "bases": [
+      "weap"
+    ],
+    "sockets": 3,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [
+      "weapon"
+    ],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 49,
+    "ladder_only": false,
+    "rune_order": [
+      "07",
+      "14",
+      "23"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "Adds 312-312 Poison Damage Over 312 Seconds",
+      "Ignore Target's Defense",
+      "Level 27-15 83 (27/15 Charges)",
+      "Level 11-13 92 (11/13 Charges)",
+      "7% Mana stolen per hit"
+    ],
+    "affixes_zh": [
+      "增加 312 毒伤害",
+      "ignore-ac 1",
+      "等级27 83(27/15次)",
+      "等级11 92(11/13次)",
+      "法力偷取 +7%"
+    ],
+    "zh": "毒液"
+  },
+  "Runeword99": {
+    "en": "Voice of Reason",
+    "runes": [
+      "r01",
+      "r02",
+      "r18",
+      "r20"
+    ],
+    "bases": [
+      "swor",
+      "mace"
+    ],
+    "sockets": 4,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 43,
+    "ladder_only": false,
+    "rune_order": [
+      "20",
+      "18",
+      "01",
+      "02"
+    ],
+    "max_roll": "350DTD/375DTU",
+    "notes": [],
+    "affixes": [
+      "+220-350% Damage to Demons",
+      "+280-300% Damage to Undead",
+      "Adds 100-220-100-220 Cold Damage",
+      "-24% to Enemy Cold Resistance",
+      "Ice Blast% Chance to Cast Level 18-20 on Striking",
+      "Frozen Orb% Chance to Cast Level 15-13 on Striking",
+      "Cannot Be Frozen"
+    ],
+    "affixes_zh": [
+      "对恶魔伤害 +220-350%",
+      "对不死伤害 +280-300%",
+      "增加 100-220 冰伤害",
+      "pierce-cold 24",
+      "击中时 18% 施展等级20 冰球爆",
+      "击中时 15% 施展等级13 冰封球",
+      "nofreeze 1"
+    ],
+    "zh": "理智之声"
+  },
+  "Runeword160": {
+    "en": "Wealth",
+    "runes": [
+      "r03",
+      "r18",
+      "r20"
+    ],
+    "bases": [
+      "tors"
+    ],
+    "sockets": 3,
+    "stars": 3,
+    "phase": "farm1",
+    "slots": [
+      "armor"
+    ],
+    "rec_best": [
+      "法师铠",
+      "统治者板甲",
+      "龙皮甲"
+    ],
+    "rec_interim": [],
+    "req_lvl": 43,
+    "ladder_only": false,
+    "rune_order": [
+      "20",
+      "18",
+      "03"
+    ],
+    "max_roll": null,
+    "notes": [
+      "MF用，打钱重要装备"
+    ],
+    "affixes": [
+      "250% Extra Gold from Monsters",
+      "100% Better Chance of Getting Magic Items"
+    ],
+    "affixes_zh": [
+      "金币掉落 +250%",
+      "寻宝率 +100%"
+    ],
+    "zh": "财富"
+  },
+  "Runeword162": {
+    "en": "White",
+    "runes": [
+      "r14",
+      "r16"
+    ],
+    "bases": [
+      "wand"
+    ],
+    "sockets": 2,
+    "stars": 4,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 35,
+    "ladder_only": false,
+    "rune_order": [
+      "14",
+      "16"
+    ],
+    "max_roll": null,
+    "notes": [
+      "纯骨死灵武器，毒招也可过渡用"
+    ],
+    "affixes": [
+      "+3 to 7 Skills",
+      "Magic Damage Reduced by 4",
+      "+20% Faster Cast Rate",
+      "+13 to Mana",
+      "+3 to 68",
+      "+2 to 84",
+      "+4 to 69"
+    ],
+    "affixes_zh": [
+      "+3 7技能",
+      "魔法伤害减少 +4",
+      "施法速度 +20%",
+      "法力 +13",
+      "+3 68",
+      "+2 84",
+      "+4 69"
+    ],
+    "zh": "白色"
+  },
+  "Runeword163": {
+    "en": "Wind",
+    "runes": [
+      "r01",
+      "r29"
+    ],
+    "bases": [
+      "mele"
+    ],
+    "sockets": 2,
+    "stars": 0,
+    "phase": "useless2",
+    "slots": [],
+    "rec_best": [],
+    "rec_interim": [],
+    "req_lvl": 61,
+    "ladder_only": false,
+    "rune_order": [
+      "29",
+      "01"
+    ],
+    "max_roll": "160ED",
+    "notes": [],
+    "affixes": [
+      "+120-160% Enhanced Damage",
+      "+40% Increased Attack Speed",
+      "+20% Faster Run/Walk",
+      "-50% Target Defense",
+      "Tornado% Chance to Cast Level 10-9 on Striking",
+      "Level 127-13 240 (127/13 Charges)",
+      "+15% Faster Hit Recovery"
+    ],
+    "affixes_zh": [
+      "伤害强化 +120-160%",
+      "攻击速度 +40%",
+      "跑步速度 +20%",
+      "目标防御 -50%",
+      "击中时 10% 施展等级9 Tornado",
+      "等级127 240(127/13次)",
+      "打击恢复 +15%"
+    ],
+    "zh": "疾风"
+  },
+  "Runeword165": {
+    "en": "Wisdom",
+    "runes": [
+      "r02",
+      "r06",
+      "r21"
+    ],
+    "bases": [
+      "helm"
+    ],
+    "sockets": 3,
+    "stars": 4,
+    "phase": "farm1",
+    "slots": [
+      "helm"
+    ],
+    "rec_best": [
+      "白骨面甲",
+      "恶魔面甲",
+      "屠戮盔",
+      "怒火面甲"
+    ],
+    "rec_interim": [
+      "死者面甲",
+      "宝冠盔"
+    ],
+    "req_lvl": 45,
+    "ladder_only": false,
+    "rune_order": [
+      "21",
+      "06",
+      "02"
+    ],
+    "max_roll": "25AR/8LM",
+    "notes": [],
+    "affixes": [
+      "Piercing Attack",
+      "4-8% Mana stolen per hit",
+      "15-25% Bonus to Attack Rating",
+      "+5 to Mana after each Kill",
+      "Cannot Be Frozen",
+      "+10 to Energy"
+    ],
+    "affixes_zh": [
+      "穿刺攻击 +33",
+      "法力偷取 +4-8%",
+      "准确率% +15-25%",
+      "杀敌回蓝 +5",
+      "nofreeze 1",
+      "能量 +10"
+    ],
+    "zh": "智慧"
+  },
+  "Runeword168": {
+    "en": "Wrath",
+    "runes": [
+      "r17",
+      "r21",
+      "r23",
+      "r30"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 4,
+    "stars": 1,
+    "phase": null,
+    "slots": [],
+    "rec_best": [
+      "女族长弓"
+    ],
+    "rec_interim": [],
+    "req_lvl": 63,
+    "ladder_only": false,
+    "rune_order": [
+      "21",
+      "17",
+      "30",
+      "23"
+    ],
+    "max_roll": "300DTU",
+    "notes": [
+      "触发多种诅咒，弓马玩具"
+    ],
+    "affixes": [
+      "+300% Damage to Demons",
+      "+250-300% Damage to Undead",
+      "Adds 41-240-41-240 Lightning Damage",
+      "Adds 85-120-85-120 Magic Damage",
+      "Life Tap% Chance to Cast Level 5-10 on Striking",
+      "Decrepify% Chance to Cast Level 30-1 on Striking",
+      "Cannot Be Frozen"
+    ],
+    "affixes_zh": [
+      "对恶魔伤害 +300%",
+      "对不死伤害 +250-300%",
+      "增加 41-240 电伤害",
+      "增加 85-120 魔法伤害",
+      "击中时 5% 施展等级10 偷取生命",
+      "击中时 30% 施展等级1 衰老",
+      "nofreeze 1"
+    ],
+    "zh": "怒火"
+  },
+  "Runeword170": {
+    "en": "Zephyr",
+    "runes": [
+      "r05",
+      "r09"
+    ],
+    "bases": [
+      "miss"
+    ],
+    "sockets": 2,
+    "stars": 2,
+    "phase": "farm1",
+    "slots": [],
+    "rec_best": [
+      "刀锋弓",
+      "复合弓",
+      "猎弓"
+    ],
+    "rec_interim": [
+      "复合弓",
+      "猎弓"
+    ],
+    "req_lvl": 21,
+    "ladder_only": false,
+    "rune_order": [
+      "09",
+      "05"
+    ],
+    "max_roll": null,
+    "notes": [],
+    "affixes": [
+      "+25% Faster Run/Walk",
+      "+25% Increased Attack Speed",
+      "+33% Enhanced Damage",
+      "+66 to Attack Rating",
+      "240% Chance to Cast Level 7-1 When Struck",
+      "+25 Defense"
+    ],
+    "affixes_zh": [
+      "跑步速度 +25%",
+      "攻击速度 +25%",
+      "伤害强化 +33%",
+      "准确率 +66",
+      "被击中时 7% 施展等级1 240",
+      "防御 +25"
+    ],
+    "zh": "和风"
+  }
+}

@@ -1,0 +1,1214 @@
+[
+  {
+    "id": "crf064",
+    "name": "Hit",
+    "inputs": [
+      "fhl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 7,
+        "param": null
+      },
+      {
+        "code": "ac-miss",
+        "min": 25,
+        "max": 50,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf065",
+    "name": "Hit",
+    "inputs": [
+      "mbt",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 7,
+        "param": null
+      },
+      {
+        "code": "ac-hth",
+        "min": 25,
+        "max": 60,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf066",
+    "name": "Hit",
+    "inputs": [
+      "mgl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 7,
+        "param": null
+      },
+      {
+        "code": "knock",
+        "min": 1,
+        "max": 1,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf067",
+    "name": "Hit",
+    "inputs": [
+      "tbl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 7,
+        "param": null
+      },
+      {
+        "code": "dmg-to-mana",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf068",
+    "name": "Hit",
+    "inputs": [
+      "gts",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "block",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf069",
+    "name": "Hit",
+    "inputs": [
+      "fld",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "balance1",
+        "min": 10,
+        "max": 20,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf070",
+    "name": "Hit",
+    "inputs": [
+      "amul",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "howl",
+        "min": 5,
+        "max": 15,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf071",
+    "name": "Hit",
+    "inputs": [
+      "ring",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 6,
+        "param": null
+      },
+      {
+        "code": "dex",
+        "min": 1,
+        "max": 5,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf072",
+    "name": "Hit",
+    "inputs": [
+      "blun",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "gethit-skill",
+        "min": 5,
+        "max": 4,
+        "param": 44
+      },
+      {
+        "code": "thorns",
+        "min": 3,
+        "max": 7,
+        "param": null
+      },
+      {
+        "code": "dmg%",
+        "min": 35,
+        "max": 60,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf073",
+    "name": "Blood",
+    "inputs": [
+      "hlm",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "deadly",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf074",
+    "name": "Blood",
+    "inputs": [
+      "tbt",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "regen",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf075",
+    "name": "Blood",
+    "inputs": [
+      "vgl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "crush",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf076",
+    "name": "Blood",
+    "inputs": [
+      "mbl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "openwounds",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf077",
+    "name": "Blood",
+    "inputs": [
+      "spk",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "thorns",
+        "min": 4,
+        "max": 7,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf078",
+    "name": "Blood",
+    "inputs": [
+      "plt",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "demon-heal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf079",
+    "name": "Blood",
+    "inputs": [
+      "amul",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "move1",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf080",
+    "name": "Blood",
+    "inputs": [
+      "ring",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 3,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "str",
+        "min": 1,
+        "max": 5,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf081",
+    "name": "Blood",
+    "inputs": [
+      "axe",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "lifesteal",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "hp",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "dmg%",
+        "min": 35,
+        "max": 60,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf082",
+    "name": "Caster",
+    "inputs": [
+      "msk",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "manasteal",
+        "min": 1,
+        "max": 4,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf083",
+    "name": "Caster",
+    "inputs": [
+      "lbt",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "mana%",
+        "min": 2,
+        "max": 5,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf084",
+    "name": "Caster",
+    "inputs": [
+      "lgl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "mana-kill",
+        "min": 1,
+        "max": 3,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf085",
+    "name": "Caster",
+    "inputs": [
+      "vbl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "cast1",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf086",
+    "name": "Caster",
+    "inputs": [
+      "sml",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "block",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf087",
+    "name": "Caster",
+    "inputs": [
+      "ltp",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "mana-kill",
+        "min": 1,
+        "max": 3,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf088",
+    "name": "Caster",
+    "inputs": [
+      "amul",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "cast1",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf089",
+    "name": "Caster",
+    "inputs": [
+      "ring",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "enr",
+        "min": 1,
+        "max": 5,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf090",
+    "name": "Caster",
+    "inputs": [
+      "rod",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "regen-mana",
+        "min": 4,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "mana",
+        "min": 10,
+        "max": 20,
+        "param": null
+      },
+      {
+        "code": "mana%",
+        "min": 1,
+        "max": 5,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf091",
+    "name": "Safety",
+    "inputs": [
+      "crn",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "res-ltng",
+        "min": 5,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "ac%",
+        "min": 10,
+        "max": 30,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf092",
+    "name": "Safety",
+    "inputs": [
+      "hbt",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "res-fire",
+        "min": 5,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "ac%",
+        "min": 10,
+        "max": 30,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf093",
+    "name": "Safety",
+    "inputs": [
+      "hgl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "res-cold",
+        "min": 5,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "ac%",
+        "min": 10,
+        "max": 30,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf094",
+    "name": "Safety",
+    "inputs": [
+      "lbl",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "res-pois",
+        "min": 5,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "ac%",
+        "min": 10,
+        "max": 30,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf095",
+    "name": "Safety",
+    "inputs": [
+      "kit",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "res-mag",
+        "min": 5,
+        "max": 10,
+        "param": null
+      },
+      {
+        "code": "ac%",
+        "min": 10,
+        "max": 30,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf096",
+    "name": "Safety",
+    "inputs": [
+      "brs",
+      "mag",
+      "upg"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "half-freeze",
+        "min": 1,
+        "max": 1,
+        "param": null
+      },
+      {
+        "code": "ac%",
+        "min": 10,
+        "max": 30,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf097",
+    "name": "Safety",
+    "inputs": [
+      "amul",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "block",
+        "min": 1,
+        "max": 10,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf098",
+    "name": "Safety",
+    "inputs": [
+      "ring",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "vit",
+        "min": 1,
+        "max": 5,
+        "param": null
+      }
+    ]
+  },
+  {
+    "id": "crf099",
+    "name": "Safety",
+    "inputs": [
+      "spea",
+      "mag"
+    ],
+    "spawnable": 1,
+    "chance": 100,
+    "costmult": null,
+    "costadd": null,
+    "props": [
+      {
+        "code": "red-dmg",
+        "min": 1,
+        "max": 4,
+        "param": null
+      },
+      {
+        "code": "red-mag",
+        "min": 1,
+        "max": 2,
+        "param": null
+      },
+      {
+        "code": "ac%",
+        "min": 5,
+        "max": 10,
+        "param": null
+      }
+    ]
+  }
+]

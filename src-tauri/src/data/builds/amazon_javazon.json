@@ -1,0 +1,85 @@
+{
+  "id": "amazon-javazon",
+  "class": "Amazon",
+  "name": "Lightning Fury Javazon",
+  "name_zh": "标枪亚马逊",
+  "core_skills": [
+    "Lightning Fury",
+    "Charged Strike",
+    "Lightning Strike",
+    "Pierce"
+  ],
+  "stat_priority": [
+    "strength=156",
+    "dexterity=block",
+    "energy=base",
+    "rest=vitality"
+  ],
+  "equipment": {
+    "core": [
+      {
+        "slot": "weapon_main",
+        "code": "ama",
+        "name": "Titan's Revenge",
+        "weight": 1.0
+      },
+      {
+        "slot": "shield",
+        "code": "uit",
+        "name": "Stormshield",
+        "weight": 0.8
+      },
+      {
+        "slot": "helm",
+        "code": "skp",
+        "name": "Harlequin Crest (Shako)",
+        "weight": 0.7
+      }
+    ],
+    "optional": [
+      {
+        "slot": "armor",
+        "code": "xea",
+        "name": "Skin of the Vipermagi",
+        "weight": 0.5
+      },
+      {
+        "slot": "gloves",
+        "code": "zvb",
+        "name": "Razortail",
+        "weight": 0.5
+      },
+      {
+        "slot": "belt",
+        "code": "zhb",
+        "name": "Thundergod's Vigor",
+        "weight": 0.5
+      }
+    ],
+    "runewords": [
+      {
+        "runes": [
+          "jah",
+          "ith",
+          "ber"
+        ],
+        "name": "Enigma",
+        "slot": "armor",
+        "weight": 0.6
+      },
+      {
+        "runes": [
+          "amn",
+          "ral",
+          "mal",
+          "ist",
+          "ohm"
+        ],
+        "name": "Call to Arms",
+        "slot": "weapon_alt",
+        "weight": 0.4
+      }
+    ]
+  },
+  "description": "标枪亚马逊，以闪电之怒清场、充能一击杀 Boss。通刷地狱全场景的顶级 Build。"
+}

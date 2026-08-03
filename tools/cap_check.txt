@@ -1,0 +1,18 @@
+Key=War Bonnet, zhCN=幼童软帽
+ÿcU[MAX:防19]
+ÿc520小之一，可收藏ÿc4, enUS=Biggin's Bonnet
+ÿcU[MAX:19Def]ÿc4
+Key=Steel Carapice, zhCN=钢铁甲壳
+ÿcU[MAX:220ED/15REG/60CR/14DR]
+ÿc5收藏ÿc4, enUS=Steel Carapace
+ÿcU[MAX:220ED/15REG/60CR/14DR]ÿc4
+Key=The Chieftan, zhCN=酋长
+ÿcU[MAX:20RES]ÿc4, enUS=The Chieftain
+ÿcU[MAX:20RES]ÿc4
+Key=Berserker's Headgear, zhCN=狂战士的头盔
+ÿcU[MAX:防33]ÿc2, enUS=Berserker's Headgear
+ÿcU[MAX:33Def]ÿc2
+Key=coi_inf_t1_gate_desc, zhCN=ÿc0T1初阶注灵上限ÿc0, enUS=ÿc0T1 Infusion Capÿc0
+Key=coi_inf_t2_gate_desc, zhCN=ÿc2T2中阶注灵上限ÿc0, enUS=ÿc2T2 Infusion Capÿc0
+Key=coi_inf_t3_gate_desc, zhCN=ÿc4T3高阶注灵上限ÿc0, enUS=ÿc4T3 Infusion Capÿc0
+Total zhCN: 895/895

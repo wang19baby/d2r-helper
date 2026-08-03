@@ -1,0 +1,80 @@
+{
+  "id": "paladin-smiter",
+  "class": "Paladin",
+  "name": "Smite Paladin",
+  "name_zh": "盾击圣骑士",
+  "core_skills": [
+    "Smite",
+    "Holy Shield",
+    "Fanaticism",
+    "Salvation"
+  ],
+  "stat_priority": [
+    "strength=base",
+    "energy=base",
+    "rest=vitality"
+  ],
+  "equipment": {
+    "core": [
+      {
+        "slot": "weapon_main",
+        "code": "fla",
+        "name": "Grief Phase Blade",
+        "weight": 1.0
+      },
+      {
+        "slot": "shield",
+        "code": "pab",
+        "name": "Exile (Sacred Targe)",
+        "weight": 0.9
+      },
+      {
+        "slot": "helm",
+        "code": "xhm",
+        "name": "Guillaume's Face",
+        "weight": 0.8
+      }
+    ],
+    "optional": [
+      {
+        "slot": "armor",
+        "code": "uui",
+        "name": "Fortitude",
+        "weight": 0.6
+      },
+      {
+        "slot": "belt",
+        "code": "umc",
+        "name": "Verdungo's Hearty Cord",
+        "weight": 0.4
+      },
+      {
+        "slot": "gloves",
+        "code": "uvg",
+        "name": "Dracul's Grasp",
+        "weight": 0.5
+      },
+      {
+        "slot": "boots",
+        "code": "xhb",
+        "name": "Gore Rider",
+        "weight": 0.3
+      }
+    ],
+    "runewords": [
+      {
+        "runes": [
+          "amn",
+          "ral",
+          "mal",
+          "ist",
+          "ohm"
+        ],
+        "name": "Call to Arms",
+        "slot": "weapon_alt",
+        "weight": 0.5
+      }
+    ]
+  },
+  "description": "盾击圣骑士，专注打 Boss（DC/UBer）。盾击必中，靠压碎性打击 CB 快速击杀。"
+}

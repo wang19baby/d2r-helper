@@ -1,0 +1,695 @@
+/**
+ * D2R Marketplace — 静态码表生成器
+ *
+ * 读取游戏 TXT 文件（原版 base/ + 模组覆盖），输出 Rust const 数组。
+ * 用法: node tools/generate_tables.cjs
+ *
+ * 配置:
+ *   VANILLA_DIR = 原版游戏 excel 目录（base/）
+ *   MOD_DIR     = 模组 excel 目录（可选，用于模组物品检测）
+ *   OUT_DIR     = Rust 源码输出目录（src-tauri/src/stash/）
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// ═══════════════════════════════════════════════════════════════
+// 配置 — 按你的实际路径修改
+// ═══════════════════════════════════════════════════════════════
+const CONFIG = {
+  VANILLA_DIR: 'D:/dev/d2r/cascview_cn/x64/Work/data/data/global/excel/base',
+  MOD_DIR:     'D:/personal/games/Diablo II Resurrected/mods/D2RMM/D2RMM.mpq/data/global/excel',
+  OUT_DIR:     'D:/work_space/personal_workspace/d2r/d2r-marketplace-tauri/src-tauri/src/stash',
+};
+
+// ═══════════════════════════════════════════════════════════════
+// TXT 读取器 (TSV)
+// ═══════════════════════════════════════════════════════════════
+function readTxt(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.warn(`  [WARN] file not found: ${filePath}`);
+    return [];
+  }
+  const text = fs.readFileSync(filePath, 'utf8');
+  const lines = text.split(/\r?\n/).filter(l => l.trim());
+  if (lines.length < 2) return [];
+
+  const headers = lines[0].split('\t');
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const fields = lines[i].split('\t');
+    const row = {};
+    for (let j = 0; j < headers.length; j++) {
+      const val = fields[j]?.trim() || '';
+      if (val) row[headers[j]] = val;
+    }
+    if (row['code'] || row['Name'] || row['name'] || row['index'] || row['description']) {
+      rows.push(row);
+    }
+  }
+  return rows;
+}
+
+// 安全字符串转义
+function esc(s) {
+  if (!s) return '';
+  return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 1. 生成 game_items.rs — ALL_ITEMS
+// ═══════════════════════════════════════════════════════════════
+function generateGameItems(vanillaDir, modDir) {
+  // 读取 armor.txt → is_armor=true
+  // weapons.txt → is_weapon=true
+  // misc.txt → 都不是
+  // shield 特殊判断: type 包含 "shie" 或 "Shie" 或 "PaSh" 等盾牌类型
+
+  const shieldTypes = new Set([
+    'shie','shld','Shie','Shld','PaSh','lrg','kit','tow','gts',
+    'buc','sml','xsh','xsh','xrg','xpk','xow','xgs','ush','ush',
+    'uml','ulk','utw','ugs','nef',
+  ]);
+
+  const armorRows = readTxt(path.join(vanillaDir, 'armor.txt'));
+  const weaponRows = readTxt(path.join(vanillaDir, 'weapons.txt'));
+  const miscRows = readTxt(path.join(vanillaDir, 'misc.txt'));
+
+  // Mod 文件 (用于检测 mod_added)
+  const modArmor = modDir ? readTxt(path.join(modDir, 'armor.txt')) : [];
+  const modWeapon = modDir ? readTxt(path.join(modDir, 'weapons.txt')) : [];
+  const modMisc = modDir ? readTxt(path.join(modDir, 'misc.txt')) : [];
+
+  // 收集所有 code
+  const items = [];
+  const seenCodes = new Set();
+
+  function addItems(rows, source, isArmor, isWeapon, modRows) {
+    for (const row of rows) {
+      const code = (row['code'] || '').toLowerCase();
+      if (!code || seenCodes.has(code)) continue;
+      seenCodes.add(code);
+
+      const name = esc(row['name'] || row['*Name'] || code);
+      const type = (row['type'] || row['*type'] || '').toLowerCase();
+      const isShield = shieldTypes.has(type);
+
+      // These come from vanilla file = definitely NOT mod items
+      items.push({ code, name, isArmor, isWeapon, isShield, modAdded: false });
+    }
+  }
+
+  addItems(armorRows, 'armor', true, false, modArmor);
+  addItems(weaponRows, 'weapon', false, true, modWeapon);
+  addItems(miscRows, 'misc', false, false, modMisc);
+
+  // 额外从 mod 文件补充 mod 独有的物品
+  function addModOnly(modRows, isArmor, isWeapon) {
+    for (const row of modRows) {
+      const code = (row['code'] || '').toLowerCase();
+      if (!code || seenCodes.has(code)) continue;
+      seenCodes.add(code);
+
+      const name = esc(row['name'] || row['*Name'] || code);
+      items.push({ code, name, isArmor, isWeapon, isShield: false, modAdded: true });
+    }
+  }
+  addModOnly(modArmor, true, false);
+  addModOnly(modWeapon, false, true);
+  addModOnly(modMisc, false, false);
+
+  // 排序
+  items.sort((a, b) => a.code.localeCompare(b.code));
+
+  // 输出 Rust 代码
+  const lines = [
+    '/// All item type definitions (auto-generated from game TXT files)',
+    '/// Source: D2R 3.2-92777 + D2RMM 仙道轮回 mod',
+    '/// Format: (item_code, display_name, is_armor, is_weapon, is_shield)',
+    '#[rustfmt::skip]',
+    'pub const ALL_ITEMS: &[(&str, &str, bool, bool, bool)] = &[',
+  ];
+
+  for (const item of items) {
+    lines.push(
+      `  ("${item.code}", "${item.name}", ${item.isArmor}, ${item.isWeapon}, ${item.isShield}),`
+    );
+  }
+
+  const modCount = items.filter(i => i.modAdded).length;
+  lines.push('];');
+  lines.push(`// Total: ${items.length} items (${items.length - modCount} vanilla + ${modCount} mod)`);
+
+  // 额外生成 MOD_ITEMS 表（只包含模组新增物品 code）
+  const modLines = [
+    '/// Mod-added item codes (auto-generated, not in vanilla D2R 3.2-92777)',
+    '/// Generated by comparing base/ vs mod/ TXT files',
+    'pub const MOD_ITEM_CODES: &[&str] = &[',
+  ];
+  for (const item of items) {
+    if (item.modAdded) {
+      modLines.push(`  "${item.code}",`);
+    }
+  }
+  modLines.push('];');
+  modLines.push(`// Total: ${modCount} mod items`);
+
+  const combined = lines.join('\n') + '\n\n' + modLines.join('\n');
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'game_items.rs'), combined);
+  console.log(`  ✅ game_items.rs: ${items.length} items (${modCount} mod-added)`);
+  return { allItems: items, modCodes: new Set(items.filter(i => i.modAdded).map(i => i.code)) };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 2. 生成 item_sizes.rs — ITEM_INVENTORY_SIZES
+// ═══════════════════════════════════════════════════════════════
+function generateItemSizes(vanillaDir, modDir, modCodes) {
+  const sizes = [];
+
+  function addSizes(rows) {
+    for (const row of rows) {
+      const code = (row['code'] || '').toLowerCase();
+      if (!code) continue;
+      const w = parseInt(row['invwidth'] || '1', 10) || 1;
+      const h = parseInt(row['invheight'] || '1', 10) || 1;
+      sizes.push({ code, w, h });
+    }
+  }
+
+  addSizes(readTxt(path.join(vanillaDir, 'armor.txt')));
+  addSizes(readTxt(path.join(vanillaDir, 'weapons.txt')));
+  addSizes(readTxt(path.join(vanillaDir, 'misc.txt')));
+
+  // Also add mod items for size data (use mod file when available)
+  if (modDir) {
+    addSizes(readTxt(path.join(modDir, 'armor.txt')));
+    addSizes(readTxt(path.join(modDir, 'weapons.txt')));
+    addSizes(readTxt(path.join(modDir, 'misc.txt')));
+  }
+
+  // Deduplicate: later entries (mod) override earlier (vanilla)
+  const sizeMap = new Map();
+  for (const s of sizes) sizeMap.set(s.code, s);
+  const unique = [...sizeMap.values()].sort((a, b) => a.code.localeCompare(b.code));
+
+  const lines = [
+    '/// Inventory sizes for all items (auto-generated from game TXT files)',
+    '/// Format: (code, width, height)',
+    '#[rustfmt::skip]',
+    'pub const ITEM_INVENTORY_SIZES: &[(&str, u8, u8)] = &[',
+  ];
+
+  for (const s of unique) {
+    lines.push(`  ("${s.code}", ${s.w}, ${s.h}),`);
+  }
+
+  lines.push('];');
+  lines.push(`// Total: ${unique.length} items`);
+
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'item_sizes.rs'), lines.join('\n'));
+  console.log(`  ✅ item_sizes.rs: ${unique.length} items (with correct sizes!)`);
+
+  // Return item_sizes as map for later use
+  return sizeMap;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 3. 生成 constants.rs — ITEM_CODE_MAP + STACKABLE + NAME_TO_CODE
+// ═══════════════════════════════════════════════════════════════
+function generateConstants(vanillaDir, modDir, modCodes) {
+  const stackableRows = readTxt(path.join(vanillaDir, 'misc.txt'))
+    .filter(r => r['stackable'] === '1');
+  const modMisc = modDir ? readTxt(path.join(modDir, 'misc.txt')) : [];
+  const modStackable = modMisc.filter(r => r['stackable'] === '1');
+
+  // In D2R, items with type='rune' are always stackable even if stackable col != 1
+  const allMisc = readTxt(path.join(vanillaDir, 'misc.txt'));
+  const runeRows = allMisc.filter(r => (r['type']||'').toLowerCase() === 'rune');
+  // Also add runes from mod misc
+  if (modMisc.length > 0) {
+    const modRuneRows = modMisc.filter(r => (r['type']||'').toLowerCase() === 'rune');
+    for (const r of modRuneRows) { if (!runeRows.find(rr => rr.code === r.code)) runeRows.push(r); }
+  }
+
+  // Merge stackable codes
+  const stackableSet = new Set();
+  for (const r of stackableRows) {
+    const code = (r['code'] || '').toLowerCase();
+    if (code) stackableSet.add(code);
+  }
+  // Add rune type items
+  for (const r of runeRows) {
+    const code = (r['code'] || '').toLowerCase();
+    if (code) stackableSet.add(code);
+  }
+  for (const r of modStackable) {
+    const code = (r['code'] || '').toLowerCase();
+    if (code) stackableSet.add(code);
+  }
+
+  // Also include throwing weapons (stackable weapons)
+  const weaponRows = readTxt(path.join(vanillaDir, 'weapons.txt'));
+  const modWeapon = modDir ? readTxt(path.join(modDir, 'weapons.txt')) : [];
+  for (const w of [...weaponRows, ...modWeapon]) {
+    if (w['stackable'] === '1') {
+      const code = (w['code'] || '').toLowerCase();
+      if (code) stackableSet.add(code);
+    }
+  }
+
+  const stackableCodes = [...stackableSet].sort();
+
+  // ITEM_CODE_MAP: code → name + kind + icon
+  // For the icon path, we use a simple convention based on type
+  const codeMap = [];
+  const nameToCode = [];
+  const seenNames = new Set();
+
+  function addToCodeMap(rows, kind, modRows) {
+    const modRowMap = new Map();
+    if (modRows) for (const r of modRows) {
+      const c = (r['code'] || '').toLowerCase();
+      if (c) modRowMap.set(c, r);
+    }
+
+    for (const row of rows) {
+      const code = (row['code'] || '').toLowerCase();
+      if (!code) continue;
+      const name = row['name'] || row['*Name'] || code;
+      // Prefer mod name if available
+      const modRow = modRowMap.get(code);
+      const displayName = esc(modRow ? (modRow['name'] || modRow['*Name'] || name) : name);
+      const type = (row['type'] || row['*type'] || '').toLowerCase();
+      const isMod = modCodes.has(code);
+
+      // Determine kind
+      let itemKind = 'misc';
+      if (kind === 'armor') itemKind = 'armor';
+      else if (kind === 'weapon') itemKind = 'weapon';
+      else if (type.includes('rune')) itemKind = 'rune';
+      else if (type.includes('gem')) itemKind = 'gem';
+      else if (type.includes('potion')) itemKind = 'potion';
+      else if (type.startsWith('key')) itemKind = 'key';
+      else if (code.startsWith('tes') || code.startsWith('ceh') || code.startsWith('bet') || code.startsWith('fed')) itemKind = 'essence';
+      else if (code === 'toa') itemKind = 'token';
+      else if (code.startsWith('xa')) itemKind = 'shard';
+      else if (isMod) itemKind = 'mod';
+
+      // Icon path
+      let icon;
+      if (code.match(/^r\d+$/)) icon = `/assets/img/runes/${code}.webp`;
+      else if (isMod) icon = '/assets/img/items/default_item.webp';
+      else icon = `/assets/img/items/default_${itemKind}.webp`;
+
+      codeMap.push({ code, name: displayName, kind: itemKind, icon, isMod });
+
+      // Build name→code map
+      const nameLower = displayName.toLowerCase();
+      if (!seenNames.has(nameLower)) {
+        seenNames.add(nameLower);
+        nameToCode.push({ name: nameLower, code });
+      }
+    }
+  }
+
+  addToCodeMap(readTxt(path.join(vanillaDir, 'armor.txt')), 'armor', modDir ? readTxt(path.join(modDir, 'armor.txt')) : null);
+  addToCodeMap(readTxt(path.join(vanillaDir, 'weapons.txt')), 'weapon', modDir ? readTxt(path.join(modDir, 'weapons.txt')) : null);
+  addToCodeMap(readTxt(path.join(vanillaDir, 'misc.txt')), 'misc', modDir ? readTxt(path.join(modDir, 'misc.txt')) : null);
+
+  // Sort code map by code
+  codeMap.sort((a, b) => a.code.localeCompare(b.code));
+  nameToCode.sort((a, b) => a.name.localeCompare(b.name));
+
+  // ── Write constants.rs ──
+  const lines = [
+    '/// Auto-generated from game TXT files (D2R 3.2-92777 + D2RMM)',
+    'use std::collections::HashMap;',
+    '',
+    '/// Map of item type codes to their display metadata',
+    '/// Format: (code, name, kind, icon_path)',
+    '#[rustfmt::skip]',
+    'pub const ITEM_CODE_MAP: &[(&str, &str, &str, &str)] = &[',
+  ];
+  for (const c of codeMap) {
+    lines.push(`  ("${c.code}", "${c.name}", "${c.kind}", "${c.icon}"),`);
+  }
+  lines.push('];');
+  lines.push(`// Total: ${codeMap.length} items`);
+  lines.push('');
+
+  // STACKABLE_ITEM_CODES
+  lines.push([
+    '/// Set of item type codes that are stackable',
+    '#[rustfmt::skip]',
+    'pub const STACKABLE_ITEM_CODES: &[&str] = &[',
+  ].join('\n'));
+  for (const c of stackableCodes) {
+    lines.push(`  "${c}",`);
+  }
+  lines.push('];');
+  lines.push(`// Total: ${stackableCodes.length} stackable codes`);
+  lines.push('');
+
+  // ITEM_NAME_TO_CODE
+  lines.push([
+    '/// Item name → item code lookup table (lowercase names)',
+    '#[rustfmt::skip]',
+    'pub const ITEM_NAME_TO_CODE: &[(&str, &str)] = &[',
+  ].join('\n'));
+  for (const n of nameToCode) {
+    lines.push(`  ("${n.name}", "${n.code}"),`);
+  }
+  lines.push('];');
+  lines.push(`// Total: ${nameToCode.length} name mappings`);
+
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'constants.rs'), lines.join('\n'));
+  console.log(`  ✅ constants.rs: ${codeMap.length} items, ${stackableCodes.length} stackable, ${nameToCode.length} name mappings`);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 4. 生成 runewords.rs — 符文之语配方
+// ═══════════════════════════════════════════════════════════════
+function generateRunewords(vanillaDir, modDir) {
+  const rows = readTxt(path.join(vanillaDir, 'runes.txt'));
+  // Prefer mod runes.txt if available
+  const modRows = modDir ? readTxt(path.join(modDir, 'runes.txt')) : [];
+  const runeRows = modRows.length > rows.length ? modRows : rows;
+
+  const rwMap = new Map(); // name → runeword
+  for (const row of runeRows) {
+    const name = row['*Rune Name'] || row['Name'] || '';
+    if (!name) continue;
+    const runeNames = (row['*RunesUsed'] || '').trim();
+    if (!runeNames) continue;
+
+    // Parse rune codes from the Rune1..Rune6 columns
+    const runeCodes = [];
+    for (let i = 1; i <= 6; i++) {
+      const r = row[`Rune${i}`];
+      if (r) runeCodes.push(r.trim().toLowerCase());
+    }
+    if (runeCodes.length === 0) continue;
+
+    // Parse allowed item types (itype1..itype6 + etype1..etype3)
+    const allowedTypes = [];
+    for (let i = 1; i <= 6; i++) {
+      const t = row[`itype${i}`];
+      if (t) allowedTypes.push(t.trim().toLowerCase());
+    }
+    for (let i = 1; i <= 3; i++) {
+      const t = row[`etype${i}`];
+      if (t) allowedTypes.push(t.trim().toLowerCase());
+    }
+
+    // Socket count = number of runes
+    const sockets = runeCodes.length;
+
+    rwMap.set(name, {
+      id: row['Name'] || '',
+      name,
+      runeCodes,
+      runeNames,
+      allowedTypes,
+      sockets,
+      complete: parseInt(row['complete'] || '0', 10) === 1,
+    });
+  }
+
+  const rws = [...rwMap.values()].filter(r => r.complete);
+  rws.sort((a, b) => a.name.localeCompare(b.name));
+
+  const lines = [
+    '/// Runeword recipes (auto-generated from runes.txt)',
+    '/// Format: (id, name, rune_codes, allowed_base_types, sockets)',
+    '#[rustfmt::skip]',
+    'pub const RUNEWORDS: &[(&str, &str, &[&str], &[&str], u8)] = &[',
+  ];
+
+  for (const rw of rws) {
+    const runesStr = rw.runeCodes.map(c => `"${c}"`).join(', ');
+    const typesStr = rw.allowedTypes.length > 0
+      ? `&[${rw.allowedTypes.map(t => `"${t}"`).join(', ')}]`
+      : '&[]';
+    lines.push(`  ("${rw.id}", "${esc(rw.name)}", &[${runesStr}], ${typesStr}, ${rw.sockets}),`);
+  }
+
+  lines.push('];');
+  lines.push(`// Total: ${rws.length} runewords`);
+
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'runewords.rs'), lines.join('\n'));
+  console.log(`  ✅ runewords.rs: ${rws.length} runeword recipes`);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 5. 生成 unique_items.rs — 暗金物品 + set_items.rs — 套装
+// ═══════════════════════════════════════════════════════════════
+function generateUniqueAndSet(vanillaDir, modDir) {
+  // ── Uniques ──
+  const uniqueRows = readTxt(path.join(vanillaDir, 'uniqueitems.txt'));
+  const modUnique = modDir ? readTxt(path.join(modDir, 'uniqueitems.txt')) : [];
+
+  // Build vanilla ID set for mod detection
+  const vanillaUniqueIds = new Set(
+    uniqueRows.map(r => parseInt(r['*ID'] || r['index'] || '-1'))
+  );
+
+  const uniqueMap = new Map();
+  // Process mod file first (has full list), then mark non-vanilla IDs as mod-added
+  const sourceRows = modDir ? [...modUnique] : [...uniqueRows];
+  for (const row of sourceRows) {
+    const id = row['*ID'] || row['index'] || '';
+    // name = first column (index) = unique item's proper name (e.g. "The Gnasher")
+    // *ItemName = base item type name (e.g. "Hand Axe") — NOT what we want
+    const name = row['index'] || row['*ItemName'] || '';
+    const code = row['code'] || '';
+    const lvl = row['lvl'] || row['level'] || '0';
+    const lvlReq = row['lvl req'] || '0';
+    if (!id) continue;
+
+    const numId = parseInt(id);
+    if (isNaN(numId)) continue; // skip entries with non-numeric IDs
+    const modAdded = modDir ? !vanillaUniqueIds.has(numId) : false;
+
+    uniqueMap.set(numId, {
+      id: numId,
+      name: esc(name),
+      code: (code || '').toLowerCase(),
+      level: parseInt(lvl) || 0,
+      levelReq: parseInt(lvlReq) || 0,
+      modAdded,
+    });
+  }
+
+  const uniques = [...uniqueMap.values()].sort((a, b) => a.id - b.id);
+
+  const ulines = [
+    '/// Unique item definitions (auto-generated from uniqueitems.txt)',
+    '/// Format: (id, name, base_code, level, level_req, is_mod_item)',
+    '#[rustfmt::skip]',
+    'pub const UNIQUE_ITEMS: &[(u16, &str, &str, u8, u8, bool)] = &[',
+  ];
+  for (const u of uniques) {
+    ulines.push(`  (${u.id}, "${u.name}", "${u.code}", ${u.level}, ${u.levelReq}, ${u.modAdded}),`);
+  }
+  ulines.push('];');
+  ulines.push(`// Total: ${uniques.length} unique items`);
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'unique_items.rs'), ulines.join('\n'));
+  console.log(`  ✅ unique_items.rs: ${uniques.length} unique items`);
+
+  // ── Sets ──
+  const setRows = readTxt(path.join(vanillaDir, 'setitems.txt'));
+  const modSet = modDir ? readTxt(path.join(modDir, 'setitems.txt')) : [];
+  const setDefRows = readTxt(path.join(vanillaDir, 'sets.txt'));
+
+  const setItemMap = new Map();
+  for (const row of [...setRows, ...modSet]) {
+    const id = row['*ID'] || '';
+    const name = row['*ItemName'] || '';
+    const set = row['set'] || '';
+    const code = row['item'] || '';
+    const lvl = row['lvl'] || '0';
+    const lvlReq = row['lvl req'] || '0';
+    if (!id) continue;
+    setItemMap.set(parseInt(id), {
+      id: parseInt(id),
+      name: esc(name),
+      setName: esc(set),
+      code: (code || '').toLowerCase(),
+      level: parseInt(lvl) || 0,
+      levelReq: parseInt(lvlReq) || 0,
+    });
+  }
+
+  const setItems = [...setItemMap.values()].sort((a, b) => a.id - b.id);
+
+  const slines = [
+    '/// Set item definitions (auto-generated from setitems.txt)',
+    '/// Format: (id, name, set_name, base_code, level, level_req)',
+    '#[rustfmt::skip]',
+    'pub const SET_ITEMS: &[(u16, &str, &str, &str, u8, u8)] = &[',
+  ];
+  for (const s of setItems) {
+    slines.push(`  (${s.id}, "${s.name}", "${s.setName}", "${s.code}", ${s.level}, ${s.levelReq}),`);
+  }
+  slines.push('];');
+  slines.push(`// Total: ${setItems.length} set items`);
+
+  // Set definitions (bonuses)
+  const setDefs = [];
+  for (const row of setDefRows) {
+    const name = row['name'] || '';
+    if (!name) continue;
+    setDefs.push({ name: esc(name) });
+  }
+
+  if (setDefs.length > 0) {
+    slines.push('');
+    slines.push('/// Set bonus definitions (auto-generated from sets.txt)');
+    slines.push('/// Format: (name)');
+    slines.push('#[rustfmt::skip]');
+    slines.push('pub const SET_BONUSES: &[(&str)] = &[');
+    for (const s of setDefs) {
+      slines.push(`  ("${s.name}"),`);
+    }
+    slines.push('];');
+    slines.push(`// Total: ${setDefs.length} set bonuses`);
+  }
+
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'set_items.rs'), slines.join('\n'));
+  console.log(`  ✅ set_items.rs: ${setItems.length} set items + ${setDefs.length} set bonuses`);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 6. 生成 cube_recipes.rs — 合成配方
+// ═══════════════════════════════════════════════════════════════
+function generateCubeRecipes(vanillaDir, modDir) {
+  const baseRows = readTxt(path.join(vanillaDir, 'cubemain.txt'));
+  const modRows = modDir ? readTxt(path.join(modDir, 'cubemain.txt')) : [];
+  const rows = modRows.length > 0 ? modRows : baseRows;
+
+  const lines = [
+    '/// Horadric Cube recipes (auto-generated from cubemain.txt)',
+    '/// Format: (description, inputs, output, is_mod_recipe)',
+    '#[rustfmt::skip]',
+    'pub const CUBE_RECIPES: &[(&str, &[&str], &str, bool)] = &[',
+  ];
+
+  // Build vanilla description set for mod detection
+  const vanillaDescs = new Set(baseRows.map(r => r['description'] || ''));
+
+  let count = 0;
+  let modCount = 0;
+  for (const row of rows) {
+    const desc = row['description'] || '';
+    if (!desc) continue;
+
+    // Collect inputs
+    const inputs = [];
+    for (let i = 1; i <= 7; i++) {
+      const input = row[`input ${i}`];
+      if (input) inputs.push(esc(input));
+    }
+    const output = row['output'] || '';
+    const isMod = modDir ? !vanillaDescs.has(desc) : false;
+
+    lines.push(`  ("${esc(desc)}", &[${inputs.map(i => `"${i}"`).join(', ')}], "${esc(output)}", ${isMod}),`);
+    count++;
+    if (isMod) modCount++;
+  }
+  lines.push('];');
+  lines.push(`// Total: ${count} recipes (${count - modCount} vanilla + ${modCount} mod)`);
+
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'cube_recipes.rs'), lines.join('\n'));
+  console.log(`  ✅ cube_recipes.rs: ${count} recipes (${modCount} mod)`);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// 7. 生成 game_item_names.rs — 完整名称表
+// ═══════════════════════════════════════════════════════════════
+function generateGameItemNames(vanillaDir, modDir) {
+  const names = [];
+
+  function addNames(rows) {
+    for (const row of rows) {
+      const code = (row['code'] || '').toLowerCase();
+      const name = row['name'] || row['*Name'] || '';
+      if (code && name) {
+        names.push({ code, name: esc(name) });
+      }
+    }
+  }
+
+  addNames(readTxt(path.join(vanillaDir, 'armor.txt')));
+  addNames(readTxt(path.join(vanillaDir, 'weapons.txt')));
+  addNames(readTxt(path.join(vanillaDir, 'misc.txt')));
+
+  // Mod overrides
+  if (modDir) {
+    addNames(readTxt(path.join(modDir, 'armor.txt')));
+    addNames(readTxt(path.join(modDir, 'weapons.txt')));
+    addNames(readTxt(path.join(modDir, 'misc.txt')));
+  }
+
+  // Deduplicate (later overrides earlier)
+  const nameMap = new Map();
+  for (const n of names) nameMap.set(n.code, n.name);
+  const unique = [...nameMap.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+
+  const lines = [
+    '/// Game item name lookup (auto-generated from TXT files)',
+    '/// Format: (code, name)',
+    '#[rustfmt::skip]',
+    'pub const GAME_ITEM_NAMES: &[(&str, &str)] = &[',
+  ];
+  for (const [code, name] of unique) {
+    lines.push(`  ("${code}", "${name}"),`);
+  }
+  lines.push('];');
+  lines.push(`// Total: ${unique.length} name entries`);
+
+  fs.writeFileSync(path.join(CONFIG.OUT_DIR, 'game_item_names.rs'), lines.join('\n'));
+  console.log(`  ✅ game_item_names.rs: ${unique.length} name entries`);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MAIN
+// ═══════════════════════════════════════════════════════════════
+function main() {
+  console.log('D2R 静态码表生成器');
+  console.log('─────────────────────');
+  console.log(`原版目录: ${CONFIG.VANILLA_DIR}`);
+  console.log(`模组目录: ${CONFIG.MOD_DIR}`);
+  console.log(`输出目录: ${CONFIG.OUT_DIR}`);
+  console.log('');
+
+  // Step 1: game_items.rs — 必须先跑，得到 modCodes 供后续使用
+  const { modCodes } = generateGameItems(CONFIG.VANILLA_DIR, CONFIG.MOD_DIR);
+  console.log('');
+
+  // Step 2: item_sizes.rs (依赖 modCodes 识别模组物品)
+  generateItemSizes(CONFIG.VANILLA_DIR, CONFIG.MOD_DIR, modCodes);
+  console.log('');
+
+  // Step 3: constants.rs
+  generateConstants(CONFIG.VANILLA_DIR, CONFIG.MOD_DIR, modCodes);
+  console.log('');
+
+  // Step 4: runewords.rs
+  generateRunewords(CONFIG.VANILLA_DIR, CONFIG.MOD_DIR);
+  console.log('');
+
+  // Step 5: unique_items.rs + set_items.rs
+  generateUniqueAndSet(CONFIG.VANILLA_DIR, CONFIG.MOD_DIR);
+  console.log('');
+
+  // Step 6: cube_recipes.rs
+  generateCubeRecipes(CONFIG.VANILLA_DIR, CONFIG.MOD_DIR);
+  console.log('');
+
+  // Step 7: game_item_names.rs
+  generateGameItemNames(CONFIG.VANILLA_DIR, CONFIG.MOD_DIR);
+  console.log('');
+  console.log('✅ 全部完成！');
+}
+
+main();

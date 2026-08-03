@@ -1,0 +1,4049 @@
+[
+  {
+    "id": "cube000",
+    "description": "Staff of Kings + Amulet of the Viper -> Horadric Staff",
+    "enabled": 1,
+    "op": 28,
+    "numinputs": 2,
+    "inputs": [
+      "msf",
+      "vip"
+    ],
+    "output": "hst",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube001",
+    "description": "Khalim's Flail + Khalim's Heart + Khalim's Eye + Khalim's Brain -> Khalim's Will",
+    "enabled": 1,
+    "op": 28,
+    "numinputs": 4,
+    "inputs": [
+      "qf1",
+      "qhr",
+      "qey",
+      "qbr"
+    ],
+    "output": "qf2",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube002",
+    "description": "Wirt's Leg + Tome of Town Portal -> Portal to The Secret Cow Level",
+    "enabled": 1,
+    "op": 28,
+    "numinputs": 2,
+    "inputs": [
+      "leg",
+      "tbk"
+    ],
+    "output": "Cow Portal",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube003",
+    "description": "3 Healing Potions (Any) + 3 Mana Potions (Any) + 1 Standard Gem (Any) -> Full Rejuvenation Potion",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 7,
+    "inputs": [
+      "hpot",
+      "qty=3",
+      "mpot",
+      "qty=3",
+      "gem2"
+    ],
+    "output": "rvl",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube004",
+    "description": "3 Healing Potions (Any) + 3 Mana Potions (Any)  + 1 Chipped Gem (Any) -> Rejuvenation Potion",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 7,
+    "inputs": [
+      "hpot",
+      "qty=3",
+      "mpot",
+      "qty=3",
+      "gem0"
+    ],
+    "output": "rvs",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube005",
+    "description": "3 Rejuvenation Potions -> Full Rejuvenation Potion",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "rvs",
+      "qty=3"
+    ],
+    "output": "rvl",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube006",
+    "description": "6 Perfect Gems (1 of each type) + 1 Magic Amulet -> Prismatic Amulet",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 7,
+    "inputs": [
+      "amu",
+      "mag",
+      "gpv",
+      "gpy",
+      "gpb",
+      "gpg",
+      "gpr",
+      "gpw"
+    ],
+    "output": "amu,mag,pre=331",
+    "qty": 1,
+    "lvl": 50,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube007",
+    "description": "1 Magic Ring + 1 Perfect Ruby + 1 Exploding Potion -> Garnet Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "rin",
+      "mag",
+      "gpr",
+      "opm"
+    ],
+    "output": "rin,mag,pre=372",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube008",
+    "description": "1 Magic Ring + 1 Perfect Sapphire + 1 Thawing Potion -> Cobalt Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "rin",
+      "mag",
+      "gpb",
+      "wms"
+    ],
+    "output": "rin,mag,pre=353",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube009",
+    "description": "1 Magic Ring + 1 Perfect Topaz + 1 Rejuvenation Potion -> Coral Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "rin",
+      "mag",
+      "gpy",
+      "rvs"
+    ],
+    "output": "rin,mag,pre=392",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube010",
+    "description": "1 Magic Ring + 1 Standard Emerald + 1 Antidote Potion -> Jade Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "rin",
+      "mag",
+      "gpg",
+      "yps"
+    ],
+    "output": "rin,mag,pre=412",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube011",
+    "description": "1 Axe (Any) + 1 Dagger (Any) -> Throwing Axe",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 2,
+    "inputs": [
+      "axe",
+      "knif"
+    ],
+    "output": "tax,nor",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube012",
+    "description": "1 Spear (Any) + 1 Arrows -> Javelins",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 2,
+    "inputs": [
+      "spea",
+      "aqv"
+    ],
+    "output": "jav,nor",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube013",
+    "description": "3 Magic Rings -> Magic Amulet",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "rin",
+      "mag",
+      "qty=3"
+    ],
+    "output": "amu,mag",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 75,
+    "bldtst": -1
+  },
+  {
+    "id": "cube014",
+    "description": "3 Magic Amulets -> Magic Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "amu",
+      "mag",
+      "qty=3"
+    ],
+    "output": "rin,mag",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 75,
+    "bldtst": -1
+  },
+  {
+    "id": "cube015",
+    "description": "3 Standard Gems + 1 Socketed Weapon ->  Socketed Magic Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "sock",
+      "gem2",
+      "qty=3"
+    ],
+    "output": "usetype,mag",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube016",
+    "description": "3 Flawless Gems + 1 Magic Weapon -> Socketed Magic Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "gem3",
+      "qty=3"
+    ],
+    "output": "usetype,mag",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube017",
+    "description": "1 Magic Shield + 1 Spiked Club + 2 Skulls (Any) -> Magic Shield of Spikes",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shld",
+      "mag",
+      "gemz",
+      "qty=2",
+      "spc"
+    ],
+    "output": "usetype,mag,suf=162",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube018",
+    "description": "4 Healing Potions (Any) + 1 Standard Ruby + 1 Magic Sword -> Sword of the Leech",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 6,
+    "inputs": [
+      "swor",
+      "mag",
+      "gemr",
+      "hpot",
+      "qty=4"
+    ],
+    "output": "usetype,mag,suf=352",
+    "qty": 1,
+    "lvl": 30,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube019",
+    "description": "1 Diamond (Any) + 1 Kris + 1 Staff + 1 Belt -> Savage Polearm",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "kri",
+      "gemd",
+      "staf",
+      "belt"
+    ],
+    "output": "pole,mag,pre=191",
+    "qty": 1,
+    "lvl": 50,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube020",
+    "description": "1 Strangling Gas Potion + 1 Healing Potion (Any) -> Antidote Potion",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 2,
+    "inputs": [
+      "gpl",
+      "hpot"
+    ],
+    "output": "yps",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube021",
+    "description": "2 Arrows -> Bolts",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 2,
+    "inputs": [
+      "aqv",
+      "qty=2"
+    ],
+    "output": "cqv",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube022",
+    "description": "2 Bolts -> Arrows",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 2,
+    "inputs": [
+      "cqv",
+      "qty=2"
+    ],
+    "output": "aqv",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube023",
+    "description": "3 Chipped Amethysts -> Flawed Amethyst",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gcv",
+      "qty=3"
+    ],
+    "output": "gfv",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube024",
+    "description": "3 Flawed Amethysts -> Standard Amethyst",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gfv",
+      "qty=3"
+    ],
+    "output": "gsv",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube025",
+    "description": "3 Standard Amethysts -> Flawless Amethyst",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gsv",
+      "qty=3"
+    ],
+    "output": "gzv",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube026",
+    "description": "3 Flawless Amethysts -> Perfect Amethyst",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gzv",
+      "qty=3"
+    ],
+    "output": "gpv",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube027",
+    "description": "3 Chipped Rubies -> Flawed Ruby",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gcr",
+      "qty=3"
+    ],
+    "output": "gfr",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube028",
+    "description": "3 Flawed Rubies -> Standard Ruby",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gfr",
+      "qty=3"
+    ],
+    "output": "gsr",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube029",
+    "description": "3 Standard Rubies -> Flawless Ruby",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gsr",
+      "qty=3"
+    ],
+    "output": "glr",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube030",
+    "description": "3 Flawless Rubies -> Perfect Ruby",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "glr",
+      "qty=3"
+    ],
+    "output": "gpr",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube031",
+    "description": "3 Chipped Sapphires -> Flawed Sapphire",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gcb",
+      "qty=3"
+    ],
+    "output": "gfb",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube032",
+    "description": "3 Flawed Sapphires -> Standard Sapphire",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gfb",
+      "qty=3"
+    ],
+    "output": "gsb",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube033",
+    "description": "3 Standard Sapphires -> Flawless Sapphire",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gsb",
+      "qty=3"
+    ],
+    "output": "glb",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube034",
+    "description": "3 Flawless Sapphires -> Perfect Sapphire",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "glb",
+      "qty=3"
+    ],
+    "output": "gpb",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube035",
+    "description": "3 Chipped Topazes -> Flawed Topaz",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gcy",
+      "qty=3"
+    ],
+    "output": "gfy",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube036",
+    "description": "3 Flawed Topazes -> Standard Topaz",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gfy",
+      "qty=3"
+    ],
+    "output": "gsy",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube037",
+    "description": "3 Standard Topazes -> Flawless Topaz",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gsy",
+      "qty=3"
+    ],
+    "output": "gly",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube038",
+    "description": "3 Flawless Topazes -> Perfect Topaz",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gly",
+      "qty=3"
+    ],
+    "output": "gpy",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube039",
+    "description": "3 Chipped Emeralds -> Flawed Emerald",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gcg",
+      "qty=3"
+    ],
+    "output": "gfg",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube040",
+    "description": "3 Flawed Emeralds -> Standard Emerald",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gfg",
+      "qty=3"
+    ],
+    "output": "gsg",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube041",
+    "description": "3 Standard Emeralds -> Flawless Emerald",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gsg",
+      "qty=3"
+    ],
+    "output": "glg",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube042",
+    "description": "3 Flawless Emeralds -> Perfect Emerald",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "glg",
+      "qty=3"
+    ],
+    "output": "gpg",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube043",
+    "description": "3 Chipped Diamonds -> Flawed Diamond",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gcw",
+      "qty=3"
+    ],
+    "output": "gfw",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube044",
+    "description": "3 Flawed Diamonds -> Standard Diamond",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gfw",
+      "qty=3"
+    ],
+    "output": "gsw",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube045",
+    "description": "3 Standard Diamonds -> Flawless Diamond",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "gsw",
+      "qty=3"
+    ],
+    "output": "glw",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube046",
+    "description": "3 Flawless Diamonds -> Perfect Diamond",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "glw",
+      "qty=3"
+    ],
+    "output": "gpw",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube047",
+    "description": "3 Chipped Skulls -> Flawed Skull",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "skc",
+      "qty=3"
+    ],
+    "output": "skf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube048",
+    "description": "3 Flawed Skulls -> Standard Skull",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "skf",
+      "qty=3"
+    ],
+    "output": "sku",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube049",
+    "description": "3 Standard Skulls -> Flawless Skull",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "sku",
+      "qty=3"
+    ],
+    "output": "skl",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube050",
+    "description": "3 Flawless Skulls -> Perfect Skull",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "skl",
+      "qty=3"
+    ],
+    "output": "skz",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube051",
+    "description": "3 El Runes -> Eld Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r01",
+      "qty=3"
+    ],
+    "output": "r02",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube052",
+    "description": "3 Eld Runes -> Tir Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r02",
+      "qty=3"
+    ],
+    "output": "r03",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube053",
+    "description": "3 Tir Runes -> Nef Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r03",
+      "qty=3"
+    ],
+    "output": "r04",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube054",
+    "description": "3 Nef Runes -> Eth Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r04",
+      "qty=3"
+    ],
+    "output": "r05",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube055",
+    "description": "3 Eth Runes -> Ith Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r05",
+      "qty=3"
+    ],
+    "output": "r06",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube056",
+    "description": "3 Ith Runes -> Tal Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r06",
+      "qty=3"
+    ],
+    "output": "r07",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube057",
+    "description": "3 Tal Runes -> Ral Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r07",
+      "qty=3"
+    ],
+    "output": "r08",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube058",
+    "description": "3 Ral Runes -> Ort Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r08",
+      "qty=3"
+    ],
+    "output": "r09",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube059",
+    "description": "3 Ort Runes -> Thul Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r09",
+      "qty=3"
+    ],
+    "output": "r10",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube060",
+    "description": "3 Perfect Gems (Any) + 1 Magic Item -> Re-rolled Magic Item",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "any",
+      "mag",
+      "gem4",
+      "qty=3"
+    ],
+    "output": "usetype,mag",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube061",
+    "description": "6 Perfect Skulls + 1 Rare Item -> 1 Low Quality Rare Item",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 7,
+    "inputs": [
+      "any",
+      "rar",
+      "skz",
+      "qty=6"
+    ],
+    "output": "usetype,rar",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 40,
+    "bldtst": -1
+  },
+  {
+    "id": "cube062",
+    "description": "1 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> 1 High Quality Rare Item",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "any",
+      "rar",
+      "skz",
+      "The Stone of Jordan"
+    ],
+    "output": "usetype,rar",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 66,
+    "bldtst": -1
+  },
+  {
+    "id": "cube063",
+    "description": "3 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> Add 1 Socket to Rare Item",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 5,
+    "inputs": [
+      "any",
+      "rar",
+      "nos",
+      "skz",
+      "qty=3",
+      "The Stone of Jordan"
+    ],
+    "output": "useitem,sock=1",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube064",
+    "description": "1 Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "fhl",
+      "mag",
+      "upg",
+      "jew",
+      "r06",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube065",
+    "description": "1 Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mbt",
+      "mag",
+      "upg",
+      "jew",
+      "r08",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube066",
+    "description": "1 Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mgl",
+      "mag",
+      "upg",
+      "jew",
+      "r09",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube067",
+    "description": "1 Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tbl",
+      "mag",
+      "upg",
+      "jew",
+      "r07",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube068",
+    "description": "1 Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "gts",
+      "mag",
+      "upg",
+      "jew",
+      "r05",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube069",
+    "description": "1 Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "fld",
+      "mag",
+      "upg",
+      "jew",
+      "r04",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube070",
+    "description": "1 Magic Amulet + 1 Jewel + Thul Rune + 1 Perfect Sapphire -> Hit Power Amulet",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amul",
+      "mag",
+      "jew",
+      "r10",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube071",
+    "description": "1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Sapphire -> Hit Power Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "jew",
+      "r11",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube072",
+    "description": "1 Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "blun",
+      "mag",
+      "jew",
+      "r03",
+      "gpb"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube073",
+    "description": "1 Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "hlm",
+      "mag",
+      "upg",
+      "jew",
+      "r08",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube074",
+    "description": "1 Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby -> Blood Boots",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tbt",
+      "mag",
+      "upg",
+      "jew",
+      "r05",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube075",
+    "description": "1 Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby -> Blood Gloves",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "vgl",
+      "mag",
+      "upg",
+      "jew",
+      "r04",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube076",
+    "description": "1 Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby -> Blood Belt",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mbl",
+      "mag",
+      "upg",
+      "jew",
+      "r07",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube077",
+    "description": "1 Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby -> Blood Shield",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "spk",
+      "mag",
+      "upg",
+      "jew",
+      "r06",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube078",
+    "description": "1 Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby -> Blood Body",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "plt",
+      "mag",
+      "upg",
+      "jew",
+      "r10",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube079",
+    "description": "1 Magic Amulet + 1 Jewel + 1 Amn Rune + 1 Perfect Ruby -> Blood Amulet",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amul",
+      "mag",
+      "jew",
+      "r11",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube080",
+    "description": "1 Magic Ring + 1 Jewel + 1 Sol Rune + 1 Perfect Ruby -> Blood Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "jew",
+      "r12",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube081",
+    "description": "1 Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "axe",
+      "mag",
+      "jew",
+      "r09",
+      "gpr"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube082",
+    "description": "1 Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "msk",
+      "mag",
+      "upg",
+      "jew",
+      "r04",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube083",
+    "description": "1 Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst -> Caster Boots",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lbt",
+      "mag",
+      "upg",
+      "jew",
+      "r10",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube084",
+    "description": "1 Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst -> Caster Gloves",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lgl",
+      "mag",
+      "upg",
+      "jew",
+      "r09",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube085",
+    "description": "1 Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst -> Caster Belt",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "vbl",
+      "mag",
+      "upg",
+      "jew",
+      "r06",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube086",
+    "description": "1 Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst -> Caster Shield",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "sml",
+      "mag",
+      "upg",
+      "jew",
+      "r05",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube087",
+    "description": "1 Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst -> Caster Body",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ltp",
+      "mag",
+      "upg",
+      "jew",
+      "r07",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube088",
+    "description": "1 Magic Amulet + 1 Jewel + 1 Ral Rune + 1 Perfect Amethyst -> Caster Amulet",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amul",
+      "mag",
+      "jew",
+      "r08",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube089",
+    "description": "1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Amethyst -> Caster Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "jew",
+      "r11",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube090",
+    "description": "1 Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst -> Caster Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "rod",
+      "mag",
+      "jew",
+      "r03",
+      "gpv"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube091",
+    "description": "1 Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "crn",
+      "mag",
+      "upg",
+      "jew",
+      "r06",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube092",
+    "description": "1 Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald -> Safety Boots",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "hbt",
+      "mag",
+      "upg",
+      "jew",
+      "r09",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube093",
+    "description": "1 Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald -> Safety Gloves",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "hgl",
+      "mag",
+      "upg",
+      "jew",
+      "r08",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube094",
+    "description": "1 Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald -> Safety Belt",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lbl",
+      "mag",
+      "upg",
+      "jew",
+      "r07",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube095",
+    "description": "1 Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald -> Safety Shield",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "kit",
+      "mag",
+      "upg",
+      "jew",
+      "r04",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube096",
+    "description": "1 Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald -> Safety Body",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "brs",
+      "mag",
+      "upg",
+      "jew",
+      "r05",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube097",
+    "description": "1 Magic Amulet + 1 Jewel + 1 Thul Rune + 1 Perfect Emerald -> Safety Amulet",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amul",
+      "mag",
+      "jew",
+      "r10",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube098",
+    "description": "1 Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Emerald -> Safety Ring",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "jew",
+      "r11",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube099",
+    "description": "1 Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald -> Safety Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "spea",
+      "mag",
+      "jew",
+      "r12",
+      "gpg"
+    ],
+    "output": "usetype,crf",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 50,
+    "bldtst": -1
+  },
+  {
+    "id": "cube100",
+    "description": "3 Thul Runes + 1 Chipped Topaz -> Amn Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r10",
+      "qty=3",
+      "gcy"
+    ],
+    "output": "r11",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube101",
+    "description": "3 Amn Runes + 1 Chipped Amethyst -> Sol Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r11",
+      "qty=3",
+      "gcv"
+    ],
+    "output": "r12",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube102",
+    "description": "3 Sol Runes + 1 Chipped Sapphire -> Shael Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r12",
+      "qty=3",
+      "gcb"
+    ],
+    "output": "r13",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube103",
+    "description": "3 Shael Runes + 1 Chipped Ruby -> Dol Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r13",
+      "qty=3",
+      "gcr"
+    ],
+    "output": "r14",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube104",
+    "description": "3 Dol Runes + 1 Chipped Emerald -> Hel Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r14",
+      "qty=3",
+      "gcg"
+    ],
+    "output": "r15",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube105",
+    "description": "3 Hel Runes + 1 Chipped Diamond -> Io Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r15",
+      "qty=3",
+      "gcw"
+    ],
+    "output": "r16",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube106",
+    "description": "3 Io Runes + 1 Flawed Topaz -> Lum Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r16",
+      "qty=3",
+      "gfy"
+    ],
+    "output": "r17",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube107",
+    "description": "3 Lum Runes + 1 Flawed Amethyst -> Ko Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r17",
+      "qty=3",
+      "gfv"
+    ],
+    "output": "r18",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube108",
+    "description": "3 Ko Runes + 1 Flawed Sapphire -> Fal Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r18",
+      "qty=3",
+      "gfb"
+    ],
+    "output": "r19",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube109",
+    "description": "3 Fal Runes + 1 Flawed Ruby -> Lem Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r19",
+      "qty=3",
+      "gfr"
+    ],
+    "output": "r20",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube110",
+    "description": "3 Lem Runes + 1 Flawed Emerald -> Pul Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "r20",
+      "qty=3",
+      "gfg"
+    ],
+    "output": "r21",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube111",
+    "description": "2 Pul Runes + 1 Flawed Diamond -> Um Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r21",
+      "qty=2",
+      "gfw"
+    ],
+    "output": "r22",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube112",
+    "description": "2 Um Runes + 1 Standard Topaz -> Mal Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r22",
+      "qty=2",
+      "gsy"
+    ],
+    "output": "r23",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube113",
+    "description": "2 Mal Runes + 1 Standard Amethyst -> Ist Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r23",
+      "qty=2",
+      "gsv"
+    ],
+    "output": "r24",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube114",
+    "description": "2 Ist Runes + 1 Standard Sapphire -> Gul Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r24",
+      "qty=2",
+      "gsb"
+    ],
+    "output": "r25",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube115",
+    "description": "2 Gul Runes + 1 Standard Ruby -> Vex Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r25",
+      "qty=2",
+      "gsr"
+    ],
+    "output": "r26",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube116",
+    "description": "2 Vex Runes + 1 Standard Emerald -> Ohm Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r26",
+      "qty=2",
+      "gsg"
+    ],
+    "output": "r27",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube117",
+    "description": "2 Ohm Runes + 1 Standard Diamond -> Lo Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r27",
+      "qty=2",
+      "gsw"
+    ],
+    "output": "r28",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube118",
+    "description": "2 Lo Runes + 1 Flawless Topaz -> Sur Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r28",
+      "qty=2",
+      "gly"
+    ],
+    "output": "r29",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube119",
+    "description": "2 Sur Runes + 1 Flawless Amethyst -> Ber Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r29",
+      "qty=2",
+      "gzv"
+    ],
+    "output": "r30",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube120",
+    "description": "2 Ber Runes + 1 Flawless Sapphire -> Jah Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r30",
+      "qty=2",
+      "glb"
+    ],
+    "output": "r31",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube121",
+    "description": "2 Jah Runes + 1 Flawless Ruby -> Cham Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r31",
+      "qty=2",
+      "glr"
+    ],
+    "output": "r32",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube122",
+    "description": "2 Cham Runes + 1 Flawless Emerald -> Zod Rune",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "r32",
+      "qty=2",
+      "glg"
+    ],
+    "output": "r33",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube123",
+    "description": "1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + 1 Normal Torso Armor -> Socketed Torso Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tors",
+      "nor",
+      "nos",
+      "r07",
+      "r10",
+      "gpy"
+    ],
+    "output": "useitem",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube124",
+    "description": "1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + 1 Normal Weapon -> Socketed Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "nor",
+      "nos",
+      "r08",
+      "r11",
+      "gpv"
+    ],
+    "output": "useitem",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube125",
+    "description": "1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + 1 Normal Helm -> Socketed Helm",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "helm",
+      "nor",
+      "nos",
+      "r08",
+      "r10",
+      "gpb"
+    ],
+    "output": "useitem",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube126",
+    "description": "1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + 1 Normal Shield -> Socketed Shield",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shld",
+      "nor",
+      "nos",
+      "r07",
+      "r11",
+      "gpr"
+    ],
+    "output": "useitem",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube127",
+    "description": "1 Eld Rune + 1 Chipped Gem (Any) + 1 Low Quality Weapon -> Normal Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "weap",
+      "low",
+      "r02",
+      "gem0"
+    ],
+    "output": "usetype,nor",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube128",
+    "description": "1 El Rune + 1 Chipped Gem (Any) + 1 Low Quality Armor -> Normal Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "armo",
+      "low",
+      "r01",
+      "gem0"
+    ],
+    "output": "usetype,nor",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube129",
+    "description": "1 Ral Rune + 1 Sol Rune + 1 Perfect Emerald + 1 Normal Unique Weapon -> Exceptional Unique Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "bas",
+      "uni",
+      "r08",
+      "r12",
+      "gpg"
+    ],
+    "output": "useitem,mod,exc",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube130",
+    "description": "1 Tal Rune + 1 Shael Rune + 1 Perfect Diamond + 1 Normal Unique Armor -> Exceptional Unique Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "armo",
+      "bas",
+      "uni",
+      "r07",
+      "r13",
+      "gpw"
+    ],
+    "output": "useitem,mod,exc",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube131",
+    "description": "1 Lum Rune + 1 Pul Rune + 1 Perfect Emerald + 1 Exceptional Unique Weapon -> Elite Unique Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "exc",
+      "uni",
+      "r17",
+      "r21",
+      "gpg"
+    ],
+    "output": "useitem,mod,eli",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube132",
+    "description": "1 Ko Rune + 1 Lem Rune + 1 Perfect Diamond + 1 Exceptional Unique Armor -> Elite Unique Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "armo",
+      "exc",
+      "uni",
+      "r18",
+      "r20",
+      "gpw"
+    ],
+    "output": "useitem,mod,eli",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube133",
+    "description": "1 Ort Rune + 1 Amn Rune + 1 Perfect Sapphire + 1 Normal Rare Weapon -> Exceptional Rare Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "bas",
+      "rar",
+      "r09",
+      "r11",
+      "gpb"
+    ],
+    "output": "useitem,mod,exc",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube134",
+    "description": "1 Ral Rune + 1 Thul Rune + 1 Perfect Amethyst + 1 Normal Rare Armor -> Exceptional Rare Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "armo",
+      "bas",
+      "rar",
+      "r08",
+      "r10",
+      "gpv"
+    ],
+    "output": "useitem,mod,exc",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube135",
+    "description": "1 Fal Rune + 1 Um Rune + 1 Perfect Sapphire + 1 Exceptional Rare Weapon -> Elite Rare Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "exc",
+      "rar",
+      "r19",
+      "r22",
+      "gpb"
+    ],
+    "output": "useitem,mod,eli",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube136",
+    "description": "1 Ko Rune + 1 Pul Rune + 1 Perfect Amethyst + 1 Exceptional Rare Armor -> Elite Rare Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "armo",
+      "exc",
+      "rar",
+      "r18",
+      "r21",
+      "gpv"
+    ],
+    "output": "useitem,mod,eli",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube137",
+    "description": "1 Ort Rune + 1 Weapon -> Fully Repaired Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 2,
+    "inputs": [
+      "weap",
+      "noe",
+      "r09"
+    ],
+    "output": "useitem,rep,qty=255",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube138",
+    "description": "1 Ral Rune + 1 Armor -> Fully Repaired Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 2,
+    "inputs": [
+      "armo",
+      "noe",
+      "r08"
+    ],
+    "output": "useitem,rep,qty=255",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube139",
+    "description": "1 Ort Rune + 1 Chipped Gem (Any) + 1 Weapon -> Fully Repaired and Recharged Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "weap",
+      "noe",
+      "r09",
+      "gem0"
+    ],
+    "output": "useitem,rep,rch,qty=255",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube140",
+    "description": "1 Ral Rune + 1 Flawed Gem (Any) + 1 Armor -> Fully Repaired and Recharged Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "armo",
+      "noe",
+      "r08",
+      "gem1"
+    ],
+    "output": "useitem,rep,rch,qty=255",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube141",
+    "description": "1 Hel Rune + Scroll of Town Portal + 1 Socketed Item -> Clear Sockets on Item",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 3,
+    "inputs": [
+      "any",
+      "sock",
+      "r15",
+      "tsc"
+    ],
+    "output": "useitem,uns",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube147",
+    "description": "3 Chipped Gems (Any) + 1 Magic Weapon -> Socketed Magic Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "gem0",
+      "qty=3"
+    ],
+    "output": "usetype,mag",
+    "qty": 1,
+    "lvl": 25,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube148",
+    "description": "1 Key of Terror + 1 Key of Hate + 1 Key of Destruction -> Portal to Matron's Den/Forgotten Sands/Furnace of Pain (Random)",
+    "enabled": 1,
+    "op": 28,
+    "numinputs": 3,
+    "inputs": [
+      "pk1",
+      "pk2",
+      "pk3"
+    ],
+    "output": "Pandemonium Portal",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube149",
+    "description": "1 Diablo's Horn + 1 Baal's Eye + 1 Mephisto's Brain -> Portal to Tristram (Pandemonium Finale)",
+    "enabled": 1,
+    "op": 28,
+    "numinputs": 3,
+    "inputs": [
+      "dhn",
+      "bey",
+      "mbr"
+    ],
+    "output": "Pandemonium Finale Portal",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube150",
+    "description": "1 Twisted Essence of Suffering + 1 Charged Essence of Hatred + 1 Burning Essence of Terror + 1 Festering Essence of Destruction -> Token of Absolution",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tes",
+      "ceh",
+      "bet",
+      "fed"
+    ],
+    "output": "toa",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube151",
+    "description": "1 Ral Rune + 1 Sol Rune + 1 Perfect Emerald + 1 Normal Set Weapon -> Exceptional Set Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "bas",
+      "set",
+      "r08",
+      "r12",
+      "gpg"
+    ],
+    "output": "useitem,mod,exc",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube152",
+    "description": "1 Tal Rune + 1 Shael Rune + 1 Perfect Diamond + 1 Normal Set Armor -> Exceptional Set Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "armo",
+      "bas",
+      "set",
+      "r07",
+      "r13",
+      "gpw"
+    ],
+    "output": "useitem,mod,exc",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube153",
+    "description": "1 Lum Rune + 1 Pul Rune + 1 Perfect Emerald + 1 Exceptional Set Weapon -> Elite Set Weapon",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "exc",
+      "set",
+      "r17",
+      "r21",
+      "gpg"
+    ],
+    "output": "useitem,mod,eli",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube154",
+    "description": "1 Ko Rune + 1 Lem Rune + 1 Perfect Diamond + 1 Exceptional Set Armor -> Elite Set Armor",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "armo",
+      "exc",
+      "set",
+      "r18",
+      "r20",
+      "gpw"
+    ],
+    "output": "useitem,mod,eli",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube155",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Amulet -> Virulent Amulet",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amu",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=674",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube156",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Ring -> Virulent Ring",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=673",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube157",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Helm -> Virulent Helm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "helm",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=674",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube158",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Boots -> Virulent Boots",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "boot",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=674",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube159",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Gloves -> Virulent Gloves",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "glov",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=674",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube160",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Armor -> Virulent Armor",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tors",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=676",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube161",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Weapon -> Virulent Weapon",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=675",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube162",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Magic Shield -> Virulent Shield",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shie",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=675",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube163",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Small Charm -> Virulent Small Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "scha",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=671",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube164",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Western Worldstone Shard + 1 Large Charm -> Virulent Large Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mcha",
+      "mag",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "useitem,pre=673",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube165",
+    "description": "1 Ko Rune + 1 Perfect Emerald + 1 Uber Ancient Summon Material Act1 + 1 Rotting Fissure -> Virulent Rotting Fissure                                                                                                                                                                                                ",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "PreCrafted Rotting Fissure",
+      "r18",
+      "gpg",
+      "xa1"
+    ],
+    "output": "Crafted Rotting Fissure",
+    "qty": 1,
+    "lvl": 69,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube166",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Amulet -> Gelid Amulet",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amu",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=684",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube167",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Ring -> Gelid Ring",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=683",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube168",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Helm -> Gelid Helm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "helm",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=684",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube169",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Boots -> Gelid Boots",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "boot",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=684",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube170",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Gloves -> Gelid Gloves",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "glov",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=684",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube171",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Armor -> Gelid Armor",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tors",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=686",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube172",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Weapon -> Gelid Weapon",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=685",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube173",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Magic Shield -> Gelid Shield",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shie",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=685",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube174",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Small Charm -> Gelid Small Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "scha",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=682",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube175",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Large Charm -> Gelid Large Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mcha",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=683",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube176",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Eastern Worldstone Shard + 1 Grand Charm -> Gelid Grand Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lcha",
+      "mag",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "useitem,pre=684",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube177",
+    "description": "1 Lum Rune + 1 Perfect Sapphire + 1 Uber Ancient Summon Material Act2 + 1 Cold Rupture -> Gelid Cold Rupture",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "PreCrafted Cold Rupture",
+      "r17",
+      "gpb",
+      "xa2"
+    ],
+    "output": "Crafted Cold Rupture",
+    "qty": 1,
+    "lvl": 69,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube178",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Amulet -> Magnetic Amulet",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amu",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=689",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube179",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Ring -> Magnetic Ring",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=688",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube180",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Helm -> Magnetic Helm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "helm",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=689",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube181",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Boots -> Magnetic Boots",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "boot",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=689",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube182",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Gloves -> Magnetic Gloves",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "glov",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=689",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube183",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Armor -> Magnetic Armor",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tors",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=691",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube184",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Weapon -> Magnetic Weapon",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=690",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube185",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Magic Shield -> Magnetic Shield",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shie",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=690",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube186",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Small Charm -> Magnetic Small Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "scha",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=687",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube187",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Large Charm -> Magnetic Large Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mcha",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=688",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube188",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Southern Worldstone Shard + 1 Grand Charm -> Magnetic Grand Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lcha",
+      "mag",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "useitem,pre=689",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube189",
+    "description": "1 Fal Rune + 1 Perfect Topaz + 1 Uber Ancient Summon Material Act3 + 1 Crack of the Heavens -> Magnetic Crack of the Heavens",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "PreCrafted Crack of the Heavens",
+      "r19",
+      "gpy",
+      "xa3"
+    ],
+    "output": "Crafted Crack of the Heavens",
+    "qty": 1,
+    "lvl": 69,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube190",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Amulet -> Incendiary Amulet",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amu",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=679",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube191",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Ring -> Incendiary Ring",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=678",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube192",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Helm -> Incendiary Helm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "helm",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=679",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube193",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Boots -> Incendiary Boots",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "boot",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=679",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube194",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Gloves -> Incendiary Gloves",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "glov",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=679",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube195",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Armor -> Incendiary Armor",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tors",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=681",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube196",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Weapon -> Incendiary Weapon",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=680",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube197",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Magic Shield -> Incendiary Shield",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shie",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=680",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube198",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Small Charm -> Incendiary Small Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "scha",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=677",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube199",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Large Charm -> Incendiary Large Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mcha",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=678",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube200",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Deep Worldstone Shard + 1 Grand Charm -> Incendiary Grand Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lcha",
+      "mag",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "useitem,pre=679",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube201",
+    "description": "1 Io Rune + 1 Perfect Ruby + 1 Uber Ancient Summon Material Act4 + 1 Flame Rift -> Incendiary Flame Rift",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "PreCrafted Flame Rift",
+      "r16",
+      "gpr",
+      "xa4"
+    ],
+    "output": "Crafted Flame Rift",
+    "qty": 1,
+    "lvl": 69,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube202",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Amulet -> Breaching Amulet",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amu",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=699",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube203",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Ring -> Breaching Ring",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=698",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube204",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Helm -> Breaching Helm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "helm",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=699",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube205",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Boots -> Breaching Boots",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "boot",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=699",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube206",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Gloves -> Breaching Gloves",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "glov",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=699",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube207",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Armor -> Breaching Armor",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tors",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=701",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube208",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Weapon -> Breaching Weapon",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=700",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube209",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Magic Shield -> Breaching Shield",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shie",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=700",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube210",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Small Charm -> Breaching Small Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "scha",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=697",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube211",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Large Charm -> Breaching Large Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mcha",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=698",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube212",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Northern Worldstone Shard + 1 Grand Charm -> Breaching Grand Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lcha",
+      "mag",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "useitem,pre=699",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube213",
+    "description": "1 Pul Rune + 1 Perfect Amethyst + 1 Uber Ancient Summon Material Act5 + 1 Bone Break -> Breaching Bone Break",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "PreCrafted Bone Break",
+      "r21",
+      "gpv",
+      "xa5"
+    ],
+    "output": "Crafted Bone Break",
+    "qty": 1,
+    "lvl": 69,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube214",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Amulet -> Mystical Amulet",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "amu",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=694",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube215",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Ring -> Mystical Ring",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "ring",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=693",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube216",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Helm -> Mystical Helm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "helm",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=694",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube217",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Boots -> Mystical Boots",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "boot",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=694",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube218",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Gloves -> Mystical Gloves",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "glov",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=694",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube219",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Armor -> Mystical Armor",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "tors",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=696",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube220",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Weapon -> Mystical Weapon",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "weap",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=695",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube221",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Magic Shield -> Mystical Shield",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "shie",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=695",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube222",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Small Charm -> Mystical Small Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "scha",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=692",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube223",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Large Charm -> Mystical Large Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "mcha",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=693",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube224",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Northern Worldstone Shard + 1 Grand Charm -> Mystical Grand Charm",
+    "enabled": 0,
+    "op": 0,
+    "numinputs": 4,
+    "inputs": [
+      "lcha",
+      "mag",
+      "r23",
+      "gpw",
+      "xa5"
+    ],
+    "output": "useitem,pre=694",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube225",
+    "description": "1 Mal Rune + 1 Perfect Diamond + 1 Uber Ancient Summon Material Act5 + 1 Black Cleft -> Mystical Black Cleft",
+    "enabled": 1,
+    "op": 0,
+    "numinputs": 6,
+    "inputs": [
+      "PreCrafted Black Cleft",
+      "r23",
+      "gpw",
+      "xa3",
+      "xa4",
+      "xa5"
+    ],
+    "output": "Crafted Black Cleft",
+    "qty": 1,
+    "lvl": 69,
+    "plvl": 0,
+    "bldtst": -1
+  },
+  {
+    "id": "cube226",
+    "description": "1 Uber Ancient Summon Material from Act 1 + Act2 + Act3 + Act 4 + Act 5 -> Portal to Colossal Summit",
+    "enabled": 1,
+    "op": 28,
+    "numinputs": 5,
+    "inputs": [
+      "ua1",
+      "ua2",
+      "ua3",
+      "ua4",
+      "ua5"
+    ],
+    "output": "Red Portal,lvl=137,qty=1",
+    "qty": 1,
+    "lvl": 1,
+    "plvl": 0,
+    "bldtst": -1
+  }
+]

@@ -1,0 +1,233 @@
+{
+  "name": "StorageWorkbench · 高级堆叠页 · 拖动存入 review 优化",
+  "description": "基于 frontend-design review 的 StorageWorkbench 拖动存入链路优化:P0 并发竞态 + P1 视觉/状态一致性 + P2 staging 体验 + 堆叠页拖动支持。",
+  "branch": "feature/storage-workbench-staging-polish",
+  "createdAt": "2026-07-29",
+  "completedAt": "2026-07-29",
+  "stories": [
+    {
+      "id": "US-S01",
+      "title": "P0-1 staging-slot onDrop/onDragOver 改用 dragPayloadRef + 修复 is-drop-mode 视觉矛盾",
+      "description": "staging-slot 的 drop handler 用 React state `dragPayload` 是 stale state 风险,且 className 中的 is-drop-mode 在 submitting=true 时仍显示导致视觉矛盾(金色边框 + 禁止光标)。统一改用 dragPayloadRef.current,并加 !submitting 守卫。",
+      "priority": 1,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "staging-slot onDrop 用 dragPayloadRef.current 而非 dragPayload(state)",
+        "staging-slot onDragOver 用 dragPayloadRef.current",
+        "storage-stackable-area onDragOver 用 dragPayloadRef.current",
+        "is-drop-mode className 条件: dragPayloadRef.current?.source === 'warehouse' && !submitting",
+        "TS check 通过(npx tsc --noEmit 0 错误)"
+      ],
+      "actualResults": {
+        "filesChanged": "web/src/pages/StorageWorkbench.tsx (line 938-970 区域)",
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S02",
+      "title": "P0-2 confirmStagedItem 用 confirmingRef 串行化 + P1-B toast 与去重一致性",
+      "description": "confirmStagedItem 双击/手抖时 React state 提交异步,守卫 submitting/confirmingStagingId 都还为 false → 后端 warehouse_withdraw 被并发触发。用 confirmingRef 同步拦截。同时 stageItemForWithdraw 返回 {added: boolean} 让 toast 与状态一致。",
+      "priority": 2,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "新增 confirmingRef = useRef(false)",
+        "confirmStagedItem 守卫增加 || confirmingRef.current",
+        "confirmStagedItem try 前 confirmingRef.current = true",
+        "confirmStagedItem finally 中 confirmingRef.current = false",
+        "stageItemForWithdraw 返回 {added: boolean}",
+        "staging-slot onDrop 根据 added 分别弹 'info'(已暂存) 或 'warning'(已在槽中) toast",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": "web/src/pages/StorageWorkbench.tsx",
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S03",
+      "title": "P2-1 staging item 加 ItemTooltip(与 StackablePageView 一致)",
+      "description": "StackablePageView 的 ITEM_CELL 有 ItemTooltip 显示物品属性(affix/socket 等),staging slot 的暂存项没有,用户在确认前看不到关键属性。补齐。",
+      "priority": 3,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "storage-staging-item__icon 内的 img 加 ItemTooltip",
+        "ItemTooltip 接收 quality/itemCode/nameZh/english/quantity/tooltipData/tooltipLines 7 个 props",
+        "复用 ItemTooltip 组件,不新建 tooltip",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": "web/src/pages/StorageWorkbench.tsx (storage-staging-item__icon 内加 ItemTooltip)",
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S04",
+      "title": "P2-2 drop flash 视觉反馈",
+      "description": "staging-slot onDrop 立即 clearDrag,is-drop-mode 一闪即逝,用户感受不到'成功落入'的视觉确认。加短暂 drop flash 状态(150-200ms)让边框有落到位的视觉反馈。",
+      "priority": 4,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "新增 dropFlash 局部 state (useState boolean)",
+        "staging-slot onDrop 成功后 setDropFlash(true),setTimeout 220ms 后 setDropFlash(false)",
+        "is-drop-flash className 在 dropFlash=true 时生效",
+        "在 index.css 加 .storage-staging-slot.is-drop-flash 样式 + keyframes",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": [
+          "web/src/pages/StorageWorkbench.tsx (dropFlash state + flashDropSuccess + className)",
+          "web/src/index.css (.storage-staging-slot.is-drop-flash + @keyframes storage-staging-flash)"
+        ],
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S05",
+      "title": "P3-1 staging 全部确认按钮(批量)",
+      "description": "staging slot 有 N 件待确认时,逐个点 ✓ 累。加'全部确认(N)'按钮,一次性触发所有 confirmStagedItem。注意必须复用 confirmingRef 串行化防止并发。",
+      "priority": 5,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "staging slot head 在 stagingItems.length > 1 时显示'全部确认(N)'按钮",
+        "按钮调用 confirmAllStagedItems,内部 for-await 顺序触发",
+        "全部确认完成后 stagingItems 应清空(confirmStagedItem 内部 clearStagedItem 负责)",
+        "任一 confirm 失败时,后续的 confirm 仍然继续(confirmStagedItem 内部 try/catch 吞错)",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": "web/src/pages/StorageWorkbench.tsx (新增 confirmAllStagedItems + 按钮)",
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S06",
+      "title": "P3-2 confirm 失败时若 item 已删除自动清理",
+      "description": "用户在 staging 中保留一个 item,切到 SQLite 收藏页把它删除,然后回到 staging 点确认 → 后端报错 'Warehouse item not found',但 item 仍在 staging,用户陷入死循环。修复:catch 错误信息匹配 'not found' 时自动 clearStagedItem。",
+      "priority": 6,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "confirmStagedItem catch 块检测错误信息含 'not found' 或 'Warehouse item not found'",
+        "匹配时自动调用 clearStagedItem(item.id)",
+        "给 toast 额外加 '物品已不存在,已自动清理' 提示",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": "web/src/pages/StorageWorkbench.tsx (catch 块检测)",
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S07",
+      "title": "StackablePageView 支持拖动 + 原位置高亮 + 共享仓库 → SQLite 存入",
+      "description": "StackablePageView 的 ITEM_CELL 没有 draggable 属性,无法从堆叠页拖物品到 SQLite 收藏页。重写 ITEM_CELL 接受 draggable/isDragging/onDragStart 三个 opts,让组件既兼容角色页只读模式,又支持 StorageWorkbench 的拖动场景。同时拖动时原物品透明度降至 0.18 + 金色边框,作为'原位置被抽走'视觉提示。",
+      "priority": 7,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "ITEM_CELL 接受 opts: { draggable, isDragging, onDragStart }",
+        "draggable=true && item 存在时,div 设 draggable + onDragStart 绑定",
+        "isDragging=true 时,opacity 0.18 + 金色边框 + 内阴影",
+        "GemGrid / RuneGrid / 材料区都接 beginDragStash 和 draggingItemId props",
+        "角色页调用方式不变(不传 beginDragStash),保持只读",
+        "StorageWorkbench 渲染处透传 beginDragStash 和 draggingItemId",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": [
+          "web/src/components/StackablePageView.tsx (重写,加 Props + draggable opts)",
+          "web/src/pages/StorageWorkbench.tsx (透传 props)"
+        ],
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S09",
+      "title": "装备页拖动视觉修复:原位置高亮 + ghost 尺寸统一",
+      "description": "用户反馈:装备页拖动共享仓库物品时,原 cell 完全消失(opacity:0)无任何视觉提示,且 storage-drag-ghost 用 GRID_CELL(固定 44px)而非 scaledCell,装备页小屏缩放后 ghost 尺寸与 cell 不匹配。修复:①is-dragging 从 opacity:0 改为半透明 + 金色边框 + 内阴影 + '原位置' 徽章;②ghostWidth/ghostHeight 统一用 scaledCell。",
+      "priority": 9,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        ".storage-grid-item.is-dragging opacity 改为 0.18(不再是 0)",
+        "is-dragging 时加金色边框 + 内阴影(与堆叠页 ITEM_CELL 一致)",
+        "is-dragging 时左上角显示 '原位置' 文字徽章(::after 伪元素)",
+        "storage-drag-ghost 的 ghostWidth/ghostHeight 统一用 scaledCell 而非 GRID_CELL",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": [
+          "web/src/index.css (+18 行:.is-dragging 样式 + ::after 徽章)",
+          "web/src/pages/StorageWorkbench.tsx (-2/+4 行:ghostWidth/Height 简化)"
+        ],
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    },
+    {
+      "id": "US-S08",
+      "title": "最终回归:TypeScript + 文件计数 + git 状态",
+      "description": "所有 story 完成后,跑一次完整 TypeScript 检查,确认无回归,文件结构对劲。",
+      "priority": 8,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "npx tsc --noEmit 0 错误",
+        "git status 显示变更文件数符合预期(StorageWorkbench.tsx + StackablePageView.tsx + index.css)",
+        "无 .webp 残留(主项目区)"
+      ],
+      "actualResults": {
+        "tsCheck": "npx tsc --noEmit 0 errors",
+        "gitStatus": "3 files modified (StackablePageView.tsx +166/-53, StorageWorkbench.tsx +110/-27, index.css +11)",
+        "webpRemaining": "0 in main project (web/dist/ is gitignored)"
+      }
+    },
+    {
+      "id": "US-S10",
+      "title": "扩展'当前选中'卡片内容(品质徽章 + 基础/词缀/孔位 + 复制 code)",
+      "description": "用户反馈选中物品只显示 4 个字段(名称、code/尺寸/数量、来源位置),信息密度过低。后端 TooltipData 已有 9 个结构化字段(base_stats/affix_stats/sockets/runeword_stats/set_info 等),前端只需消费。扩展内容:①品质徽章 + 物品种类标签;②基础属性(防御/伤害);③词缀属性(前缀蓝/后缀黄/手工橙分色);④孔位 + 镶嵌物品图标缩略;⑤复制 code 按钮。",
+      "priority": 10,
+      "passes": true,
+      "status": "completed",
+      "completedAt": "2026-07-29",
+      "acceptanceCriteria": [
+        "品质徽章显示 selectedItem.quality + 物品种类(武器/防具/头盔/盾牌)",
+        "基础属性 tooltip.base_stats 完整展示,空时隐藏该块",
+        "词缀属性 tooltip.affix_stats 完整展示,按行分色(蓝/黄/橙)",
+        "孔位 tooltip.sockets 渲染 N 个图标,空孔显示'空',已镶显示物品缩略",
+        "复制 code 按钮调 navigator.clipboard.writeText,显示 '已复制' toast",
+        "现有 selectedItem 来源位置 + 数量 + 操作按钮 不破坏",
+        "TS check 通过"
+      ],
+      "actualResults": {
+        "filesChanged": [
+          "web/src/pages/StorageWorkbench.tsx (helper functions + 6 个新块 JSX)",
+          "web/src/index.css (badges/stats/sockets 新样式块)"
+        ],
+        "added": [
+          "① qualityLabel + itemTypeLabel helpers",
+          "② 品质徽章 + 类型徽章 + 复制 code 按钮 (badges block)",
+          "③ 基础属性 stats block (from tooltip.base_stats)",
+          "④ 词缀 stats block with 分色 (蓝/黄/橙) (from tooltip.affix_stats)",
+          "⑤ 符文之语加成 block (from tooltip.runeword_stats, conditional)",
+          "⑥ 套装加成 block (from tooltip.set_bonus_stats, conditional)",
+          "⑦ 孔位 + 镶嵌 block (from tooltip.sockets + socketed_items)"
+        ],
+        "tsCheck": "npx tsc --noEmit 0 errors"
+      }
+    }
+  ]
+}

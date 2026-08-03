@@ -1,0 +1,1219 @@
+[
+  {
+    "skill": "Summon Goatman",
+    "id": "373",
+    "reqLevel": "1",
+    "manaShift": "7",
+    "mana": "30",
+    "lvlMana": "1",
+    "skilldesc": "summon goatman",
+    "synergies": [
+      {
+        "skillId": "Goatman Stun",
+        "calc": "(lvl < 2)?0:(lvl)"
+      },
+      {
+        "skillId": "Goatman Berserk",
+        "calc": "(lvl <3)?0:(lvl)"
+      },
+      {
+        "skillId": "Goatman Frenzy",
+        "calc": "(lvl < 4)?0:(lvl)"
+      },
+      {
+        "skillId": "Goatman Cleave",
+        "calc": "(lvl <5)?0:(lvl)"
+      }
+    ],
+    "params": [
+      {
+        "key": "35",
+        "desc": "HP % per level"
+      },
+      {
+        "key": "1",
+        "desc": "% Chance Crushing blow syn"
+      },
+      {
+        "key": "1",
+        "desc": "Flat Damage baseline"
+      },
+      {
+        "key": "2",
+        "desc": "Flat Damage per level"
+      },
+      {
+        "key": "10",
+        "desc": "Damage % baseline"
+      },
+      {
+        "key": "10",
+        "desc": "Damage % per level"
+      },
+      {
+        "key": "140",
+        "desc": "Attack Rating  Baseline"
+      },
+      {
+        "key": "40",
+        "desc": "Attack Rating per level flat"
+      },
+      {
+        "key": "100",
+        "desc": "Defense baseline"
+      },
+      {
+        "key": "20",
+        "desc": "Defense per level"
+      },
+      {
+        "key": "10",
+        "desc": "attack speed baseline"
+      },
+      {
+        "key": "1",
+        "desc": "attack speed increase per level"
+      }
+    ]
+  },
+  {
+    "skill": "Demonic Mastery",
+    "id": "374",
+    "reqLevel": "1",
+    "manaShift": "8",
+    "mana": "0",
+    "lvlMana": "0",
+    "skilldesc": "demonic mastery",
+    "synergies": [],
+    "params": [
+      {
+        "key": "5",
+        "desc": "attack speed baseline"
+      },
+      {
+        "key": "1",
+        "desc": "attack speed increase per level"
+      },
+      {
+        "key": "25",
+        "desc": "Attack Rating % baseline"
+      },
+      {
+        "key": "25",
+        "desc": "Attack Rating % per level"
+      },
+      {
+        "key": "5",
+        "desc": "move speed % baseline"
+      },
+      {
+        "key": "39",
+        "desc": "movespeed % per level"
+      },
+      {
+        "key": "10",
+        "desc": "Damage % baseline"
+      },
+      {
+        "key": "10",
+        "desc": "Damage % per level"
+      }
+    ]
+  },
+  {
+    "skill": "Death Mark",
+    "id": "375",
+    "reqLevel": "6",
+    "manaShift": "6",
+    "mana": "9",
+    "lvlMana": "1",
+    "skilldesc": "death mark",
+    "synergies": [],
+    "params": [
+      {
+        "key": "-5",
+        "desc": "damage received increased baseline"
+      },
+      {
+        "key": "-2",
+        "desc": "damage received increased per level"
+      },
+      {
+        "key": "125",
+        "desc": "debuff duration baseline"
+      },
+      {
+        "key": "13",
+        "desc": "debuff duration per level"
+      },
+      {
+        "key": "-50",
+        "desc": "armor class decreased baseline"
+      },
+      {
+        "key": "-35",
+        "desc": "armor class decreased per level"
+      },
+      {
+        "key": "2",
+        "desc": "Synergy Movespeed Per Level "
+      },
+      {
+        "key": "38",
+        "desc": "teleport distance"
+      }
+    ]
+  },
+  {
+    "skill": "Summon Tainted",
+    "id": "376",
+    "reqLevel": "12",
+    "manaShift": "7",
+    "mana": "50",
+    "lvlMana": "1",
+    "skilldesc": "summon tainted",
+    "synergies": [
+      {
+        "skillId": "Tainted Resist Fire",
+        "calc": "\"min(ln56,30)\""
+      },
+      {
+        "skillId": "Tainted Fire Ball",
+        "calc": "lvl"
+      }
+    ],
+    "params": [
+      {
+        "key": "35",
+        "desc": "HP % per level"
+      },
+      {
+        "key": "1",
+        "desc": "Resist Fire Level Base"
+      },
+      {
+        "key": "1",
+        "desc": "Resist Fire level per level"
+      },
+      {
+        "key": "75",
+        "desc": "Defense baseline"
+      },
+      {
+        "key": "20",
+        "desc": "Defense per level"
+      },
+      {
+        "key": "10",
+        "desc": "attack speed baseline"
+      },
+      {
+        "key": "1",
+        "desc": "attack speed increase per level"
+      }
+    ]
+  },
+  {
+    "skill": "Summon Defiler",
+    "id": "377",
+    "reqLevel": "18",
+    "manaShift": "7",
+    "mana": "70",
+    "lvlMana": "1",
+    "skilldesc": "summon defiler",
+    "synergies": [
+      {
+        "skillId": "Health Link",
+        "calc": "lvl"
+      },
+      {
+        "skillId": "Summon Defiler",
+        "calc": "lvl"
+      }
+    ],
+    "params": [
+      {
+        "key": "35",
+        "desc": "HP % per level"
+      },
+      {
+        "key": "10",
+        "desc": "damage percent baseline"
+      },
+      {
+        "key": "35",
+        "desc": "Defense per level"
+      },
+      {
+        "key": "125",
+        "desc": "Defense baseline"
+      },
+      {
+        "key": "20",
+        "desc": "Defense per level"
+      }
+    ]
+  },
+  {
+    "skill": "Blood Oath",
+    "id": "378",
+    "reqLevel": "6",
+    "manaShift": "8",
+    "mana": "0",
+    "lvlMana": "0",
+    "skilldesc": "blood oath",
+    "synergies": [],
+    "params": [
+      {
+        "key": "5",
+        "desc": "Damage to % Demon baseline"
+      },
+      {
+        "key": "2",
+        "desc": "Damage to % Demon per level"
+      },
+      {
+        "key": "10",
+        "desc": "HP Mana Stamina % baseline"
+      },
+      {
+        "key": "1",
+        "desc": "HP Mana Stamina % per level"
+      },
+      {
+        "key": "50",
+        "desc": "HP baseline"
+      },
+      {
+        "key": "35",
+        "desc": "HP % Per level"
+      },
+      {
+        "key": "3",
+        "desc": "Resistance % Min"
+      },
+      {
+        "key": "79",
+        "desc": "Resistance % Max"
+      },
+      {
+        "key": "1",
+        "desc": "Physcial damage reduction baseline "
+      },
+      {
+        "key": "12",
+        "desc": "Physical Damage Reduction cap"
+      },
+      {
+        "key": "25",
+        "desc": "Synergy Defense per level with Demonic Mastery"
+      },
+      {
+        "key": "5",
+        "desc": "Syn HP regen "
+      }
+    ]
+  },
+  {
+    "skill": "Engorge",
+    "id": "379",
+    "reqLevel": "24",
+    "manaShift": "6",
+    "mana": "12",
+    "lvlMana": "1",
+    "skilldesc": "engorge",
+    "synergies": [],
+    "params": [
+      {
+        "key": "15",
+        "desc": "Attack Speed Baseline"
+      },
+      {
+        "key": "1",
+        "desc": "attack speed per level"
+      },
+      {
+        "key": "30",
+        "desc": "HP % Healed Baseline"
+      },
+      {
+        "key": "1",
+        "desc": "HP % Healed  per level"
+      },
+      {
+        "key": "125",
+        "desc": "baseline PDR duration"
+      },
+      {
+        "key": "75",
+        "desc": "per level PDR duration"
+      },
+      {
+        "key": "5",
+        "desc": "% damage reduction"
+      },
+      {
+        "key": "15",
+        "desc": "life drain min syn"
+      },
+      {
+        "key": "2",
+        "desc": "life drain max sin"
+      }
+    ]
+  },
+  {
+    "skill": "Blood Boil",
+    "id": "380",
+    "reqLevel": "18",
+    "manaShift": "6",
+    "mana": "15",
+    "lvlMana": "1",
+    "skilldesc": "blood boil",
+    "synergies": [],
+    "params": [
+      {
+        "key": "15",
+        "desc": "baseline for lifecost on demon pet"
+      },
+      {
+        "key": "-1",
+        "desc": "cap for life cost for demon pet"
+      },
+      {
+        "key": "12",
+        "desc": "Explosion Radius (half squares) baseline"
+      },
+      {
+        "key": "1",
+        "desc": "Radius cap (half squares)"
+      },
+      {
+        "key": "20",
+        "desc": "Damage synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Consume",
+    "id": "381",
+    "reqLevel": "30",
+    "manaShift": "8",
+    "mana": "25",
+    "lvlMana": "1",
+    "skilldesc": "consume",
+    "synergies": [
+      {
+        "skillId": "Consume",
+        "calc": "lvl"
+      }
+    ],
+    "params": [
+      {
+        "key": "1000",
+        "desc": "Duration baseline"
+      },
+      {
+        "key": "500",
+        "desc": "Duration per level"
+      },
+      {
+        "key": "5",
+        "desc": "Max health % Baseline"
+      },
+      {
+        "key": "1",
+        "desc": "Max health % per level"
+      },
+      {
+        "key": "10",
+        "desc": "Movement Speed Baseline"
+      },
+      {
+        "key": "46",
+        "desc": "Movement speed per level"
+      }
+    ]
+  },
+  {
+    "skill": "Bind Demon",
+    "id": "382",
+    "reqLevel": "30",
+    "manaShift": "8",
+    "mana": "25",
+    "lvlMana": "1",
+    "skilldesc": "bind demon",
+    "synergies": [],
+    "params": [
+      {
+        "key": "7",
+        "desc": "Growthrate/start for % capture referenced in monpet.txt"
+      },
+      {
+        "key": "29",
+        "desc": "Cap for % capture  referenced in monpet.txt"
+      },
+      {
+        "key": "75",
+        "desc": "Baseline damage percent Increase"
+      },
+      {
+        "key": "5",
+        "desc": "Damage per level increase"
+      },
+      {
+        "key": "100",
+        "desc": "Synergy Chance to Bind w/ Death Mark  referenced in monpet.txt"
+      },
+      {
+        "key": "100",
+        "desc": "Baseline health percent Increase"
+      },
+      {
+        "key": "5",
+        "desc": "Heatlh per level increase"
+      },
+      {
+        "key": "15",
+        "desc": "Life% syn other demon skills"
+      },
+      {
+        "key": "10",
+        "desc": "dmg % syn other demon skills"
+      }
+    ]
+  },
+  {
+    "skill": "Levitate",
+    "id": "383",
+    "reqLevel": "1",
+    "manaShift": "8",
+    "mana": "0",
+    "lvlMana": "0",
+    "skilldesc": "levitate",
+    "synergies": [],
+    "params": [
+      {
+        "key": "0",
+        "desc": "Min % Chance"
+      },
+      {
+        "key": "35",
+        "desc": "Max % Chance"
+      },
+      {
+        "key": "25",
+        "desc": "Damage % baseline"
+      },
+      {
+        "key": "4",
+        "desc": "Damage % per level"
+      },
+      {
+        "key": "40",
+        "desc": "Attack Rating % baseline"
+      },
+      {
+        "key": "5",
+        "desc": "Attack Rating % per level"
+      },
+      {
+        "key": "2",
+        "desc": "Requirements -#% base"
+      },
+      {
+        "key": "2",
+        "desc": "Requirements -#% per level"
+      }
+    ]
+  },
+  {
+    "skill": "Eldritch Blast",
+    "id": "384",
+    "reqLevel": "24",
+    "manaShift": "7",
+    "mana": "11",
+    "lvlMana": "1",
+    "skilldesc": "eldritchblast",
+    "synergies": [],
+    "params": [
+      {
+        "key": "5",
+        "desc": "baseline life/manasteal"
+      },
+      {
+        "key": "1",
+        "desc": "per level life/manasteal"
+      },
+      {
+        "key": "1000",
+        "desc": "Duration baseline"
+      },
+      {
+        "key": "50",
+        "desc": "Synergy Duration per level  (psychic ward)"
+      },
+      {
+        "key": "50",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "25",
+        "desc": "Duration Synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Hex Bane",
+    "id": "385",
+    "reqLevel": "1",
+    "manaShift": "7",
+    "mana": "12",
+    "lvlMana": "1",
+    "skilldesc": "hex bane",
+    "synergies": [],
+    "params": [
+      {
+        "key": "3600",
+        "desc": "Hex Duration baseline"
+      },
+      {
+        "key": "300",
+        "desc": "Hex Duration per level"
+      },
+      {
+        "key": "30",
+        "desc": "Defense % baseline"
+      },
+      {
+        "key": "1",
+        "desc": "Defense % per level"
+      },
+      {
+        "key": "50",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "5",
+        "desc": "Duration Synergy"
+      },
+      {
+        "key": "35",
+        "desc": "Hex Purge Damage synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Hex Siphon",
+    "id": "386",
+    "reqLevel": "24",
+    "manaShift": "7",
+    "mana": "25",
+    "lvlMana": "1",
+    "skilldesc": "hex siphon",
+    "synergies": [],
+    "params": [
+      {
+        "key": "1",
+        "desc": "Life/Mana drain baseline"
+      },
+      {
+        "key": "1",
+        "desc": "Life/Mana drain per level"
+      },
+      {
+        "key": "3600",
+        "desc": "Hex Duration baseline"
+      },
+      {
+        "key": "300",
+        "desc": "Hex Duration per level"
+      },
+      {
+        "key": "1",
+        "desc": "Life/Mana drain baseline"
+      },
+      {
+        "key": "1",
+        "desc": "Life/Mana drain per level"
+      },
+      {
+        "key": "5",
+        "desc": "Debuff Duration synergy"
+      },
+      {
+        "key": "1",
+        "desc": "life/mana steal synergy "
+      },
+      {
+        "key": "1",
+        "desc": "Damage% synergy"
+      },
+      {
+        "key": "33",
+        "desc": "damage % baseline"
+      },
+      {
+        "key": "3",
+        "desc": "damage % steal  per level"
+      }
+    ]
+  },
+  {
+    "skill": "Psychic Ward",
+    "id": "387",
+    "reqLevel": "18",
+    "manaShift": "8",
+    "mana": "20",
+    "lvlMana": "2",
+    "skilldesc": "psychic ward",
+    "synergies": [],
+    "params": [
+      {
+        "key": "37",
+        "desc": "Stun Length baseline"
+      },
+      {
+        "key": "85",
+        "desc": "Stun Length per level"
+      },
+      {
+        "key": "15",
+        "desc": "Damage absorbed baseline"
+      },
+      {
+        "key": "10",
+        "desc": "Damage absorbed per level"
+      },
+      {
+        "key": "15",
+        "desc": "Damage Absorbed synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Echoing Strike",
+    "id": "388",
+    "reqLevel": "12",
+    "manaShift": "7",
+    "mana": "14",
+    "lvlMana": "1",
+    "skilldesc": "echoing strike",
+    "synergies": [],
+    "params": [
+      {
+        "key": "30",
+        "desc": "baseline damage increase"
+      },
+      {
+        "key": "5",
+        "desc": "per level damage increase"
+      },
+      {
+        "key": "5",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "5",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "1",
+        "desc": "Mirrored Blade Projectile Count Synergy"
+      },
+      {
+        "key": "1",
+        "desc": "Separate Skill Cast ID for Missiles"
+      }
+    ]
+  },
+  {
+    "skill": "Hex Purge",
+    "id": "389",
+    "reqLevel": "12",
+    "manaShift": "8",
+    "mana": "25",
+    "lvlMana": "1",
+    "skilldesc": "hex purge",
+    "synergies": [],
+    "params": [
+      {
+        "key": "39",
+        "desc": "AuraEventFunc installed onto Target. 39 = sWarPurgeOnHitDebuff"
+      },
+      {
+        "key": "5",
+        "desc": "Debuff Duration synergy"
+      },
+      {
+        "key": "3600",
+        "desc": "Hex Duration baseline"
+      },
+      {
+        "key": "300",
+        "desc": "Hex Duration per level"
+      },
+      {
+        "key": "10",
+        "desc": "Attackspeed Baseline percent"
+      },
+      {
+        "key": "1",
+        "desc": "attackspeed per level"
+      },
+      {
+        "key": "400",
+        "desc": "Radius * 100"
+      },
+      {
+        "key": "33",
+        "desc": "Radius per level * 100"
+      },
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "100",
+        "desc": "Chance to Explode Synergy"
+      },
+      {
+        "key": "6900",
+        "desc": "Chance to Explode % Base * 100"
+      },
+      {
+        "key": "50",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "skill": "Blade Warp",
+    "id": "390",
+    "reqLevel": "18",
+    "manaShift": "8",
+    "mana": "15",
+    "lvlMana": "0",
+    "skilldesc": "blade warp",
+    "synergies": [],
+    "params": [
+      {
+        "key": "4",
+        "desc": "Explosion Radius "
+      },
+      {
+        "key": "1",
+        "desc": "Mirrored Blade Projectile Count Synergy"
+      },
+      {
+        "key": "24",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "0",
+        "desc": "Separate Skill Cast ID for Missiles"
+      }
+    ]
+  },
+  {
+    "skill": "Cleave",
+    "id": "391",
+    "reqLevel": "6",
+    "manaShift": "8",
+    "mana": "3",
+    "lvlMana": "0",
+    "skilldesc": "cleave",
+    "synergies": [],
+    "params": [
+      {
+        "key": "20",
+        "desc": "Damage % base"
+      },
+      {
+        "key": "5",
+        "desc": "Damage % per level"
+      },
+      {
+        "key": "10",
+        "desc": "Attack Speed % Min"
+      },
+      {
+        "key": "30",
+        "desc": "Attack Speed % Max"
+      },
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "12",
+        "desc": "Mirrored Blades Synergy for degrees arc increased"
+      }
+    ]
+  },
+  {
+    "skill": "Mirrored Blades",
+    "id": "392",
+    "reqLevel": "30",
+    "manaShift": "7",
+    "mana": "10",
+    "lvlMana": "1",
+    "skilldesc": "mirrored blades",
+    "synergies": [],
+    "params": [
+      {
+        "key": "50",
+        "desc": "Damage % Override Starting"
+      },
+      {
+        "key": "120",
+        "desc": "Damage % Override Per level"
+      },
+      {
+        "key": "10",
+        "desc": "Attack Speed % Min"
+      },
+      {
+        "key": "30",
+        "desc": "Attack Speed % Max"
+      },
+      {
+        "key": "0",
+        "desc": "Separate Skill Cast ID for Missiles"
+      }
+    ]
+  },
+  {
+    "skill": "Sigil Lethargy",
+    "id": "393",
+    "reqLevel": "6",
+    "manaShift": "8",
+    "mana": "4",
+    "lvlMana": "0",
+    "skilldesc": "sigil lethargy",
+    "synergies": [],
+    "params": [
+      {
+        "key": "7",
+        "desc": "Radius"
+      },
+      {
+        "key": "0",
+        "desc": "Radius per level"
+      },
+      {
+        "key": "20",
+        "desc": "Damage Resistance %"
+      },
+      {
+        "key": "1",
+        "desc": "Damage Resistance % per level"
+      },
+      {
+        "key": "-33",
+        "desc": "Damage Dealt %"
+      },
+      {
+        "key": "-1",
+        "desc": "Damage Dealt % per level"
+      },
+      {
+        "key": "-50",
+        "desc": "Slow %"
+      },
+      {
+        "key": "0",
+        "desc": "Slow % per level"
+      }
+    ]
+  },
+  {
+    "skill": "Ring of Fire",
+    "id": "394",
+    "reqLevel": "6",
+    "manaShift": "7",
+    "mana": "16",
+    "lvlMana": "1",
+    "skilldesc": "ring of fire",
+    "synergies": [],
+    "params": [
+      {
+        "key": "5",
+        "desc": "number of missiles"
+      },
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Miasma Bolt",
+    "id": "395",
+    "reqLevel": "1",
+    "manaShift": "7",
+    "mana": "4",
+    "lvlMana": "1",
+    "skilldesc": "miasma bolt",
+    "synergies": [],
+    "params": [
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "20",
+        "desc": "Damage synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Sigil Rancor",
+    "id": "396",
+    "reqLevel": "12",
+    "manaShift": "8",
+    "mana": "12",
+    "lvlMana": "0",
+    "skilldesc": "sigil rancor",
+    "synergies": [],
+    "params": [
+      {
+        "key": "7",
+        "desc": "Radius"
+      },
+      {
+        "key": "0",
+        "desc": "Radius per level"
+      },
+      {
+        "key": "50",
+        "desc": "Damage Dealt %"
+      },
+      {
+        "key": "5",
+        "desc": "Damage Dealt % per level"
+      },
+      {
+        "key": "5",
+        "desc": "Attack Speed % Baseline"
+      },
+      {
+        "key": "1",
+        "desc": "Attack Speed % per level"
+      }
+    ]
+  },
+  {
+    "skill": "Enhanced Entropy",
+    "id": "397",
+    "reqLevel": "24",
+    "manaShift": "8",
+    "mana": "0",
+    "lvlMana": "0",
+    "skilldesc": "enhanced entropy",
+    "synergies": [],
+    "params": [
+      {
+        "key": "2",
+        "desc": "Baseline Miasma damage Percent increase"
+      },
+      {
+        "key": "2",
+        "desc": "per level Miasma damage Percent increase"
+      },
+      {
+        "key": "5",
+        "desc": "Baseline Miasma range Percent increase"
+      },
+      {
+        "key": "1",
+        "desc": "per level Miasma range Percent increase"
+      },
+      {
+        "key": "2",
+        "desc": "Baseline Miasma duration Percent increase"
+      },
+      {
+        "key": "2",
+        "desc": "per level Miasma duration Percent increase"
+      },
+      {
+        "key": "2",
+        "desc": "Baseline abyss damage Percent increase"
+      },
+      {
+        "key": "3",
+        "desc": "per level abyss damage Percent increase"
+      },
+      {
+        "key": "2",
+        "desc": "Baseline abyss duration Percent increase"
+      },
+      {
+        "key": "2",
+        "desc": "per level abyss duration Percent increase"
+      }
+    ]
+  },
+  {
+    "skill": "Flame Wave",
+    "id": "398",
+    "reqLevel": "18",
+    "manaShift": "7",
+    "mana": "14",
+    "lvlMana": "1",
+    "skilldesc": "flame wave",
+    "synergies": [],
+    "params": [
+      {
+        "key": "4",
+        "desc": "Width baseline for flamewave"
+      },
+      {
+        "key": "7",
+        "desc": "Max length for flamewave"
+      },
+      {
+        "key": "17",
+        "desc": "flame wave delay"
+      },
+      {
+        "key": "15",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Miasma Chains",
+    "id": "399",
+    "reqLevel": "12",
+    "manaShift": "7",
+    "mana": "9",
+    "lvlMana": "1",
+    "skilldesc": "miasma chains",
+    "synergies": [],
+    "params": [
+      {
+        "key": "3",
+        "desc": "baseline number of miasmabolts "
+      },
+      {
+        "key": "12",
+        "desc": "cap for number of miasma bolts made"
+      },
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "20",
+        "desc": "Damage synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Sigil Death",
+    "id": "400",
+    "reqLevel": "24",
+    "manaShift": "7",
+    "mana": "20",
+    "lvlMana": "1",
+    "skilldesc": "sigil death",
+    "synergies": [
+      {
+        "skillId": "Sigil Death Explosion",
+        "calc": "skill('Sigil Death'.lvl)"
+      }
+    ],
+    "params": [
+      {
+        "key": "13",
+        "desc": "HP % to kill normal monsters"
+      },
+      {
+        "key": "0",
+        "desc": "HP % to kill normal monsters per level"
+      },
+      {
+        "key": "10",
+        "desc": "\"% HP to kill champion, unique, and superunique monsters\""
+      },
+      {
+        "key": "0",
+        "desc": "\"% HP to kill champion, unique, and superunique monsters per level\""
+      },
+      {
+        "key": "7",
+        "desc": "Radius"
+      },
+      {
+        "key": "0",
+        "desc": "Radius per level"
+      }
+    ]
+  },
+  {
+    "skill": "Apocalypse",
+    "id": "401",
+    "reqLevel": "30",
+    "manaShift": "8",
+    "mana": "32",
+    "lvlMana": "1",
+    "skilldesc": "apocalypse",
+    "synergies": [],
+    "params": [
+      {
+        "key": "5",
+        "desc": "baseline fire pierce"
+      },
+      {
+        "key": "1",
+        "desc": "fire immunity pierce per level"
+      },
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      }
+    ]
+  },
+  {
+    "skill": "Abyss",
+    "id": "402",
+    "reqLevel": "30",
+    "manaShift": "8",
+    "mana": "23",
+    "lvlMana": "1",
+    "skilldesc": "abyss",
+    "synergies": [],
+    "params": [
+      {
+        "key": "6",
+        "desc": "Explosion Radius baseline"
+      },
+      {
+        "key": "0",
+        "desc": "Explosion Radius per level"
+      },
+      {
+        "key": "2",
+        "desc": "Duration of ground fire baseline"
+      },
+      {
+        "key": "0",
+        "desc": "Duration of ground fire per level"
+      },
+      {
+        "key": "10",
+        "desc": "Damage synergy"
+      },
+      {
+        "key": "20",
+        "desc": "Damage synergy"
+      }
+    ]
+  }
+]

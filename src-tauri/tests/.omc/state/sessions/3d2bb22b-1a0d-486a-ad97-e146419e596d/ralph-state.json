@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "iteration": 1,
+  "max_iterations": 100,
+  "started_at": "2026-07-27T04:25:12.746Z",
+  "prompt": "/oh-my-claudecode:ralph 创建prd.json,然后进行T17/T16 然后开始计划",
+  "session_id": "3d2bb22b-1a0d-486a-ad97-e146419e596d",
+  "project_path": "D:\\work_space\\personal_workspace\\d2r\\d2r-marketplace-tauri\\src-tauri\\tests",
+  "linked_ultrawork": true,
+  "awaiting_confirmation": true,
+  "last_checked_at": "2026-07-27T04:25:12.750Z"
+}

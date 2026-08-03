@@ -1,0 +1,11 @@
+Cap: NOT FOUND
+Helm: NOT FOUND
+Full Helm: NOT FOUND
+Leather Armor: NOT FOUND
+Small Charm: NOT FOUND
+Large Charm: NOT FOUND
+Grand Charm: NOT FOUND
+El Rune: NOT FOUND
+Chipped Amethyst: NOT FOUND
+Key of Terror: NOT FOUND
+Rejuvenation Potion: NOT FOUND

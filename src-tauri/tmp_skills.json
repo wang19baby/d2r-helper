@@ -1,0 +1,27 @@
+[stat_loader] Loaded 303 stat definitions from 'D:/personal/games/Diablo II Resurrected/mods/D2RMM/D2RMM.mpq/data/global/excel/itemstatcost.txt'
+{
+  "active_weapon": 0,
+  "attributes": {
+    "dexterity": 20,
+    "energy": 110,
+    "gold": 5039,
+    "goldbank": 25,
+    "hitpoints": 302,
+    "maxhp": 284,
+    "maxstamina": 168,
+    "newskills": 0,
+    "stamina": 195,
+    "statpts": 0,
+    "strength": 30,
+    "vitality": 90
+  },
+  "checksum": 3477762098,
+  "class": "术士",
+  "class_id": 7,
+  "file_size": 3624,
+  "hash": "c39359c8a74db398a17f443dfb80f69b7dd68beb41b0050ce7f05eec0b958f57",
+  "level": 18,
+  "menu_layout": "0x00000000",
+  "name": "图书馆长",
+  "num_skills": 30
+}

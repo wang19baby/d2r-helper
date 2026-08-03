@@ -1,0 +1,54 @@
+lin found! zhCN=ÿc;力量 [1 - 3]ÿc0
+ÿc:灵印ÿc0
+
+Short code-like keys: 121
+  Key=Wisp, zhCN=鬼火投影
+ÿcU[MAX:20LA/20MF]
+ÿc5最难出的戒指，混王座有奇效
+  Key=Gull, zhCN=海鸥
+ÿc520小之一，MF很实用ÿc4
+  Key=lin, zhCN=ÿc;力量 [1 - 3]ÿc0
+ÿc:灵印ÿc0
+  Key=lsh, zhCN=ÿc;生命 [2 - 5]ÿc0
+ÿc:灵石ÿc0
+  Key=lyd, zhCN=ÿc;敏捷 [1 - 3]ÿc0
+ÿc:灵蕴点ÿc0
+  Key=xfu, zhCN=ÿc;MF [1 - 3]ÿc0
+ÿc:仙符ÿc0
+  Key=jlf, zhCN=ÿc;施法 [1 - 2]ÿc0
+ÿc:聚灵符ÿc0
+  Key=rly, zhCN=ÿc;攻速 [1 - 2]ÿc0
+ÿc:融灵药剂ÿc0
+  Key=nls, zhCN=ÿc;全抗 [1 - 2]ÿc0
+ÿc:凝灵砂ÿc0
+  Key=li1, zhCN=ÿc;力量 [3 - 5]ÿc0
+ÿc:灵印(10)ÿc0
+  Key=xf1, zhCN=ÿc;MF [3 - 5]ÿc0
+ÿc:仙符(10)ÿc0
+  Key=ls1, zhCN=ÿc;生命 [6 - 12]ÿc0
+ÿc:灵石(10)ÿc0
+  Key=ld1, zhCN=ÿc;敏捷 [3 - 5]ÿc0
+ÿc:灵蕴点(10)ÿc0
+  Key=jl1, zhCN=ÿc;施法 [3 - 5]ÿc0
+ÿc:聚灵符(10)ÿc0
+  Key=rl1, zhCN=ÿc;攻速 [3 - 5]ÿc0
+ÿc:融灵药剂(10)ÿc0
+  Key=nl1, zhCN=ÿc;全抗 [3 - 5]ÿc0
+ÿc:凝灵砂(10)ÿc0
+  Key=stf, zhCN=ÿc;ÿc:启动资金ÿc0
+  Key=ui0, zhCN=ÿc;总览手札ÿc0
+ÿc:总览手札ÿc0
+  Key=ui1, zhCN=ÿc;成长手札ÿc0
+ÿc:成长手札ÿc0
+  Key=ui2, zhCN=ÿc;副本手札ÿc0
+ÿc:副本手札ÿc0
+  Key=xmd, zhCN=ÿc;ÿc:须弥袋ÿc0
+  Key=pc1, zhCN=ÿc;PoC试验小护符·壹ÿc0
+  Key=pc2, zhCN=ÿc;PoC试验小护符·贰ÿc0
+  Key=pc3, zhCN=ÿc;PoC试验小护符·叁ÿc0
+  Key=pc4, zhCN=ÿc;PoC试验小护符·肆ÿc0
+  Key=pc5, zhCN=ÿc;PoC试验小护符·伍ÿc0
+  Key=xuj, zhCN=ÿc;ÿc:须弥袋·暗金ÿc0
+  Key=lkg, zhCN=ÿc;ÿc:灵核之尘(金)ÿc0
+  Key=lkm, zhCN=ÿc;ÿc:灵核之尘(木)ÿc0
+  Key=lks, zhCN=ÿc;ÿc:灵核之尘(水)ÿc0

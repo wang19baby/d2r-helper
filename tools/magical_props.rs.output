@@ -1,0 +1,367 @@
+Total magical_properties entries: 359
+Entries with save_bits (sB): 247
+// Generated from D2R webpack chunk (385ca0d5...js)
+// Format: (save_bits, num_sub_props, save_add)
+// save_bits=0 means the property is not used for item serialization
+#[rustfmt::skip]
+pub const MAGICAL_PROPS: &[(u8, u8, i32)] = &[
+    (8, 1, 32), // [0] strength
+    (7, 1, 32), // [1] energy
+    (7, 1, 32), // [2] dexterity
+    (7, 1, 32), // [3] vitality
+    (0, 1, 0), // [4] statpts (no sB - character-only or unused)
+    (0, 1, 0), // [5] newskills (no sB - character-only or unused)
+    (0, 1, 0), // [6] hitpoints (no sB - character-only or unused)
+    (9, 1, 32), // [7] maxhp
+    (0, 1, 0), // [8] mana (no sB - character-only or unused)
+    (8, 1, 32), // [9] maxmana
+    (0, 1, 0), // [10] stamina (no sB - character-only or unused)
+    (8, 1, 32), // [11] maxstamina
+    (0, 1, 0), // [12] level (no sB - character-only or unused)
+    (0, 1, 0), // [13] experience (no sB - character-only or unused)
+    (0, 1, 0), // [14] gold (no sB - character-only or unused)
+    (0, 1, 0), // [15] goldbank (no sB - character-only or unused)
+    (9, 1, 0), // [16] item_armor_percent
+    (9, 2, 0), // [17] item_maxdamage_percent
+    (9, 1, 0), // [18] item_mindamage_percent
+    (10, 1, 0), // [19] tohit
+    (6, 1, 0), // [20] toblock
+    (6, 1, 0), // [21] mindamage
+    (7, 1, 0), // [22] maxdamage
+    (6, 1, 0), // [23] secondary_mindamage
+    (7, 1, 0), // [24] secondary_maxdamage
+    (8, 1, 0), // [25] damagepercent
+    (8, 1, 0), // [26] manarecovery
+    (8, 1, 0), // [27] manarecoverybonus
+    (8, 1, 0), // [28] staminarecoverybonus
+    (0, 1, 0), // [29] lastexp (no sB - character-only or unused)
+    (0, 1, 0), // [30] nextexp (no sB - character-only or unused)
+    (11, 1, 10), // [31] armorclass
+    (9, 1, 0), // [32] armorclass_vs_missile
+    (8, 1, 0), // [33] armorclass_vs_hth
+    (6, 1, 0), // [34] normal_damage_reduction
+    (6, 1, 0), // [35] magic_damage_reduction
+    (8, 1, 0), // [36] damageresist
+    (8, 1, 0), // [37] magicresist
+    (5, 1, 0), // [38] maxmagicresist
+    (8, 1, 50), // [39] fireresist
+    (5, 1, 0), // [40] maxfireresist
+    (8, 1, 50), // [41] lightresist
+    (5, 1, 0), // [42] maxlightresist
+    (8, 1, 50), // [43] coldresist
+    (5, 1, 0), // [44] maxcoldresist
+    (8, 1, 50), // [45] poisonresist
+    (5, 1, 0), // [46] maxpoisonresist
+    (0, 1, 0), // [47] damageaura (no sB - character-only or unused)
+    (8, 2, 0), // [48] firemindam
+    (9, 1, 0), // [49] firemaxdam
+    (6, 2, 0), // [50] lightmindam
+    (10, 1, 0), // [51] lightmaxdam
+    (8, 2, 0), // [52] magicmindam
+    (9, 1, 0), // [53] magicmaxdam
+    (8, 3, 0), // [54] coldmindam
+    (9, 1, 0), // [55] coldmaxdam
+    (8, 1, 0), // [56] coldlength
+    (10, 3, 0), // [57] poisonmindam
+    (10, 1, 0), // [58] poisonmaxdam
+    (9, 1, 0), // [59] poisonlength
+    (7, 1, 0), // [60] lifedrainmindam
+    (0, 1, 0), // [61] lifedrainmaxdam (no sB - character-only or unused)
+    (7, 1, 0), // [62] manadrainmindam
+    (0, 1, 0), // [63] manadrainmaxdam (no sB - character-only or unused)
+    (0, 1, 0), // [64] stamdrainmindam (no sB - character-only or unused)
+    (0, 1, 0), // [65] stamdrainmaxdam (no sB - character-only or unused)
+    (0, 1, 0), // [66] stunlength (no sB - character-only or unused)
+    (7, 1, 30), // [67] velocitypercent
+    (7, 1, 30), // [68] attackrate
+    (0, 1, 0), // [69] other_animrate (no sB - character-only or unused)
+    (0, 1, 0), // [70] quantity (no sB - character-only or unused)
+    (8, 1, 100), // [71] value
+    (9, 1, 0), // [72] durability
+    (8, 1, 0), // [73] maxdurability
+    (6, 1, 30), // [74] hpregen
+    (7, 1, 20), // [75] item_maxdurability_percent
+    (6, 1, 10), // [76] item_maxhp_percent
+    (6, 1, 10), // [77] item_maxmana_percent
+    (7, 1, 0), // [78] item_attackertakesdamage
+    (9, 1, 100), // [79] item_goldbonus
+    (8, 1, 100), // [80] item_magicbonus
+    (7, 1, 0), // [81] item_knockback
+    (9, 1, 20), // [82] item_timeduration
+    (3, 1, 0), // [83] item_addclassskills
+    (0, 1, 0), // [84] unsentparam1 (no sB - character-only or unused)
+    (9, 1, 50), // [85] item_addexperience
+    (7, 1, 0), // [86] item_healafterkill
+    (7, 1, 0), // [87] item_reducedprices
+    (1, 1, 0), // [88] item_doubleherbduration
+    (4, 1, 4), // [89] item_lightradius
+    (24, 1, 0), // [90] item_lightcolor
+    (8, 1, 100), // [91] item_req_percent
+    (7, 1, 0), // [92] item_levelreq
+    (7, 1, 20), // [93] item_fasterattackrate
+    (7, 1, 64), // [94] item_levelreqpct
+    (0, 1, 0), // [95] lastblockframe (no sB - character-only or unused)
+    (7, 1, 20), // [96] item_fastermovevelocity
+    (6, 1, 0), // [97] item_nonclassskill
+    (1, 1, 0), // [98] state
+    (7, 1, 20), // [99] item_fastergethitrate
+    (0, 1, 0), // [100] monster_playercount (no sB - character-only or unused)
+    (0, 1, 0), // [101] skill_poison_override_length (no sB - character-only or unused)
+    (7, 1, 20), // [102] item_fasterblockrate
+    (0, 1, 0), // [103] skill_bypass_undead (no sB - character-only or unused)
+    (0, 1, 0), // [104] skill_bypass_demons (no sB - character-only or unused)
+    (7, 1, 20), // [105] item_fastercastrate
+    (0, 1, 0), // [106] skill_bypass_beasts (no sB - character-only or unused)
+    (3, 1, 0), // [107] item_singleskill
+    (1, 1, 0), // [108] item_restinpeace
+    (9, 1, 0), // [109] curse_resistance
+    (8, 1, 20), // [110] item_poisonlengthresist
+    (9, 1, 20), // [111] item_normaldamage
+    (7, 1, -1), // [112] item_howl
+    (7, 1, 0), // [113] item_stupidity
+    (6, 1, 0), // [114] item_damagetomana
+    (1, 1, 0), // [115] item_ignoretargetac
+    (7, 1, 0), // [116] item_fractionaltargetac
+    (7, 1, 0), // [117] item_preventheal
+    (1, 1, 0), // [118] item_halffreezeduration
+    (9, 1, 20), // [119] item_tohit_percent
+    (7, 1, 128), // [120] item_damagetargetac
+    (9, 1, 20), // [121] item_demondamage_percent
+    (9, 1, 20), // [122] item_undeaddamage_percent
+    (10, 1, 128), // [123] item_demon_tohit
+    (10, 1, 128), // [124] item_undead_tohit
+    (1, 1, 0), // [125] item_throwable
+    (3, 1, 0), // [126] item_elemskill
+    (3, 1, 0), // [127] item_allskills
+    (5, 1, 0), // [128] item_attackertakeslightdamage
+    (0, 1, 0), // [129] ironmaiden_level (no sB - character-only or unused)
+    (0, 1, 0), // [130] lifetap_level (no sB - character-only or unused)
+    (0, 1, 0), // [131] thorns_percent (no sB - character-only or unused)
+    (0, 1, 0), // [132] bonearmor (no sB - character-only or unused)
+    (0, 1, 0), // [133] bonearmormax (no sB - character-only or unused)
+    (5, 1, 0), // [134] item_freeze
+    (7, 1, 0), // [135] item_openwounds
+    (7, 1, 0), // [136] item_crushingblow
+    (7, 1, 0), // [137] item_kickdamage
+    (7, 1, 0), // [138] item_manaafterkill
+    (7, 1, 0), // [139] item_healafterdemonkill
+    (7, 1, 0), // [140] item_extrablood
+    (7, 1, 0), // [141] item_deadlystrike
+    (7, 1, 0), // [142] item_absorbfire_percent
+    (7, 1, 0), // [143] item_absorbfire
+    (7, 1, 0), // [144] item_absorblight_percent
+    (7, 1, 0), // [145] item_absorblight
+    (7, 1, 0), // [146] item_absorbmagic_percent
+    (7, 1, 0), // [147] item_absorbmagic
+    (7, 1, 0), // [148] item_absorbcold_percent
+    (7, 1, 0), // [149] item_absorbcold
+    (7, 1, 0), // [150] item_slow
+    (5, 1, 0), // [151] item_aura
+    (1, 1, 0), // [152] item_indesctructible
+    (1, 1, 0), // [153] item_cannotbefrozen
+    (7, 1, 20), // [154] item_staminadrainpct
+    (7, 1, 0), // [155] item_reanimate
+    (7, 1, 0), // [156] item_pierce
+    (7, 1, 0), // [157] item_magicarrow
+    (7, 1, 0), // [158] item_explosivearrow
+    (6, 1, 0), // [159] item_throw_mindamage
+    (7, 1, 0), // [160] item_throw_maxdamage
+    (0, 1, 0), // [161] skill_handofathena (no sB - character-only or unused)
+    (0, 1, 0), // [162] skill_staminapercent (no sB - character-only or unused)
+    (0, 1, 0), // [163] skill_passive_staminapercent (no sB - character-only or unused)
+    (0, 1, 0), // [164] skill_concentration (no sB - character-only or unused)
+    (0, 1, 0), // [165] skill_enchant (no sB - character-only or unused)
+    (0, 1, 0), // [166] skill_pierce (no sB - character-only or unused)
+    (0, 1, 0), // [167] skill_conviction (no sB - character-only or unused)
+    (0, 1, 0), // [168] skill_chillingarmor (no sB - character-only or unused)
+    (0, 1, 0), // [169] skill_frenzy (no sB - character-only or unused)
+    (0, 1, 0), // [170] skill_decrepify (no sB - character-only or unused)
+    (0, 1, 0), // [171] skill_armor_percent (no sB - character-only or unused)
+    (0, 1, 0), // [172] alignment (no sB - character-only or unused)
+    (0, 1, 0), // [173] target0 (no sB - character-only or unused)
+    (0, 1, 0), // [174] target1 (no sB - character-only or unused)
+    (0, 1, 0), // [175] goldlost (no sB - character-only or unused)
+    (0, 1, 0), // [176] conversion_level (no sB - character-only or unused)
+    (0, 1, 0), // [177] conversion_maxhp (no sB - character-only or unused)
+    (0, 1, 0), // [178] unit_dooverlay (no sB - character-only or unused)
+    (9, 1, 0), // [179] attack_vs_montype
+    (9, 1, 0), // [180] damage_vs_montype
+    (3, 1, 0), // [181] fade
+    (0, 1, 0), // [182] armor_override_percent (no sB - character-only or unused)
+    (0, 1, 0), // [183] unused183 (no sB - character-only or unused)
+    (0, 1, 0), // [184] unused184 (no sB - character-only or unused)
+    (0, 1, 0), // [185] unused185 (no sB - character-only or unused)
+    (0, 1, 0), // [186] unused186 (no sB - character-only or unused)
+    (0, 1, 0), // [187] unused187 (no sB - character-only or unused)
+    (3, 1, 0), // [188] item_addskill_tab
+    (0, 1, 0), // [189] unused189 (no sB - character-only or unused)
+    (0, 1, 0), // [190] unused190 (no sB - character-only or unused)
+    (0, 1, 0), // [191] unused191 (no sB - character-only or unused)
+    (0, 1, 0), // [192] unused192 (no sB - character-only or unused)
+    (0, 1, 0), // [193] unused193 (no sB - character-only or unused)
+    (4, 1, 0), // [194] item_numsockets
+    (7, 1, 0), // [195] item_skillonattack
+    (7, 1, 0), // [196] item_skillonkill
+    (7, 1, 0), // [197] item_skillondeath
+    (7, 1, 0), // [198] item_skillonhit
+    (7, 1, 0), // [199] item_skillonlevelup
+    (0, 1, 0), // [200] unused200 (no sB - character-only or unused)
+    (7, 1, 0), // [201] item_skillongethit
+    (0, 1, 0), // [202] unused202 (no sB - character-only or unused)
+    (0, 1, 0), // [203] unused203 (no sB - character-only or unused)
+    (16, 1, 0), // [204] item_charged_skill
+    (0, 1, 0), // [205] unused204 (no sB - character-only or unused)
+    (0, 1, 0), // [206] unused205 (no sB - character-only or unused)
+    (0, 1, 0), // [207] unused206 (no sB - character-only or unused)
+    (0, 1, 0), // [208] unused207 (no sB - character-only or unused)
+    (0, 1, 0), // [209] unused208 (no sB - character-only or unused)
+    (0, 1, 0), // [210] unused209 (no sB - character-only or unused)
+    (0, 1, 0), // [211] unused210 (no sB - character-only or unused)
+    (0, 1, 0), // [212] unused211 (no sB - character-only or unused)
+    (0, 1, 0), // [213] unused212 (no sB - character-only or unused)
+    (6, 1, 0), // [214] item_armor_perlevel
+    (6, 1, 0), // [215] item_armorpercent_perlevel
+    (6, 1, 0), // [216] item_hp_perlevel
+    (6, 1, 0), // [217] item_mana_perlevel
+    (6, 1, 0), // [218] item_maxdamage_perlevel
+    (6, 1, 0), // [219] item_maxdamage_percent_perlevel
+    (6, 1, 0), // [220] item_strength_perlevel
+    (6, 1, 0), // [221] item_dexterity_perlevel
+    (6, 1, 0), // [222] item_energy_perlevel
+    (6, 1, 0), // [223] item_vitality_perlevel
+    (6, 1, 0), // [224] item_tohit_perlevel
+    (6, 1, 0), // [225] item_tohitpercent_perlevel
+    (6, 1, 0), // [226] item_cold_damagemax_perlevel
+    (6, 1, 0), // [227] item_fire_damagemax_perlevel
+    (6, 1, 0), // [228] item_ltng_damagemax_perlevel
+    (6, 1, 0), // [229] item_pois_damagemax_perlevel
+    (6, 1, 0), // [230] item_resist_cold_perlevel
+    (6, 1, 0), // [231] item_resist_fire_perlevel
+    (6, 1, 0), // [232] item_resist_ltng_perlevel
+    (6, 1, 0), // [233] item_resist_pois_perlevel
+    (6, 1, 0), // [234] item_absorb_cold_perlevel
+    (6, 1, 0), // [235] item_absorb_fire_perlevel
+    (6, 1, 0), // [236] item_absorb_ltng_perlevel
+    (6, 1, 0), // [237] item_absorb_pois_perlevel
+    (5, 1, 0), // [238] item_thorns_perlevel
+    (6, 1, 0), // [239] item_find_gold_perlevel
+    (6, 1, 0), // [240] item_find_magic_perlevel
+    (6, 1, 0), // [241] item_regenstamina_perlevel
+    (6, 1, 0), // [242] item_stamina_perlevel
+    (6, 1, 0), // [243] item_damage_demon_perlevel
+    (6, 1, 0), // [244] item_damage_undead_perlevel
+    (6, 1, 0), // [245] item_tohit_demon_perlevel
+    (6, 1, 0), // [246] item_tohit_undead_perlevel
+    (6, 1, 0), // [247] item_crushingblow_perlevel
+    (6, 1, 0), // [248] item_openwounds_perlevel
+    (6, 1, 0), // [249] item_kick_damage_perlevel
+    (6, 1, 0), // [250] item_deadlystrike_perlevel
+    (0, 1, 0), // [251] item_find_gems_perlevel (no sB - character-only or unused)
+    (6, 1, 0), // [252] item_replenish_durability
+    (6, 1, 0), // [253] item_replenish_quantity
+    (8, 1, 0), // [254] item_extra_stack
+    (0, 1, 0), // [255] item_find_item (no sB - character-only or unused)
+    (0, 1, 0), // [256] item_slash_damage (no sB - character-only or unused)
+    (0, 1, 0), // [257] item_slash_damage_percent (no sB - character-only or unused)
+    (0, 1, 0), // [258] item_crush_damage (no sB - character-only or unused)
+    (0, 1, 0), // [259] item_crush_damage_percent (no sB - character-only or unused)
+    (0, 1, 0), // [260] item_thrust_damage (no sB - character-only or unused)
+    (0, 1, 0), // [261] item_thrust_damage_percent (no sB - character-only or unused)
+    (0, 1, 0), // [262] item_absorb_slash (no sB - character-only or unused)
+    (0, 1, 0), // [263] item_absorb_crush (no sB - character-only or unused)
+    (0, 1, 0), // [264] item_absorb_thrust (no sB - character-only or unused)
+    (0, 1, 0), // [265] item_absorb_slash_percent (no sB - character-only or unused)
+    (0, 1, 0), // [266] item_absorb_crush_percent (no sB - character-only or unused)
+    (0, 1, 0), // [267] item_absorb_thrust_percent (no sB - character-only or unused)
+    (22, 1, 0), // [268] item_armor_bytime
+    (22, 1, 0), // [269] item_armorpercent_bytime
+    (22, 1, 0), // [270] item_hp_bytime
+    (22, 1, 0), // [271] item_mana_bytime
+    (22, 1, 0), // [272] item_maxdamage_bytime
+    (22, 1, 0), // [273] item_maxdamage_percent_bytime
+    (22, 1, 0), // [274] item_strength_bytime
+    (22, 1, 0), // [275] item_dexterity_bytime
+    (22, 1, 0), // [276] item_energy_bytime
+    (22, 1, 0), // [277] item_vitality_bytime
+    (22, 1, 0), // [278] item_tohit_bytime
+    (22, 1, 0), // [279] item_tohitpercent_bytime
+    (22, 1, 0), // [280] item_cold_damagemax_bytime
+    (22, 1, 0), // [281] item_fire_damagemax_bytime
+    (22, 1, 0), // [282] item_ltng_damagemax_bytime
+    (22, 1, 0), // [283] item_pois_damagemax_bytime
+    (22, 1, 0), // [284] item_resist_cold_bytime
+    (22, 1, 0), // [285] item_resist_fire_bytime
+    (22, 1, 0), // [286] item_resist_ltng_bytime
+    (22, 1, 0), // [287] item_resist_pois_bytime
+    (22, 1, 0), // [288] item_absorb_cold_bytime
+    (22, 1, 0), // [289] item_absorb_fire_bytime
+    (22, 1, 0), // [290] item_absorb_ltng_bytime
+    (22, 1, 0), // [291] item_absorb_pois_bytime
+    (22, 1, 0), // [292] item_find_gold_bytime
+    (22, 1, 0), // [293] item_find_magic_bytime
+    (22, 1, 0), // [294] item_regenstamina_bytime
+    (22, 1, 0), // [295] item_stamina_bytime
+    (22, 1, 0), // [296] item_damage_demon_bytime
+    (22, 1, 0), // [297] item_damage_undead_bytime
+    (22, 1, 0), // [298] item_tohit_demon_bytime
+    (22, 1, 0), // [299] item_tohit_undead_bytime
+    (22, 1, 0), // [300] item_crushingblow_bytime
+    (22, 1, 0), // [301] item_openwounds_bytime
+    (22, 1, 0), // [302] item_kick_damage_bytime
+    (22, 1, 0), // [303] item_deadlystrike_bytime
+    (0, 1, 0), // [304] item_find_gems_bytime (no sB - character-only or unused)
+    (8, 1, 50), // [305] item_pierce_cold
+    (8, 1, 50), // [306] item_pierce_fire
+    (8, 1, 50), // [307] item_pierce_ltng
+    (8, 1, 50), // [308] item_pierce_pois
+    (0, 1, 0), // [309] item_damage_vs_monster (no sB - character-only or unused)
+    (0, 1, 0), // [310] item_damage_percent_vs_monster (no sB - character-only or unused)
+    (0, 1, 0), // [311] item_tohit_vs_monster (no sB - character-only or unused)
+    (0, 1, 0), // [312] item_tohit_percent_vs_monster (no sB - character-only or unused)
+    (0, 1, 0), // [313] item_ac_vs_monster (no sB - character-only or unused)
+    (0, 1, 0), // [314] item_ac_percent_vs_monster (no sB - character-only or unused)
+    (0, 1, 0), // [315] firelength (no sB - character-only or unused)
+    (0, 1, 0), // [316] burningmin (no sB - character-only or unused)
+    (0, 1, 0), // [317] burningmax (no sB - character-only or unused)
+    (0, 1, 0), // [318] progressive_damage (no sB - character-only or unused)
+    (0, 1, 0), // [319] progressive_steal (no sB - character-only or unused)
+    (0, 1, 0), // [320] progressive_other (no sB - character-only or unused)
+    (0, 1, 0), // [321] progressive_fire (no sB - character-only or unused)
+    (0, 1, 0), // [322] progressive_cold (no sB - character-only or unused)
+    (0, 1, 0), // [323] progressive_lightning (no sB - character-only or unused)
+    (6, 1, 0), // [324] item_extra_charges
+    (0, 1, 0), // [325] progressive_tohit (no sB - character-only or unused)
+    (0, 1, 0), // [326] poison_count (no sB - character-only or unused)
+    (0, 1, 0), // [327] damage_framerate (no sB - character-only or unused)
+    (0, 1, 0), // [328] pierce_idx (no sB - character-only or unused)
+    (9, 1, 50), // [329] passive_fire_mastery
+    (9, 1, 50), // [330] passive_ltng_mastery
+    (9, 1, 50), // [331] passive_cold_mastery
+    (9, 1, 50), // [332] passive_pois_mastery
+    (8, 1, 0), // [333] passive_fire_pierce
+    (8, 1, 0), // [334] passive_ltng_pierce
+    (8, 1, 0), // [335] passive_cold_pierce
+    (8, 1, 0), // [336] passive_pois_pierce
+    (8, 1, 0), // [337] passive_critical_strike
+    (7, 1, 0), // [338] passive_dodge
+    (7, 1, 0), // [339] passive_avoid
+    (7, 1, 0), // [340] passive_evade
+    (8, 1, 0), // [341] passive_warmth
+    (8, 1, 0), // [342] passive_mastery_melee_th
+    (8, 1, 0), // [343] passive_mastery_melee_dmg
+    (8, 1, 0), // [344] passive_mastery_melee_crit
+    (8, 1, 0), // [345] passive_mastery_throw_th
+    (8, 1, 0), // [346] passive_mastery_throw_dmg
+    (8, 1, 0), // [347] passive_mastery_throw_crit
+    (8, 1, 0), // [348] passive_weaponblock
+    (8, 1, 0), // [349] passive_summon_resist
+    (0, 1, 0), // [350] modifierlist_skill (no sB - character-only or unused)
+    (0, 1, 0), // [351] modifierlist_level (no sB - character-only or unused)
+    (0, 1, 0), // [352] last_sent_hp_pct (no sB - character-only or unused)
+    (0, 1, 0), // [353] source_unit_type (no sB - character-only or unused)
+    (0, 1, 0), // [354] source_unit_id (no sB - character-only or unused)
+    (0, 1, 0), // [355] shortparam1 (no sB - character-only or unused)
+    (2, 1, 0), // [356] questitemdifficulty
+    (9, 1, 50), // [357] passive_mag_mastery
+    (8, 1, 0), // [358] passive_mag_pierce
+];

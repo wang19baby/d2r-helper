@@ -1,0 +1,84 @@
+{
+  "id": "druid-windy",
+  "class": "Druid",
+  "name": "Wind Druid",
+  "name_zh": "风德",
+  "core_skills": [
+    "Tornado",
+    "Hurricane",
+    "Twister",
+    "Oak Sage"
+  ],
+  "stat_priority": [
+    "strength=base",
+    "energy=base",
+    "rest=vitality"
+  ],
+  "equipment": {
+    "core": [
+      {
+        "slot": "weapon_main",
+        "code": "9wn",
+        "name": "Suicide Branch",
+        "weight": 0.8
+      },
+      {
+        "slot": "helm",
+        "code": "dra",
+        "name": "Jalal's Mane",
+        "weight": 0.9
+      },
+      {
+        "slot": "armor",
+        "code": "xea",
+        "name": "Skin of the Vipermagi",
+        "weight": 0.7
+      }
+    ],
+    "optional": [
+      {
+        "slot": "shield",
+        "code": "uit",
+        "name": "Spirit Monarch",
+        "weight": 0.6
+      },
+      {
+        "slot": "belt",
+        "code": "ulc",
+        "name": "Arachnid Mesh",
+        "weight": 0.5
+      },
+      {
+        "slot": "ring_l",
+        "code": "rin",
+        "name": "Stone of Jordan",
+        "weight": 0.4
+      }
+    ],
+    "runewords": [
+      {
+        "runes": [
+          "jah",
+          "ith",
+          "ber"
+        ],
+        "name": "Enigma",
+        "slot": "armor",
+        "weight": 0.7
+      },
+      {
+        "runes": [
+          "amn",
+          "ral",
+          "mal",
+          "ist",
+          "ohm"
+        ],
+        "name": "Call to Arms",
+        "slot": "weapon_alt",
+        "weight": 0.5
+      }
+    ]
+  },
+  "description": "风德，以龙卷风 + 暴风为主要输出，物理+冰系混合伤害。橡木智者加血，安全性极高。"
+}

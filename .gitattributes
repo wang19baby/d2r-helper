@@ -1,0 +1,12 @@
+# Enforce LF line endings on web TypeScript / source files.
+# Source: cleanup of CRLF-to-LF batch on 9 .tsx files (ed434b0 follow-up).
+# Mitigation: future Windows editor saves won't reintroduce CRLF.
+
+*.tsx        text eol=lf
+*.ts         text eol=lf
+*.css        text eol=lf
+
+# Mark auto-generated data tables (regenerate via build scripts, not by hand).
+# Keeps GitHub language stats accurate and hides 2500+ lines of generated code in diffs.
+src-tauri/src/data/python_stats.rs linguist-generated=true
+src-tauri/src/data/affix_names.rs   linguist-generated=true

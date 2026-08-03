@@ -1,0 +1,331 @@
+[
+  {
+    "id": 0,
+    "name": "strength",
+    "sb": 8,
+    "sa": 32,
+    "sp": 0
+  },
+  {
+    "id": 1,
+    "name": "energy",
+    "sb": 7,
+    "sa": 32,
+    "sp": 0
+  },
+  {
+    "id": 2,
+    "name": "dexterity",
+    "sb": 7,
+    "sa": 32,
+    "sp": 0
+  },
+  {
+    "id": 3,
+    "name": "vitality",
+    "sb": 7,
+    "sa": 32,
+    "sp": 0
+  },
+  {
+    "id": 4,
+    "name": "statpts",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 5,
+    "name": "newskills",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 6,
+    "name": "hitpoints",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 7,
+    "name": "maxhp",
+    "sb": 9,
+    "sa": 32,
+    "sp": 0
+  },
+  {
+    "id": 8,
+    "name": "mana",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 9,
+    "name": "maxmana",
+    "sb": 8,
+    "sa": 32,
+    "sp": 0
+  },
+  {
+    "id": 10,
+    "name": "stamina",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 11,
+    "name": "maxstamina",
+    "sb": 8,
+    "sa": 32,
+    "sp": 0
+  },
+  {
+    "id": 12,
+    "name": "level",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 13,
+    "name": "experience",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 14,
+    "name": "gold",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 15,
+    "name": "goldbank",
+    "sb": 0,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 368,
+    "name": "coi_inf_t1_count",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 369,
+    "name": "coi_inf_t1_gate",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 370,
+    "name": "coi_inf_t2_count",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 371,
+    "name": "coi_inf_t2_gate",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 372,
+    "name": "coi_inf_t3_count",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 373,
+    "name": "coi_inf_t3_gate",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 374,
+    "name": "coi_inf_gate_init",
+    "sb": 1,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 396,
+    "name": "crit",
+    "sb": 7,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 397,
+    "name": "hp-kill",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 398,
+    "name": "mana-lost",
+    "sb": 10,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 399,
+    "name": "coi_jzb_lin",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 400,
+    "name": "coi_jzb_xfu",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 401,
+    "name": "coi_jzb_lsh",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 402,
+    "name": "coi_jzb_lyd",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 403,
+    "name": "coi_jzb_jlf",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 404,
+    "name": "coi_jzb_rly",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 405,
+    "name": "coi_jzb_nls",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 406,
+    "name": "coi_jzb_lck",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 407,
+    "name": "coi_jzb_cly",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 408,
+    "name": "coi_jzb_qlf",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 409,
+    "name": "coi_jzb_cll",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 410,
+    "name": "coi_jzb_lgy",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 411,
+    "name": "coi_jzb_lgs",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 412,
+    "name": "coi_jzb_uni",
+    "sb": 14,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 413,
+    "name": "coi_root_gold",
+    "sb": 6,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 414,
+    "name": "coi_root_wood",
+    "sb": 6,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 415,
+    "name": "coi_root_water",
+    "sb": 6,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 416,
+    "name": "coi_root_fire",
+    "sb": 6,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 417,
+    "name": "coi_root_earth",
+    "sb": 6,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 418,
+    "name": "coi_root_light",
+    "sb": 6,
+    "sa": 0,
+    "sp": 0
+  },
+  {
+    "id": 419,
+    "name": "coi_root_dark",
+    "sb": 6,
+    "sa": 0,
+    "sp": 0
+  }
+]

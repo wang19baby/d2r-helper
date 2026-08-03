@@ -1,0 +1,73 @@
+{
+  "id": "necromancer-bone",
+  "class": "Necromancer",
+  "name": "Bone Necromancer",
+  "name_zh": "骨系死灵",
+  "core_skills": [
+    "Bone Spear",
+    "Bone Spirit",
+    "Bone Wall",
+    "Bone Prison",
+    "Corpse Explosion"
+  ],
+  "stat_priority": [
+    "strength=156",
+    "energy=base",
+    "rest=vitality"
+  ],
+  "equipment": {
+    "core": [
+      {
+        "slot": "weapon_main",
+        "code": "9wn",
+        "name": "White (Dol+Io)",
+        "weight": 0.8
+      },
+      {
+        "slot": "helm",
+        "code": "skp",
+        "name": "Harlequin Crest (Shako)",
+        "weight": 0.9
+      },
+      {
+        "slot": "shield",
+        "code": "nea",
+        "name": "Homunculus",
+        "weight": 0.7
+      }
+    ],
+    "optional": [
+      {
+        "slot": "armor",
+        "code": "uui",
+        "name": "Bramble",
+        "weight": 0.5
+      },
+      {
+        "slot": "belt",
+        "code": "ulc",
+        "name": "Arachnid Mesh",
+        "weight": 0.5
+      },
+      {
+        "slot": "ring_l",
+        "code": "rin",
+        "name": "Stone of Jordan",
+        "weight": 0.4
+      }
+    ],
+    "runewords": [
+      {
+        "runes": [
+          "jah",
+          "ith",
+          "ber"
+        ],
+        "name": "Enigma",
+        "slot": "armor",
+        "weight": 0.7
+      }
+    ]
+  },
+  "description": "骨系死灵法师，骨矛高伤害穿透、骨魂自动追踪。骨墙骨牢控场，安全性极高。"
+}

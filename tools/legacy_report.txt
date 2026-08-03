@@ -1,0 +1,15 @@
+item-runes.json: 495 entries
+Rune entries: 86
+  Key=Runeslayer zhCN=符文斩杀者
+  Key=RuneQuote zhCN='
+  Key=Runeword2 zhCN=ÿc4末日
+  Key=Runeword3 zhCN=ÿc4权威
+  Key=Runeword5 zhCN=ÿc4美丽
+  Key=Runeword7 zhCN=ÿc4鲜血
+  Key=Runeword12 zhCN=ÿc4破碎誓言
+  Key=Runeword15 zhCN=ÿc4机遇
+  Key=Runeword18 zhCN=ÿc4黑暗
+  Key=Runeword19 zhCN=ÿc4白昼
+
+item-names.json: 895 entries
+  With zhCN: 895

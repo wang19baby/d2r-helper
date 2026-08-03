@@ -1,0 +1,11 @@
+
+Short key entries (code-like): 7
+  Key=ice enUS=Malah's Potion
+  Key=tr2 enUS=Scroll of Resistance
+  Key=xa1 enUS=Western Worldstone Shard
+  Key=xa2 enUS=Eastern Worldstone Shard
+  Key=xa3 enUS=Southern Worldstone Shard
+  Key=xa4 enUS=Deep Worldstone Shard
+  Key=xa5 enUS=Northern Worldstone Shard
+
+Total entries: 513

@@ -1,0 +1,72 @@
+{
+  "id": "necromancer-summon",
+  "class": "Necromancer",
+  "name": "Summon Necromancer",
+  "name_zh": "召唤死灵",
+  "core_skills": [
+    "Raise Skeleton",
+    "Skeleton Mastery",
+    "Corpse Explosion",
+    "Summon Resist"
+  ],
+  "stat_priority": [
+    "strength=base",
+    "energy=base",
+    "rest=vitality"
+  ],
+  "equipment": {
+    "core": [
+      {
+        "slot": "weapon_main",
+        "code": "9bw",
+        "name": "Arm of King Leoric",
+        "weight": 1.0
+      },
+      {
+        "slot": "helm",
+        "code": "skp",
+        "name": "Harlequin Crest (Shako)",
+        "weight": 0.9
+      },
+      {
+        "slot": "shield",
+        "code": "nea",
+        "name": "Homunculus",
+        "weight": 0.8
+      }
+    ],
+    "optional": [
+      {
+        "slot": "armor",
+        "code": "nee",
+        "name": "Boneflame",
+        "weight": 0.4
+      }
+    ],
+    "runewords": [
+      {
+        "runes": [
+          "jah",
+          "ith",
+          "ber"
+        ],
+        "name": "Enigma",
+        "slot": "armor",
+        "weight": 0.8
+      },
+      {
+        "runes": [
+          "amn",
+          "ral",
+          "mal",
+          "ist",
+          "ohm"
+        ],
+        "name": "Call to Arms",
+        "slot": "weapon_alt",
+        "weight": 0.5
+      }
+    ]
+  },
+  "description": "召唤死灵法师，以骷髅大军为核心，尸爆清场。适合单人开荒和通刷地狱。"
+}
